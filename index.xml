@@ -9,7 +9,17 @@
     <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
     <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
     <copyright>© 2026 Peter Benjamin Zhu</copyright>
-    <lastBuildDate>Wed, 11 Nov 2026 15:24:32 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2026 01:10:59 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>第1章：数学物理方程的引入</title>
+      <link>https://peterbenjaminzhu.github.io/topics/kristensson-second-order-differential-equations/chapter-01-introduction/</link>
+      <pubDate>Thu, 12 Nov 2026 01:10:59 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/topics/kristensson-second-order-differential-equations/chapter-01-introduction/</guid>
+      <description>从物理问题引入分离变量法，讨论其适用条件，并引入二阶线性微分方程与特殊函数的研究对象</description>
+      
+    </item>
     
     <item>
       <title>关于我</title>
