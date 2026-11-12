@@ -1,0 +1,1239 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>MCP 与 AI 辅助科研工作环境 &middot; 学物理的咸鱼</title>
+    <meta name="title" content="MCP 与 AI 辅助科研工作环境 &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="介绍 MCP 的基本结构，以及 README、AGENTS.md 和项目目录在 AI 辅助研究中的作用">
+  
+  
+    <meta name="keywords" content="科研工作流,MCP,AI,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="MCP 与 AI 辅助科研工作环境">
+	<meta property="og:description" content="介绍 MCP 的基本结构，以及 README、AGENTS.md 和项目目录在 AI 辅助研究中的作用">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-12T11:00:00+08:00">
+		<meta property="article:modified_time" content="2026-11-12T11:00:00+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="MCP 与 AI 辅助科研工作环境">
+	<meta name="twitter:description" content="介绍 MCP 的基本结构，以及 README、AGENTS.md 和项目目录在 AI 辅助研究中的作用">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c24868d3816b0b801269d32ee43bb4a1084a81b542e1d5c0a3f705ef46543e287e32b68941a40f8fc765c0d38cc1b54e2af4901a12c4058d9089a50064c50aaf.css"
+    integrity="sha512-wkho04FrC4ASadMu5Du0oQhKgbVC4dXAo/cF70ZUPih&#43;MraJQaQPj8dlwNOMwbVOKvSQGhLEBY2QiaUAZMUKrw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "MCP 与 AI 辅助科研工作环境",
+    "headline": "MCP 与 AI 辅助科研工作环境",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-12T11:00:00\u002b08:00",
+    "datePublished": "2026-11-12T11:00:00\u002b08:00",
+    
+    "dateModified": "2026-11-12T11:00:00\u002b08:00",
+    
+    "keywords": ["科研工作流","MCP","AI"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/",
+    "wordCount":  288 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            document.dispatchEvent(new Event('site:math-ready'));
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/mcp-ai-research-environment/"
+      >MCP 与 AI 辅助科研工作环境</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>MCP 与 AI 辅助科研工作环境</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          
+<h2 class="relative group">1. MCP 是什么？
+    <div id="1-mcp-是什么" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-mcp-%e6%98%af%e4%bb%80%e4%b9%88" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><strong>MCP（Model Context Protocol，模型上下文协议）</strong>是一套让 AI 应用以统一方式连接外部工具、数据和服务的开放协议。</p>
+<p>可以把大语言模型看成“大脑”，把 MCP 看成它连接外部世界的标准接口。借助 MCP，ChatGPT、Codex 或其他 AI 应用可以在授权范围内访问或调用：</p>
+<ul>
+<li>本地文件与项目资料；</li>
+<li>数据库、代码仓库和内部系统；</li>
+<li>文献管理、日历、邮件与协作工具；</li>
+<li>Wolfram、LaTeX、数值计算等专业软件。</li>
+</ul>
+<p>它的价值在于减少重复适配：工具只需实现一次 MCP 接口，不同 AI 应用便可以按统一方式发现和调用它。</p>
+
+<h2 class="relative group">2. MCP 的基本结构
+    <div id="2-mcp-的基本结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-mcp-%e7%9a%84%e5%9f%ba%e6%9c%ac%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">用户
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">AI 应用（Host，例如 ChatGPT、Codex、IDE）
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">MCP Client
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">MCP Server
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">文件 / 数据库 / GitHub / Wolfram / Zotero / 其他服务</span></span></code></pre></div></div>
+<ul>
+<li><strong>Host</strong>：运行 AI 的应用。</li>
+<li><strong>MCP Client</strong>：负责发现工具、传递参数并接收结果。</li>
+<li><strong>MCP Server</strong>：把某项外部能力封装为可调用的工具。</li>
+</ul>
+<p>MCP 可以提供只读能力（如搜索文献、读取文件），也可以提供写入或执行能力（如创建任务、修改代码、运行计算）。后者应始终受到明确权限和人工确认的约束。</p>
+
+<h2 class="relative group">3. MCP、插件与 RAG 的区别
+    <div id="3-mcp插件与-rag-的区别" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-mcp%e6%8f%92%e4%bb%b6%e4%b8%8e-rag-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<table>
+	<thead>
+			<tr>
+					<th>概念</th>
+					<th>主要解决的问题</th>
+					<th>作用</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>MCP</td>
+					<td>AI 如何连接并调用外部世界？</td>
+					<td>标准化工具与数据连接</td>
+			</tr>
+			<tr>
+					<td>插件</td>
+					<td>AI 如何接入某个特定产品能力？</td>
+					<td>通常是某平台或厂商的集成方式</td>
+			</tr>
+			<tr>
+					<td>RAG</td>
+					<td>AI 如何从资料中找到相关知识？</td>
+					<td>检索、筛选并补充上下文</td>
+			</tr>
+	</tbody>
+</table>
+<p>两者并不冲突。一个研究型工作流中，RAG 可以帮助从论文库中找相关材料，MCP 则可以让 AI 读取资料、调用计算工具、编辑 LaTeX 文件或管理参考文献。</p>
+
+<h2 class="relative group">4. ChatGPT 在研究工作中的典型用法
+    <div id="4-chatgpt-在研究工作中的典型用法" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-chatgpt-%e5%9c%a8%e7%a0%94%e7%a9%b6%e5%b7%a5%e4%bd%9c%e4%b8%ad%e7%9a%84%e5%85%b8%e5%9e%8b%e7%94%a8%e6%b3%95" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>对于理论物理、数学、计算或代码研究，MCP 可以将多个步骤连成一个连续工作流：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">研究问题
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">检索本地笔记与文献
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">阅读已有推导和未解决问题
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">调用 Wolfram 或其他工具进行符号/数值检验
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">记录结论与依据
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">整理进 LaTeX 论文草稿</span></span></code></pre></div></div>
+<p>例如，可以让 AI：</p>
+<ul>
+<li>根据本地笔记继续某一段推导；</li>
+<li>比较论文原文、自己的理解和已有计算；</li>
+<li>对符号计算结果作交叉检查；</li>
+<li>将已确认的结论与待验证的猜想分别记录；</li>
+<li>在用户确认后，将成熟内容移入论文正文。</li>
+</ul>
+
+<h2 class="relative group">5. README.md：项目介绍，也是协作入口
+    <div id="5-readmemd项目介绍也是协作入口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-readmemd%e9%a1%b9%e7%9b%ae%e4%bb%8b%e7%bb%8d%e4%b9%9f%e6%98%af%e5%8d%8f%e4%bd%9c%e5%85%a5%e5%8f%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>GitHub 中常见的 <code>README.md</code> 主要面向项目使用者和合作者，用于说明项目是什么、如何安装、如何运行以及如何引用。</p>
+<p>在 AI 辅助研究项目中，<code>README.md</code> 还可以承担另一层职责：为人和 AI 提供项目的共同入口。它应让新进入项目的人或 AI 快速知道：</p>
+<ul>
+<li>研究目标与范围；</li>
+<li>当前处于什么阶段；</li>
+<li>关键背景资料和参考文献；</li>
+<li>文件夹各自负责什么；</li>
+<li>重要的符号、约定或边界条件；</li>
+<li>下一步需要解决的问题。</li>
+</ul>
+<p>因此，二者的联系是：它们都是项目的 Markdown 说明文档；区别是 AI 研究工作流中的 README 更强调“如何持续推进这个项目”，而不只是“如何使用这个项目”。</p>
+
+<h2 class="relative group">6. AGENTS.md：给 AI 的工作约定
+    <div id="6-agentsmd给-ai-的工作约定" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-agentsmd%e7%bb%99-ai-%e7%9a%84%e5%b7%a5%e4%bd%9c%e7%ba%a6%e5%ae%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>如果 README 回答“这个项目是什么”，那么 <code>AGENTS.md</code> 更适合回答“AI 在项目中应怎样工作”。例如：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># AI 工作约定
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 推导规范
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> 所有新符号首次出现时必须定义。
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 明确区分已证明结论、数值证据与猜想。
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 关键公式需要进行量纲、符号或极限检验。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 文档规范
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> 中间推导先写入 derivation/，不要直接改论文正文。
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 已确认的决定记录在 notes/decisions.md。
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 引用资料时保留可追溯来源。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 工具规范
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> 对符号计算给出可复现的输入与结果摘要。
+</span></span><span class="line"><span class="cl">- 修改最终稿前先说明变更内容并等待确认。</span></span></code></pre></div></div>
+<p>这类约定能减少上下文丢失，也能让研究过程更容易复查。</p>
+
+<h2 class="relative group">7. 推荐的简洁研究项目结构
+    <div id="7-推荐的简洁研究项目结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-%e6%8e%a8%e8%8d%90%e7%9a%84%e7%ae%80%e6%b4%81%e7%a0%94%e7%a9%b6%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>不必从复杂系统开始。对于持续数周或数月的研究，可采用如下结构：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Research_Project/
+</span></span><span class="line"><span class="cl">├── README.md              # 研究目标、现状与项目导航
+</span></span><span class="line"><span class="cl">├── AGENTS.md              # AI 协作规则与质量要求
+</span></span><span class="line"><span class="cl">├── 00_inbox/              # 待整理论文、聊天记录和原始材料
+</span></span><span class="line"><span class="cl">├── 01_background/         # 背景知识与文献笔记
+</span></span><span class="line"><span class="cl">├── 02_derivation/         # 中间推导、计算记录、代码与检查
+</span></span><span class="line"><span class="cl">├── 03_results/            # 已确认结果、图表和数据
+</span></span><span class="line"><span class="cl">├── 04_paper/              # 论文或正式输出的 LaTeX 源文件
+</span></span><span class="line"><span class="cl">└── 05_archive/            # 历史版本与不再使用的材料</span></span></code></pre></div></div>
+<p>其中最重要的分界是：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">原始材料 → 中间推导 → 已确认结果 → 正式论文</span></span></code></pre></div></div>
+<p>将未验证的尝试与正式结论分开，能避免把草稿、猜测或临时计算误写进最终论文。</p>
+
+<h2 class="relative group">8. 是否应该先写 README？
+    <div id="8-是否应该先写-readme" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e6%98%af%e5%90%a6%e5%ba%94%e8%af%a5%e5%85%88%e5%86%99-readme" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><strong>一次性的短问题或单个公式推导</strong>：不必专门建立完整项目结构。</li>
+<li><strong>论文、毕业课题、长期研究方向或反复迭代的计算项目</strong>：建议在开始时写一个简短 README。</li>
+</ul>
+<p>README 不需要完美。先用十分钟写清“目标、当前问题、材料位置、下一步”即可；随着研究推进，再逐步补充符号约定、已确认决定和工作流程。</p>
+
+<h2 class="relative group">9. 最小可用 README 模板
+    <div id="9-最小可用-readme-模板" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-%e6%9c%80%e5%b0%8f%e5%8f%af%e7%94%a8-readme-%e6%a8%a1%e6%9d%bf" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># 项目名称
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 研究目标
+</span></span></span><span class="line"><span class="cl">用一两句话说明要解决的核心问题。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 当前阶段
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> 已完成：
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 正在进行：
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 下一步：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 重要约定
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> 单位制、度规符号或其他通用约定：
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 已确认的边界条件/假设：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 项目导航
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> <span class="sb">`01_background/`</span>：背景与文献笔记
+</span></span><span class="line"><span class="cl"><span class="k">-</span> <span class="sb">`02_derivation/`</span>：中间推导与计算验证
+</span></span><span class="line"><span class="cl"><span class="k">-</span> <span class="sb">`03_results/`</span>：已确认结果
+</span></span><span class="line"><span class="cl"><span class="k">-</span> <span class="sb">`04_paper/`</span>：正式论文草稿
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 关键参考
+</span></span></span><span class="line"><span class="cl">- 文献或资料的可追溯信息</span></span></code></pre></div></div>
+
+<h2 class="relative group">结论
+    <div id="结论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%93%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>MCP 的核心意义，是让 AI 从单纯的问答工具变成能够在授权范围内读取资料、调用专业软件并参与实际研究流程的协作助手。对于长期研究，建立清晰的目录、README 和 AI 工作约定，比一开始追求复杂自动化更重要：它们能保留研究上下文，使每一次协作都能从已有进展继续，而不是重新开始。</p>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/mcp-ai-research-environment/markdown.zip" download>Markdown &#43; resources</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/randall-sundrum-and-related-theories/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-mcp-是什么">1. MCP 是什么？</a></li>
+    <li><a href="#2-mcp-的基本结构">2. MCP 的基本结构</a></li>
+    <li><a href="#3-mcp插件与-rag-的区别">3. MCP、插件与 RAG 的区别</a></li>
+    <li><a href="#4-chatgpt-在研究工作中的典型用法">4. ChatGPT 在研究工作中的典型用法</a></li>
+    <li><a href="#5-readmemd项目介绍也是协作入口">5. README.md：项目介绍，也是协作入口</a></li>
+    <li><a href="#6-agentsmd给-ai-的工作约定">6. AGENTS.md：给 AI 的工作约定</a></li>
+    <li><a href="#7-推荐的简洁研究项目结构">7. 推荐的简洁研究项目结构</a></li>
+    <li><a href="#8-是否应该先写-readme">8. 是否应该先写 README？</a></li>
+    <li><a href="#9-最小可用-readme-模板">9. 最小可用 README 模板</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>

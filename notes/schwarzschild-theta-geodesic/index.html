@@ -1,0 +1,1133 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>在Schwarzschild时空中关于极角的测地线方程的解的问题 &middot; 学物理的咸鱼</title>
+    <meta name="title" content="在Schwarzschild时空中关于极角的测地线方程的解的问题 &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="利用存在唯一性定理讨论Schwarzschild时空赤道面测地线的初值问题">
+  
+  
+    <meta name="keywords" content="广义相对论,Schwarzschild,测地线,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="在Schwarzschild时空中关于极角的测地线方程的解的问题">
+	<meta property="og:description" content="利用存在唯一性定理讨论Schwarzschild时空赤道面测地线的初值问题">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-12T11:00:00+08:00">
+		<meta property="article:modified_time" content="2026-11-12T11:00:00+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="在Schwarzschild时空中关于极角的测地线方程的解的问题">
+	<meta name="twitter:description" content="利用存在唯一性定理讨论Schwarzschild时空赤道面测地线的初值问题">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c24868d3816b0b801269d32ee43bb4a1084a81b542e1d5c0a3f705ef46543e287e32b68941a40f8fc765c0d38cc1b54e2af4901a12c4058d9089a50064c50aaf.css"
+    integrity="sha512-wkho04FrC4ASadMu5Du0oQhKgbVC4dXAo/cF70ZUPih&#43;MraJQaQPj8dlwNOMwbVOKvSQGhLEBY2QiaUAZMUKrw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "在Schwarzschild时空中关于极角的测地线方程的解的问题",
+    "headline": "在Schwarzschild时空中关于极角的测地线方程的解的问题",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-12T11:00:00\u002b08:00",
+    "datePublished": "2026-11-12T11:00:00\u002b08:00",
+    
+    "dateModified": "2026-11-12T11:00:00\u002b08:00",
+    
+    "keywords": ["广义相对论","Schwarzschild","测地线"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/",
+    "wordCount":  113 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            document.dispatchEvent(new Event('site:math-ready'));
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/schwarzschild-theta-geodesic/"
+      >在Schwarzschild时空中关于极角的测地线方程的解的问题</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>在Schwarzschild时空中关于极角的测地线方程的解的问题</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          
+<h2 class="relative group">测地线方程
+    <div id="测地线方程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b5%8b%e5%9c%b0%e7%ba%bf%e6%96%b9%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div class="math display">\[
+\frac{\mathrm{d}^2\theta}{\mathrm{d}\tau^2}+\frac{2}{r}\frac{\mathrm{d}r}{\mathrm{d}\tau}\frac{\mathrm{d}\theta}{\mathrm{d}\tau}-\sin\theta\cos\theta\left(\frac{\mathrm{d}\phi}{\mathrm{d}\tau}\right)^2=0
+\]</div>
+<h2 class="relative group">存在唯一性定理
+    <div id="存在唯一性定理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%98%e5%9c%a8%e5%94%af%e4%b8%80%e6%80%a7%e5%ae%9a%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>对于一阶矢量微分方程</p>
+<div class="math display">\[
+\frac{\mathrm{d}\mathbf{y}}{\mathrm{d}t}=\mathbf{f}(t,\mathbf{y})
+\]</div><p><span class="math inline">\(\mathbf{y}\)</span>为<span class="math inline">\(\mathbb{R}^n\)</span>上的矢量，<span class="math inline">\(\mathbf{f}\)</span>为<span class="math inline">\(\mathbb{R}\times\mathbb{R}^n\to\mathbb{R}^n\)</span>上的映射，给定初值条件<span class="math inline">\(\mathbf{y}(t_0)=\mathbf{y_0}\)</span>，若满足</p>
+<ol>
+<li><span class="math inline">\(\mathbf{f}(t, \mathbf{y})\)</span>连续；</li>
+<li>满足Lipschitz条件：<span class="math inline">\(||\mathbf{f}(t,\mathbf{y_1})-\mathbf{f}(t,\mathbf{y_2})||\le L||\mathbf{y_1}-\mathbf{y_2}||\)</span>，其中<span class="math inline">\(L&gt;0\)</span>为常数。</li>
+</ol>
+<p>则存在唯一解<span class="math inline">\(\mathbf{y}(t)\)</span>定义在某一区间上<span class="math inline">\([t_0-\delta,t_0+\delta](\delta&gt;0)\)</span>满足初值条件。</p>
+
+<h2 class="relative group">由存在唯一性定理给出满足在赤道面上的解
+    <div id="由存在唯一性定理给出满足在赤道面上的解" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b1%e5%ad%98%e5%9c%a8%e5%94%af%e4%b8%80%e6%80%a7%e5%ae%9a%e7%90%86%e7%bb%99%e5%87%ba%e6%bb%a1%e8%b6%b3%e5%9c%a8%e8%b5%a4%e9%81%93%e9%9d%a2%e4%b8%8a%e7%9a%84%e8%a7%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">满足局域存在唯一性定理的证明
+    <div id="满足局域存在唯一性定理的证明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%bb%a1%e8%b6%b3%e5%b1%80%e5%9f%9f%e5%ad%98%e5%9c%a8%e5%94%af%e4%b8%80%e6%80%a7%e5%ae%9a%e7%90%86%e7%9a%84%e8%af%81%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>对于初值条件<span class="math inline">\(\theta(0)=\frac{\pi}{2},\ \frac{\mathrm{d}\theta}{\mathrm{d}\tau}(0)=0\)</span>存在一解<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>，现在利用存在唯一性定理证明该解为满足初值条件的唯一解。</p>
+<p>将二阶导数项分离得(令<span class="math inline">\(\dot{\theta}=\frac{\mathrm{d}\theta}{\mathrm{d}\tau}\)</span>其他的同理)</p>
+<div class="math display">\[
+\ddot{\theta}=-\frac{2}{r}\dot{r}\dot{\theta}+\sin\theta\cos\theta\dot{\phi}^2
+\]</div><p>为了能够正常使用存在唯一性定理，我们选取矢量<span class="math inline">\(\mathbf{y}=(y_1, y_2)^T\in\mathbb{R}^2\)</span>，使其分量满足<span class="math inline">\(y_1=\theta,\ y_2=\dot{\theta}\)</span>。原方程转化为一阶方程组</p>
+<div class="math display">\[
+\begin{gather}
+\dot{y_1}=y_2\\
+\dot{y_2}=-\frac{2}{r}\dot{r}y_2+\frac{1}{2}\sin(2y_1)\dot{\phi}^2
+\end{gather}
+\]</div><p>验证局部Lipschitz条件：</p>
+<ol>
+<li><span class="math inline">\(\partial\mathbf{f}/\partial y_1=(0, \cos(2y_1)\dot{\phi}^2)^T\)</span></li>
+<li><span class="math inline">\(\partial\mathbf{f}/\partial y_2=(1, -\frac{2}{r}\dot{r})^T\)</span></li>
+</ol>
+<p>在<span class="math inline">\(\tau=0, y_1=\frac{\pi}{2},y_2=0\)</span>的附近选取一个有限领域，由于<span class="math inline">\(r(\tau),\dot{r}(\tau),\dot{\phi}(\tau)\)</span>连续且光滑，故在局域内均有</p>
+<div class="math display">\[
+|\dot{r}|\le C_1,\quad |\dot{\phi}|\le C_2,\quad r\ge r_{min}\ge 0
+\]</div><p>故</p>
+<div class="math display">\[
+\left|\frac{\partial f_2}{\partial y_1}\right|=\left|\cos(2y_1)\dot{\phi}^2\right| \le 1 \cdot C_2^2\\
+\left|\frac{\partial f_2}{\partial y_2}\right|=\left|-\frac{2}{r}\dot{r}\right| \le \frac{2C_1}{r_{min}}
+\]</div><p>考虑该矢量函数的Jacobi矩阵<span class="math inline">\(D_\mathbf{y}\mathbf{f}\)</span>满足</p>
+<div class="math display">\[
+||D_\mathbf{y}\mathbf{f}||=\sqrt{\left(\frac{\partial f_1}{\partial y_1}\right)^2+\left(\frac{\partial f_1}{\partial y_2}\right)^2+\cdots} \le L \quad (L为某常数)
+\]</div><p>故在有限区间<span class="math inline">\(\mathcal{U}=[-\delta,\delta]\times\{|y_1-\frac{\pi}{2}|&lt;\epsilon\}\times\{|y_2|&lt;\epsilon\}\)</span>中可以满足Lipschitz条件，从而在局域上满足存在唯一性定理。</p>
+
+<h3 class="relative group">满足全局存在唯一性定理的证明
+    <div id="满足全局存在唯一性定理的证明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%bb%a1%e8%b6%b3%e5%85%a8%e5%b1%80%e5%ad%98%e5%9c%a8%e5%94%af%e4%b8%80%e6%80%a7%e5%ae%9a%e7%90%86%e7%9a%84%e8%af%81%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>假设解在<span class="math inline">\([0,T]\)</span>上成立，即此时对于所有的<span class="math inline">\(\tau &gt;0\)</span>，且对于<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>在<span class="math inline">\([0,t_*)\)</span>上成立，其中<span class="math inline">\(t_*\)</span>满足</p>
+<div class="math display">\[
+t_*=\mathrm{sup}\{t&gt;0|\theta(s)=\frac{\pi}{2},\forall s \in [0,t)\}
+\]</div><p>即<span class="math inline">\(t_*\)</span>为所有能使<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>成立的<span class="math inline">\(\tau\)</span>的上确界，只要<span class="math inline">\(t_*&lt;\infty\)</span>，由连续性条件：</p>
+<ol>
+<li><span class="math inline">\(\theta(t_*)=\frac{\pi}{2}\)</span>；</li>
+<li>在<span class="math inline">\([0,t_*)\)</span>上，<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>为常数，故<span class="math inline">\(\dot{\theta}(\tau)=0\)</span>，由连续性可知<span class="math inline">\(\dot{\theta}(t_*)=0\)</span>。</li>
+</ol>
+<p>故而此时我们可以考虑初值条件为<span class="math inline">\(\theta(t_*)=\frac{\pi}{2},\dot{\theta}(t_*)=0\)</span>的初值问题，由之前的讨论可以知道存在在<span class="math inline">\(t_*\)</span>的某一领域<span class="math inline">\([t_*,t_*+\epsilon)\)</span>上满足<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>，与<span class="math inline">\(t_*\)</span>为上确界矛盾。因此<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>在<span class="math inline">\(\tau \ge 0\)</span>上成立。</p>
+<p>对于<span class="math inline">\(\tau&lt;0\)</span>时，我们可以令<span class="math inline">\(s=-\tau\)</span>从而将问题转化为已经解决了的<span class="math inline">\(\tau \ge 0\)</span>的情况，故而可得<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>在全局上成立。</p>
+
+<h2 class="relative group">直接从测地线方程出发
+    <div id="直接从测地线方程出发" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%b4%e6%8e%a5%e4%bb%8e%e6%b5%8b%e5%9c%b0%e7%ba%bf%e6%96%b9%e7%a8%8b%e5%87%ba%e5%8f%91" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>对于测地线方程</p>
+<div class="math display">\[
+\frac{\mathrm{d}^2\theta}{\mathrm{d}\tau^2}+\frac{2}{r}\frac{\mathrm{d}r}{\mathrm{d}\tau}\frac{\mathrm{d}\theta}{\mathrm{d}\tau}-\sin\theta\cos\theta\left(\frac{\mathrm{d}\phi}{\mathrm{d}\tau}\right)^2=0
+\]</div><p>先看通解，我们希望对于满足方程的<span class="math inline">\(\theta(\tau)\)</span>对于过<span class="math inline">\(p\)</span>的大圆都应该满足上述方程，也即对于过<span class="math inline">\(p\)</span>的任意大圆的方程<span class="math inline">\(r(\tau),\ \phi(\tau)\)</span>，满足上述方程的<span class="math inline">\(\theta(\tau)\)</span>为我们希望的通解。故而我们可以考虑</p>
+<div class="math display">\[
+\frac{\mathrm{d}\theta}{\mathrm{d}\tau}=0\\
+\sin\theta\cos\theta=0
+\]</div><p>即</p>
+<div class="math display">\[
+\theta=\frac{k\pi}{2},\quad k=1,2,3,\cdots
+\]</div><p>此时考虑初值条件</p>
+<div class="math display">\[
+\theta(0)=\frac{\pi}{2}\\
+\dot{\theta}(0)=0
+\]</div><p>故而满足初值的特解为<span class="math inline">\(\theta(\tau)=\frac{\pi}{2}\)</span>。</p>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/schwarzschild-theta-geodesic/markdown.zip" download>Markdown &#43; resources</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/infinite-square-well/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;证明：在一维无限深方势阱外波函数仅存在平凡解
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/zotero-typora-obsidian-chatgpt-workflow/">
+              <span class="leading-6">
+                Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#测地线方程">测地线方程</a></li>
+    <li><a href="#存在唯一性定理">存在唯一性定理</a></li>
+    <li><a href="#由存在唯一性定理给出满足在赤道面上的解">由存在唯一性定理给出满足在赤道面上的解</a>
+      <ul>
+        <li><a href="#满足局域存在唯一性定理的证明">满足局域存在唯一性定理的证明</a></li>
+        <li><a href="#满足全局存在唯一性定理的证明">满足全局存在唯一性定理的证明</a></li>
+      </ul>
+    </li>
+    <li><a href="#直接从测地线方程出发">直接从测地线方程出发</a></li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>

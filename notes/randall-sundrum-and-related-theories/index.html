@@ -1,0 +1,1983 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT &middot; 学物理的咸鱼</title>
+    <meta name="title" content="Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="围绕五维几何理解 Randall–Sundrum 模型，并梳理 KK reduction、EMD、Gauss–Bonnet gravity 与 AdS/CFT 的关系">
+  
+  
+    <meta name="keywords" content="AdS-CFT,braneworld,Kaluza-Klein,Einstein-Maxwell-dilaton,Gauss-Bonnet,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT">
+	<meta property="og:description" content="围绕五维几何理解 Randall–Sundrum 模型，并梳理 KK reduction、EMD、Gauss–Bonnet gravity 与 AdS/CFT 的关系">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-12T11:00:00+08:00">
+		<meta property="article:modified_time" content="2026-11-12T11:00:00+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT">
+	<meta name="twitter:description" content="围绕五维几何理解 Randall–Sundrum 模型，并梳理 KK reduction、EMD、Gauss–Bonnet gravity 与 AdS/CFT 的关系">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c24868d3816b0b801269d32ee43bb4a1084a81b542e1d5c0a3f705ef46543e287e32b68941a40f8fc765c0d38cc1b54e2af4901a12c4058d9089a50064c50aaf.css"
+    integrity="sha512-wkho04FrC4ASadMu5Du0oQhKgbVC4dXAo/cF70ZUPih&#43;MraJQaQPj8dlwNOMwbVOKvSQGhLEBY2QiaUAZMUKrw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "Randall–Sundrum 与相关理论：从五维几何到 AdS\/CFT",
+    "headline": "Randall–Sundrum 与相关理论：从五维几何到 AdS\/CFT",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-12T11:00:00\u002b08:00",
+    "datePublished": "2026-11-12T11:00:00\u002b08:00",
+    
+    "dateModified": "2026-11-12T11:00:00\u002b08:00",
+    
+    "keywords": ["AdS-CFT","braneworld","Kaluza-Klein","Einstein-Maxwell-dilaton","Gauss-Bonnet"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/",
+    "wordCount":  2461 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            document.dispatchEvent(new Event('site:math-ready'));
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/randall-sundrum-and-related-theories/"
+      >Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">12 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          <p>学习目标：理解 Randall–Sundrum model（RS model）如何利用五维几何产生四维引力与能标层级；区分它与 Kaluza–Klein reduction、Einstein–Maxwell–dilaton theory、Gauss–Bonnet gravity 以及两个 AdS product compactifications 的关系；建立基本 holographic dictionary。本文聚焦概念与可复用公式，不预设某个具体 black-hole solution 已经存在或稳定。</p>
+
+<h2 class="relative group">1. 一句话定义与阅读范围
+    <div id="1-一句话定义与阅读范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e4%b8%80%e5%8f%a5%e8%af%9d%e5%ae%9a%e4%b9%89%e4%b8%8e%e9%98%85%e8%af%bb%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p><strong>RS model 是带有 brane boundary conditions 的五维 warped geometry 模型；其主要机制是 geometric redshift 与 graviton localization。</strong></p>
+<p>要比较几个理论名称，先问三个不同问题：</p>
+<ol>
+<li><strong>Action：</strong>理论中有哪些场，相互作用是什么？</li>
+<li><strong>Background：</strong>选取什么 metric、flux 和 scalar profile？</li>
+<li><strong>Reduction / boundary conditions：</strong>如何得到低维物理，保留哪些 modes，哪里有 brane 或 conformal boundary？</li>
+</ol>
+<p>Kaluza–Klein（KK）是组织高维 modes 和降维的方法；Einstein–Maxwell–dilaton（EMD）与 Einstein–Gauss–Bonnet（EGB）是动力学理论；RS 与 <span class="math inline">\(AdS_3\times S^2\)</span>、<span class="math inline">\(AdS_4\times S^1\)</span> 则进一步指定几何或边界方案。这些名称不处于同一分类层级。</p>
+<p><strong>适用前提：</strong>主要使用 classical effective field theory 与 linear perturbation 图像。标为 source_claim 的 duality、完整 reduction 和 phenomenology 来自文献；本文短推导只覆盖写出的公式与假设，不能代替稳定性分析或完整高维嵌入。</p>
+
+<h2 class="relative group">2. 知识网络：方法、理论与背景
+    <div id="2-知识网络方法理论与背景" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e7%9f%a5%e8%af%86%e7%bd%91%e7%bb%9c%e6%96%b9%e6%b3%95%e7%90%86%e8%ae%ba%e4%b8%8e%e8%83%8c%e6%99%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<table>
+	<thead>
+			<tr>
+					<th>名称</th>
+					<th>定义层面与它回答的问题</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Five-dimensional Einstein gravity</td>
+					<td>五维 metric 的动力学；是否加 cosmological constant、matter 或 boundary action 必须另说。</td>
+			</tr>
+			<tr>
+					<td>KK reduction</td>
+					<td>把高维场展开为内部空间 eigenmodes，识别低维 metric、vectors、scalars 与 massive tower。</td>
+			</tr>
+			<tr>
+					<td>EMD theory</td>
+					<td>指定 Einstein term、Maxwell term、dilaton kinetic term、coupling function 和可能的 scalar potential。</td>
+			</tr>
+			<tr>
+					<td>EGB gravity</td>
+					<td>在 Einstein action 中加入 Gauss–Bonnet curvature-squared combination。</td>
+			</tr>
+			<tr>
+					<td>RS1 / RS2</td>
+					<td>选择 <span class="math inline">\(AdS_5\)</span> warped background、brane tensions 与 orbifold / boundary conditions。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(AdS_3\times S^2\)</span></td>
+					<td>五维 product background；沿 <span class="math inline">\(S^2\)</span> 降维后 external spacetime 为三维。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(AdS_4\times S^1\)</span></td>
+					<td>五维 product background；沿 <span class="math inline">\(S^1\)</span> 降维后 external spacetime 为四维。</td>
+			</tr>
+			<tr>
+					<td>AdS/CFT correspondence</td>
+					<td>高维 gravity 与低维 quantum field theory 的 holographic relation，不等于 KK reduction。</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>个人理解：</strong>同一 action 可以拥有不同 backgrounds；同一形式的 background 也可能被不同 matter content 支撑。不能从“总维数都是五维”推出模型等价。</p>
+
+<h2 class="relative group">3. 符号、单位与约定
+    <div id="3-符号单位与约定" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e7%ac%a6%e5%8f%b7%e5%8d%95%e4%bd%8d%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>采用 natural units <span class="math inline">\(c=\hbar=1\)</span>。除角坐标外，坐标具有 length 单位；metric signature 为 mostly plus：<span class="math inline">\((-,+,+,+,+)\)</span>。曲率约定满足 <span class="math inline">\(AdS_D\)</span> 中 <span class="math inline">\(R_{AB}=-(D-1)g_{AB}/\ell^2\)</span>，并取
+<span class="math inline">\([\nabla_C,\nabla_D]v^A=R^A{}_{BCD}v^B\)</span>。
+主文使用 Einstein frame。Branes 不与 AdS conformal boundary 混同。</p>
+<table>
+	<thead>
+			<tr>
+					<th>符号</th>
+					<th>定义、单位与使用范围</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="math inline">\(A,B=0,\ldots,4\)</span></td>
+					<td>五维 spacetime indices；<span class="math inline">\(\mu,\nu=0,\ldots,3\)</span> 为四维 indices。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(d\)</span></td>
+					<td>Conformal boundary spacetime dimension；<span class="math inline">\(AdS_{d+1}\)</span> 的 bulk dimension 为 <span class="math inline">\(d+1\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(G_D,M_D\)</span></td>
+					<td><span class="math inline">\([G_D]=\mathrm{length}^{D-2}\)</span>；reduced Planck scale 满足 <span class="math inline">\(M_D^{D-2}=(8\pi G_D)^{-1}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(\Lambda_5\)</span></td>
+					<td>Cosmological constant，<span class="math inline">\([\Lambda_5]=\mathrm{length}^{-2}\)</span>；action 写成 <span class="math inline">\(R-2\Lambda_5\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(k,\ell\)</span></td>
+					<td>RS curvature scale 与 radius：<span class="math inline">\(k=1/\ell\)</span>，<span class="math inline">\([k]=\mathrm{length}^{-1}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(y,L\)</span></td>
+					<td>Proper-distance coordinate 与两膜间距，单位为 length；<span class="math inline">\(L=\pi r_c\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(W(y)\)</span></td>
+					<td>Warp exponent，<span class="math inline">\(W=-k\lvert y\rvert\)</span>；避免与 gauge potential <span class="math inline">\(A_\mu\)</span> 混淆。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(\lambda_i\)</span></td>
+					<td>Brane tension，<span class="math inline">\([\lambda_i]=\mathrm{length}^{-4}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(\phi,A_\mu,F=dA\)</span></td>
+					<td>Dilaton、gauge potential 与 field strength；统一引力前因子约定下，前两者无量纲，<span class="math inline">\([F]=\mathrm{length}^{-1}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(a,V(\phi)\)</span></td>
+					<td>Dilaton coupling（无量纲）与 scalar potential（<span class="math inline">\(\mathrm{length}^{-2}\)</span>）。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(\alpha,\mathcal G\)</span></td>
+					<td>GB coupling：<span class="math inline">\([\alpha]=\mathrm{length}^2\)</span>；GB density：<span class="math inline">\([\mathcal G]=\mathrm{length}^{-4}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(\ell_3,r_2,\ell_4,R_c\)</span></td>
+					<td>Product backgrounds 的 AdS radii 与 internal radii，单位均为 length。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(q\)</span></td>
+					<td>Sphere magnetic-flux parameter；第 10 节归一化下 <span class="math inline">\([q]=\mathrm{length}\)</span>。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(m,\Delta,\mathcal O,J\)</span></td>
+					<td>Bulk scalar mass：<span class="math inline">\([m]=\mathrm{length}^{-1}\)</span>；operator dimension <span class="math inline">\(\Delta\)</span> 无量纲；QFT 中 <span class="math inline">\([\mathcal O]=\mathrm{length}^{-\Delta}\)</span>、<span class="math inline">\([J]=\mathrm{length}^{\Delta-d}\)</span>。</td>
+			</tr>
+	</tbody>
+</table>
+<p>有的文献写 <span class="math inline">\(2M^3R-\Lambda_{\rm density}\)</span>，或将 scalar kinetic term 写成 <span class="math inline">\(-2(\partial\varphi)^2\)</span>。比较系数前必须映射 action normalization，不能直接抄用 <span class="math inline">\(\Lambda\)</span> 或 <span class="math inline">\(a\)</span> 的数值。</p>
+
+<h2 class="relative group">4. AdS geometry：四维切片可以平直
+    <div id="4-ads-geometry四维切片可以平直" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-ads-geometry%e5%9b%9b%e7%bb%b4%e5%88%87%e7%89%87%e5%8f%af%e4%bb%a5%e5%b9%b3%e7%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>source_claim：Poincaré patch 中</p>
+<div class="math display">\[
+ds^2_{AdS_{d+1}}=\frac{\ell^2}{z^2}
+\left(dz^2+\eta_{\mu\nu}dx^\mu dx^\nu\right),\qquad z&gt;0.
+\]</div><p>Conformal boundary 位于 <span class="math inline">\(z\to0\)</span>；除去整体 conformal factor 后得到 boundary metric。<a href="https://arxiv.org/abs/hep-th/9802150"  target="_blank" rel="noreferrer">Witten，boundary geometry 与 field asymptotics</a></p>
+<p>analytic_derivation：令 <span class="math inline">\(z=\ell e^{y/\ell}\)</span>，则 <span class="math inline">\(dz=(z/\ell)dy\)</span>，所以</p>
+<div class="math display">\[
+ds^2=e^{-2y/\ell}\eta_{\mu\nu}dx^\mu dx^\nu+dy^2.
+\]</div><p>固定 <span class="math inline">\(y\)</span> 的切片可以是 Minkowski spacetime，而整个五维 bulk 仍是负曲率 AdS。RS 的 <span class="math inline">\(\lvert y\rvert\)</span> 体现反射与膜的拼接；brane 处的导数跳跃由 junction conditions 控制。</p>
+<p><strong>物理图像：</strong>沿 <span class="math inline">\(y\)</span> 改变时，各切片上的时间、长度与能标相对于共同的四维归一化发生 redshift。平直切片并不意味着五维 curvature 为零。</p>
+
+<h2 class="relative group">5. RS1：geometric redshift 与 hierarchy
+    <div id="5-rs1geometric-redshift-与-hierarchy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-rs1geometric-redshift-%e4%b8%8e-hierarchy" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>source_claim：采用本文归一化，原始 RS action 的结构为</p>
+<div class="math display">\[
+S=\frac{M_5^3}{2}\int d^5x\sqrt{-g}(R-2\Lambda_5)
+-\sum_i\lambda_i\int_{\mathcal B_i}d^4x\sqrt{-h_i}
++S_{\rm matter}+S_{\rm boundary}.
+\]</div><p><span class="math inline">\(h_i\)</span> 是 induced metric，<span class="math inline">\(S_{\rm boundary}\)</span> 包含使 variational principle 良定义的 boundary terms。背景为</p>
+<div class="math display">\[
+ds^2=e^{-2k\lvert y\rvert}\eta_{\mu\nu}dx^\mu dx^\nu+dy^2.
+\]</div><p>RS1 定义在 <span class="math inline">\(S^1/\mathbb Z_2\)</span> 上；基本区间为 <span class="math inline">\(0\le y\le L\)</span>，两端为 ultraviolet（UV）brane 与 infrared（IR）brane。采用 <span class="math inline">\(Z_2\)</span> doubled-cover convention：</p>
+<div class="math display">\[
+\Lambda_5=-6k^2,\qquad
+\lambda_{\rm UV}=+6M_5^3k,\qquad
+\lambda_{\rm IR}=-6M_5^3k.
+\]</div><p>这些系数对应平直 branes 与本文 Einstein action convention；法向和边界描述必须一致。<a href="https://arxiv.org/abs/hep-ph/9905221"  target="_blank" rel="noreferrer">RS1，set-up 与 warped solution</a></p>
+
+<h3 class="relative group">5.1 为什么质量只带一个 warp factor？
+    <div id="51-为什么质量只带一个-warp-factor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%b4%a8%e9%87%8f%e5%8f%aa%e5%b8%a6%e4%b8%80%e4%b8%aa-warp-factor" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：一个 scalar <span class="math inline">\(H\)</span> 位于 IR brane，原始质量为 <span class="math inline">\(m_0\)</span>。由
+<span class="math inline">\(h_{\mu\nu}=e^{-2kL}\eta_{\mu\nu}\)</span>，
+得到 <span class="math inline">\(\sqrt{-h}=e^{-4kL}\)</span>、<span class="math inline">\(h^{\mu\nu}=e^{2kL}\eta^{\mu\nu}\)</span>，因此</p>
+<div class="math display">\[
+S_H=-\frac12\int d^4x
+\left[e^{-2kL}(\partial H)^2+e^{-4kL}m_0^2H^2\right].
+\]</div><p>定义 canonical field <span class="math inline">\(H_c=e^{-kL}H\)</span>，得到</p>
+<div class="math display">\[
+\boxed{m_{\rm 4D}=e^{-kL}m_0}.
+\]</div><p>质量平方带 <span class="math inline">\(e^{-2kL}\)</span>，质量本身带 <span class="math inline">\(e^{-kL}\)</span>。</p>
+<p><span class="math inline">\(m_{\rm 4D}\)</span> 是四维 Einstein-frame normalization 下相对于引力能标的质量。IR observer 采用 proper units 可以把局部 metric 归一化；可观测内容是 mass ratios，而不是钟尺单位的改变。</p>
+<p>例如 <span class="math inline">\(kL=\ln(10^{15})\simeq34.54\)</span>，就有 <span class="math inline">\(m_{\rm 4D}/m_0=10^{-15}\)</span>。这是指数层级，不要求额外维长度本身存在 <span class="math inline">\(10^{15}\)</span> 的层级。</p>
+
+<h3 class="relative group">5.2 Radion 与 stabilization
+    <div id="52-radion-与-stabilization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-radion-%e4%b8%8e-stabilization" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>source_claim：<span class="math inline">\(L\)</span> 随四维位置变化会产生 radion（膜间距的动态自由度）。原始 RS1 不自动确定其稳定值。Goldberger–Wise mechanism 引入 bulk scalar 与 brane potentials，为 radion 生成有效势。<a href="https://arxiv.org/abs/hep-ph/9907447"  target="_blank" rel="noreferrer">Goldberger–Wise，Modulus Stabilization with Bulk Fields</a></p>
+<p>Radion 与 KK radius modulus 的物理意义相似，但其 effective action 和 matter couplings 依赖 warp 与 branes，不能直接等同于任意 EMD dilaton。</p>
+
+<h2 class="relative group">6. RS2：非紧致额外维与 graviton localization
+    <div id="6-rs2非紧致额外维与-graviton-localization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-rs2%e9%9d%9e%e7%b4%a7%e8%87%b4%e9%a2%9d%e5%a4%96%e7%bb%b4%e4%b8%8e-graviton-localization" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>analytic_derivation：把 graviton zero mode 对应的四维 Einstein term 从五维 action 中提出：</p>
+<div class="math display">\[
+M_{\rm Pl}^2=M_5^3\int_{-L}^{L}dy\,e^{-2k\lvert y\rvert}
+=\frac{M_5^3}{k}(1-e^{-2kL}).
+\]</div><p>移走 IR brane、取 <span class="math inline">\(L\to\infty\)</span> 后，</p>
+<div class="math display">\[
+\boxed{M_{\rm Pl}^2=\frac{M_5^3}{k}&lt;\infty}.
+\]</div><p>这里使用 doubled cover；只在半区间积分时必须同步改变 bulk normalization，不能凭空丢掉因子 2。</p>
+<p>source_claim：RS2 存在 normalizable massless graviton zero mode，并有无 mass gap 的 continuous massive KK spectrum。长距离 <span class="math inline">\(r\gg\ell\)</span> 的静态势为</p>
+<div class="math display">\[
+V_N(r)=-\frac{G_Nm_1m_2}{r}
+\left[1+\mathcal O\!\left(\frac{\ell^2}{r^2}\right)\right].
+\]</div><p>这里只写修正阶数；精确系数涉及 tensor structure 与 brane bending，不能从简单 scalar exchange 图像直接确定。<a href="https://arxiv.org/abs/hep-th/9906064"  target="_blank" rel="noreferrer">RS2，zero mode、KK spectrum 与 Newton potential</a></p>
+<p><strong>物理图像：</strong>无限 internal length 不意味着 graviton zero mode 不可归一化。决定低能引力的是带有 warp weight 的 norm，而不只是未加权体积。</p>
+
+<h2 class="relative group">7. KK reduction：RS 也有 KK modes，但不是经典圆模型
+    <div id="7-kk-reductionrs-也有-kk-modes但不是经典圆模型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-kk-reductionrs-%e4%b9%9f%e6%9c%89-kk-modes%e4%bd%86%e4%b8%8d%e6%98%af%e7%bb%8f%e5%85%b8%e5%9c%86%e6%a8%a1%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>source_claim：经典 circle reduction 的 zero-mode ansatz 可写为</p>
+<div class="math display">\[
+ds_5^2=e^{\phi/\sqrt3}g_{\mu\nu}dx^\mu dx^\nu
++e^{-2\phi/\sqrt3}(dz+A_\mu dx^\mu)^2,
+\qquad z\sim z+2\pi R_0.
+\]</div><p>Retained fields 与 <span class="math inline">\(z\)</span> 无关，<span class="math inline">\(g_{\mu\nu}\)</span> 是四维 Einstein-frame metric。<span class="math inline">\(R_0\)</span> 是 coordinate radius，proper radius 为 <span class="math inline">\(R_{\rm proper}=R_0e^{-\phi/\sqrt3}\)</span>。</p>
+<p>若五维 action 是纯 Einstein term，保留上述 zero modes 后，</p>
+<div class="math display">\[
+\boxed{
+S_4=\frac1{16\pi G_4}\int d^4x\sqrt{-g}
+\left[R-\frac12(\partial\phi)^2-\frac14e^{-\sqrt3\phi}F^2\right]}.
+\]</div><p><a href="https://arxiv.org/abs/1909.00970"  target="_blank" rel="noreferrer">KK–EMD，five-dimensional uplift 与特定 coupling</a></p>
+
+<h3 class="relative group">7.1 Metric components 的低维解释
+    <div id="71-metric-components-的低维解释" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#71-metric-components-%e7%9a%84%e4%bd%8e%e7%bb%b4%e8%a7%a3%e9%87%8a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><span class="math inline">\(g_{\mu\nu}\)</span> 给出 metric，<span class="math inline">\(g_{\mu z}\)</span> 给出 graviphoton，<span class="math inline">\(g_{zz}\)</span> 给出 radius scalar。圆上坐标变换 <span class="math inline">\(z\mapsto z-\chi(x)\)</span> 导致 <span class="math inline">\(A\mapsto A+d\chi\)</span>，所以 gauge symmetry 来自高维 diffeomorphism。</p>
+<p>在未翘曲、<span class="math inline">\(\phi=0\)</span> 的平直圆上，</p>
+<div class="math display">\[
+\Phi(x,z)=\sum_{n\in\mathbb Z}\Phi_n(x)e^{inz/R_0},
+\qquad m_n^2=m_0^2+\frac{n^2}{R_0^2}.
+\]</div><p>Radius scalar 改变时，还要考虑 proper radius 与 Einstein-frame rescaling；上式不能无条件照搬到 RS。</p>
+<p>analytic_derivation：令 metric exponents 为 <span class="math inline">\(2a_K\phi\)</span>、<span class="math inline">\(2b_K\phi\)</span>，
+<span class="math inline">\(a_K=1/(2\sqrt3)\)</span>、<span class="math inline">\(b_K=-1/\sqrt3\)</span>。
+Einstein term 前因子满足 <span class="math inline">\(2a_K+b_K=0\)</span>；Maxwell exponent 为 <span class="math inline">\(3b_K=-\sqrt3\)</span>。这些检查解释 Einstein frame 与 exponential coupling 的关系；完整 scalar kinetic coefficient 来自前述文献 reduction，不声称仅凭两个指数就已证明。</p>
+
+<h3 class="relative group">7.2 RS orbifold 改变 zero-mode content
+    <div id="72-rs-orbifold-改变-zero-mode-content" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#72-rs-orbifold-%e6%94%b9%e5%8f%98-zero-mode-content" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>RS 中仍可对 perturbations 进行 KK eigenmode expansion，但 profiles 要满足 warped wave equation 与 brane boundary conditions。RS1 的 massive spectrum 离散，RS2 的 massive spectrum 连续。</p>
+<p>由 <span class="math inline">\(y\mapsto-y\)</span> 的 tensor transformation 可知，标准 RS1 中 <span class="math inline">\(g_{\mu y}\)</span> 为 odd，<span class="math inline">\(g_{\mu\nu}\)</span>、<span class="math inline">\(g_{yy}\)</span> 为 even。因此经典 circle reduction 的 massless graviphoton zero mode 被 orbifold projection 去掉。<strong>“有 KK tower”不等于“低能理论必然包含经典 KK 的 Maxwell field”。</strong></p>
+
+<h2 class="relative group">8. EMD：特定 KK 理论是其中一个成员
+    <div id="8-emd特定-kk-理论是其中一个成员" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-emd%e7%89%b9%e5%ae%9a-kk-%e7%90%86%e8%ae%ba%e6%98%af%e5%85%b6%e4%b8%ad%e4%b8%80%e4%b8%aa%e6%88%90%e5%91%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>一般 <span class="math inline">\(D\)</span> 维 EMD action 为</p>
+<div class="math display">\[
+S_D=\frac1{16\pi G_D}\int d^Dx\sqrt{-g}
+\left[R-\frac12(\partial\phi)^2-V(\phi)-\frac14f(\phi)F^2\right].
+\]</div><p>常用 <span class="math inline">\(f=e^{-a\phi}\)</span>。四维、canonical scalar normalization 下，第 7 节对应 <span class="math inline">\(a=\sqrt3\)</span>、<span class="math inline">\(V=0\)</span>。若文献写 <span class="math inline">\(-2(\partial\varphi)^2-e^{-2a\varphi}\mathcal F^2\)</span>，则先作 <span class="math inline">\(\phi=2\varphi\)</span>、<span class="math inline">\(A=2\mathcal A\)</span> 的 normalization mapping。</p>
+
+<h3 class="relative group">8.1 五维 cosmological constant 降维后是什么？
+    <div id="81-五维-cosmological-constant-降维后是什么" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#81-%e4%ba%94%e7%bb%b4-cosmological-constant-%e9%99%8d%e7%bb%b4%e5%90%8e%e6%98%af%e4%bb%80%e4%b9%88" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：第 7 节 ansatz 中
+<span class="math inline">\(\sqrt{-g_5}=e^{\phi/\sqrt3}\sqrt{-g_4}\)</span>。
+所以五维 <span class="math inline">\(-2\Lambda_5\)</span> 产生</p>
+<div class="math display">\[
+V_{\rm KK}(\phi)=2\Lambda_5e^{\phi/\sqrt3},
+\]</div><p>不是与 radius scalar 无关的四维常数。“五维 Einstein–AdS circle reduction”与“给四维 EMD 随意加常数势”不同。</p>
+
+<h3 class="relative group">8.2 何时能得到 RS-like background？
+    <div id="82-何时能得到-rs-like-background" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#82-%e4%bd%95%e6%97%b6%e8%83%bd%e5%be%97%e5%88%b0-rs-like-background" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：当 <span class="math inline">\(F=0\)</span>、<span class="math inline">\(\phi=\phi_0\)</span> 为常数时，</p>
+<div class="math display">\[
+V&#39;(\phi_0)=0,\qquad R_{AB}=\frac{V(\phi_0)}3g_{AB}.
+\]</div><p>若 <span class="math inline">\(V(\phi_0)&lt;0\)</span>，可有 <span class="math inline">\(AdS_5\)</span> bulk。平直 RS warp 要求 <span class="math inline">\(V(\phi_0)=-12k^2\)</span>，还需 brane junction conditions。非平凡 <span class="math inline">\(\phi(y)\)</span> 或 <span class="math inline">\(F\)</span> 会 backreact，改变 warp 与 modes。</p>
+<p>scalar equation 为</p>
+<div class="math display">\[
+\Box\phi-V&#39;(\phi)-\frac14f&#39;(\phi)F^2=0.
+\]</div><p>因此 constant dilaton 与 nonzero flux 必须满足
+<span class="math inline">\(V&#39;(\phi_0)+f&#39;(\phi_0)F^2/4=0\)</span>。
+不能把任意 pure magnetic solution 自动当作 exponential-coupling EMD 的 constant-dilaton solution。</p>
+
+<h2 class="relative group">9. Gauss–Bonnet：修改动力学，不是选择 compactification
+    <div id="9-gaussbonnet修改动力学不是选择-compactification" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-gaussbonnet%e4%bf%ae%e6%94%b9%e5%8a%a8%e5%8a%9b%e5%ad%a6%e4%b8%8d%e6%98%af%e9%80%89%e6%8b%a9-compactification" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>source_claim：本文讨论 ordinary five-dimensional EGB theory：</p>
+<div class="math display">\[
+S_{\rm EGB}=\frac1{16\pi G_5}\int d^5x\sqrt{-g}
+\left[R-2\Lambda_5+\alpha\mathcal G\right]
++S_{\rm brane}+S_{\rm boundary},
+\]</div><div class="math display">\[
+\mathcal G=R^2-4R_{AB}R^{AB}+R_{ABCD}R^{ABCD}.
+\]</div><p>GB 是 Lovelock combination，在五维影响局域动力学而保持 metric field equations 为二阶。四维、constant coupling 的 GB bulk term 是 topological；scalar-dependent coupling 不是同一情形。<a href="https://arxiv.org/abs/hep-th/0010193"  target="_blank" rel="noreferrer">Gauss–Bonnet interaction in RS compactification</a></p>
+
+<h3 class="relative group">9.1 相同 AdS geometry，参数关系已经改变
+    <div id="91-相同-ads-geometry参数关系已经改变" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#91-%e7%9b%b8%e5%90%8c-ads-geometry%e5%8f%82%e6%95%b0%e5%85%b3%e7%b3%bb%e5%b7%b2%e7%bb%8f%e6%94%b9%e5%8f%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：五维 constant curvature <span class="math inline">\(K=-k^2\)</span> 有</p>
+<div class="math display">\[
+R=-20k^2,\quad R_{AB}R^{AB}=80k^4,\quad
+R_{ABCD}R^{ABCD}=40k^4,\quad \mathcal G=120k^4.
+\]</div><p>GB equation tensor 为</p>
+<div class="math display">\[
+H_{AB}=2\left(RR_{AB}-2R_{AC}R_B{}^C
+-2R^{CD}R_{ACBD}+R_A{}^{CDE}R_{BCDE}\right)
+-\frac12g_{AB}\mathcal G.
+\]</div><p>各项在 constant curvature 上分别给出
+<span class="math inline">\(RR_{AB}=80k^4g_{AB}\)</span>、
+<span class="math inline">\(R_{AC}R_B{}^C=16k^4g_{AB}\)</span>、
+<span class="math inline">\(R^{CD}R_{ACBD}=16k^4g_{AB}\)</span>、
+<span class="math inline">\(R_A{}^{CDE}R_{BCDE}=8k^4g_{AB}\)</span>。
+因此 <span class="math inline">\(G_{AB}=6k^2g_{AB}\)</span>、<span class="math inline">\(H_{AB}=-12k^4g_{AB}\)</span>。
+代入 <span class="math inline">\(G_{AB}+\Lambda_5g_{AB}+\alpha H_{AB}=0\)</span>：</p>
+<div class="math display">\[
+\boxed{k^2-2\alpha k^4=-\frac{\Lambda_5}{6}}.
+\]</div><p>令 <span class="math inline">\(u=k^2\)</span>，则</p>
+<div class="math display">\[
+u_\pm=\frac{1\pm\sqrt{1+\frac43\alpha\Lambda_5}}{4\alpha}.
+\]</div><p><span class="math inline">\(u_-\)</span> 在 <span class="math inline">\(\alpha\to0\)</span> 回到 <span class="math inline">\(-\Lambda_5/6\)</span>；另一 branch 无平滑 Einstein limit。根号为实数、<span class="math inline">\(u&gt;0\)</span> 只是背景存在条件的一部分，不是全部 stability conditions。</p>
+<p>Brane junction conditions 与 graviton kinetic normalization 也会改变。加入 GB 后不能无条件使用 Einstein–RS 的 tension tuning 或 Planck integral；一般 supersymmetric curvature-squared correction 也不等于纯 GB 项。</p>
+
+<h2 class="relative group">10. Product backgrounds：维数相同，几何不同
+    <div id="10-product-backgrounds维数相同几何不同" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-product-backgrounds%e7%bb%b4%e6%95%b0%e7%9b%b8%e5%90%8c%e5%87%a0%e4%bd%95%e4%b8%8d%e5%90%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">10.1 Pure Einstein 加 cosmological constant 为什么不够？
+    <div id="101-pure-einstein-加-cosmological-constant-为什么不够" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#101-pure-einstein-%e5%8a%a0-cosmological-constant-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e5%a4%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：五维纯 Einstein vacuum 要求</p>
+<div class="math display">\[
+R_{AB}=\frac23\Lambda_5g_{AB}.
+\]</div><p>直接乘积的各因子必须有相同 Einstein constant。但</p>
+<div class="math display">\[
+\begin{aligned}
+AdS_3:\;&amp;R_{ab}=-\frac2{\ell_3^2}g_{ab},
+&amp; S^2:\;&amp;R_{ij}=+\frac1{r_2^2}g_{ij},\\
+AdS_4:\;&amp;R_{\mu\nu}=-\frac3{\ell_4^2}g_{\mu\nu},
+&amp; S^1:\;&amp;R_{\theta\theta}=0.
+\end{aligned}
+\]</div><p>有限半径下，前一组符号相反，后一组一负一零，都不能满足共同的 <span class="math inline">\(\frac23\Lambda_5\)</span>。这个结论限定于 <strong>unwarped direct product、pure Einstein–<span class="math inline">\(\Lambda\)</span> vacuum</strong>；加入 matter、GB、warping 或 sources 后需另行判断。</p>
+
+<h3 class="relative group">10.2 Magnetic flux 支撑 <span class="math inline">\(AdS_3\times S^2\)</span>
+    <div id="102-magnetic-flux-支撑" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#102-magnetic-flux-%e6%94%af%e6%92%91" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>source_claim：它常出现为五维 magnetic black string 的 near-horizon geometry，用于 black-string entropy 与 <span class="math inline">\(AdS_3/CFT_2\)</span>。具体 supersymmetric theory 可能含多个 gauge fields、scalars 和 Chern–Simons terms。<a href="https://arxiv.org/abs/hep-th/0703087"  target="_blank" rel="noreferrer">Castro et al.，5D Black Holes and Strings with Higher Derivatives</a></p>
+<p>下面给出独立的 Einstein–Maxwell toy example：</p>
+<div class="math display">\[
+S=\frac1{16\pi G_5}\int d^5x\sqrt{-g}
+\left(R-2\Lambda_5-\frac14F^2\right),
+\]</div><div class="math display">\[
+ds_5^2=ds^2_{AdS_3(\ell_3)}+r_2^2d\Omega_2^2,
+\qquad F=q\sin\vartheta\,d\vartheta\wedge d\varphi.
+\]</div><p><span class="math inline">\(\vartheta,\varphi\)</span> 是无量纲 sphere angles，<span class="math inline">\(F^2=2q^2/r_2^4\)</span>。
+此归一化的 trace-reversed equation 为</p>
+<div class="math display">\[
+R_{AB}=\frac23\Lambda_5g_{AB}
++\frac12F_{AC}F_B{}^C-\frac1{12}g_{AB}F^2.
+\]</div><p>analytic_derivation：AdS directions 上 Maxwell field 为零；sphere directions 有
+<span class="math inline">\(F_{ik}F_j{}^k=(q^2/r_2^4)g_{ij}\)</span>。因此</p>
+<div class="math display">\[
+-\frac2{\ell_3^2}=\frac23\Lambda_5-\frac{q^2}{6r_2^4},
+\qquad
+\frac1{r_2^2}=\frac23\Lambda_5+\frac{q^2}{3r_2^4}.
+\]</div><p>特别地，<span class="math inline">\(\Lambda_5=0\)</span> 给出</p>
+<div class="math display">\[
+\boxed{r_2^2=\frac{q^2}{3},\qquad \ell_3=2r_2}.
+\]</div><p>同一 magnetic field 对 internal 和 external directions 产生不同 stress，使两个因子有不同曲率。这是 local background calculation，不证明一定存在满足指定 asymptotics 的完整 black string。</p>
+<p>固定 radius、Einstein approximation 下，<span class="math inline">\(G_3=G_5/(4\pi r_2^2)\)</span>。若包含 radius fluctuations、warping 或 higher-curvature terms，低维 action 应重新求取。</p>
+
+<h3 class="relative group">10.3 <span class="math inline">\(AdS_4\times S^1\)</span> 需要何种支撑？
+    <div id="103--需要何种支撑" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#103--%e9%9c%80%e8%a6%81%e4%bd%95%e7%a7%8d%e6%94%af%e6%92%91" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>它是四维 AdS 与 circle 的 product compactification，需要额外 stress 与 radius stabilization。Circle 没有供 Maxwell two-form 穿过的二维 cycle；constant Wilson line 的 <span class="math inline">\(F=0\)</span>，本身也不提供所需 local stress。</p>
+<p>analytic_derivation：一个支撑例子是具有 shift symmetry 的 periodic scalar <span class="math inline">\(\chi\)</span>：</p>
+<div class="math display">\[
+S=\frac1{16\pi G_5}\int d^5x\sqrt{-g}
+\left[R-2\Lambda_5-\frac12(\partial\chi)^2\right],
+\]</div><div class="math display">\[
+ds_5^2=ds^2_{AdS_4(\ell_4)}+R_c^2d\theta^2,\qquad \chi=p\theta.
+\]</div><p><span class="math inline">\(\theta\sim\theta+2\pi\)</span>。Global consistency 要求 <span class="math inline">\(2\pi p\)</span> 是 scalar period 的整数倍；若 <span class="math inline">\(\chi\)</span> 是 noncompact、single-valued scalar，就不能直接采用此 winding ansatz。</p>
+<p>由 <span class="math inline">\(R_{AB}=\frac23\Lambda_5g_{AB}
++\frac12\partial_A\chi\,\partial_B\chi\)</span>，
+两个方向分别给出</p>
+<div class="math display">\[
+-\frac3{\ell_4^2}=\frac23\Lambda_5,\qquad
+0=\frac23\Lambda_5+\frac{p^2}{2R_c^2}.
+\]</div><p>所以当 <span class="math inline">\(\Lambda_5&lt;0\)</span>，</p>
+<div class="math display">\[
+\boxed{\ell_4^2=-\frac9{2\Lambda_5},\qquad
+R_c^2=-\frac{3p^2}{4\Lambda_5}}.
+\]</div><p>这是明确的 matter-supported product example，不是原始 RS，也不自动证明所有 radius modes 稳定。</p>
+<p>source_claim：更丰富的 supergravity / string construction 包含 circle duality twist 与 S-fold；可能有 varying scalars 和 warping。因此记号 <span class="math inline">\(AdS_4\times S^1\)</span> 有时首先指 topology，不保证 fields 都是简单 constant product。<a href="https://arxiv.org/abs/2101.07264"  target="_blank" rel="noreferrer">Arav et al.，AdS4 S-folds</a></p>
+
+<h3 class="relative group">10.4 AdS brane 与 AdS product 是两回事
+    <div id="104-ads-brane-与-ads-product-是两回事" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#104-ads-brane-%e4%b8%8e-ads-product-%e6%98%af%e4%b8%a4%e5%9b%9e%e4%ba%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>source_claim：Karch–Randall model 是 <span class="math inline">\(AdS_4\)</span> brane 嵌入 <span class="math inline">\(AdS_5\)</span> 的 warped setup；轻而有质量的 graviton 在适当尺度范围内可模拟四维引力。它不是 <span class="math inline">\(AdS_4\times S^1\)</span> direct product。<a href="https://arxiv.org/abs/hep-th/0011156"  target="_blank" rel="noreferrer">Karch–Randall，Locally Localized Gravity</a></p>
+
+<h2 class="relative group">11. AdS/CFT：连接几何与低维场论
+    <div id="11-adscft连接几何与低维场论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-adscft%e8%bf%9e%e6%8e%a5%e5%87%a0%e4%bd%95%e4%b8%8e%e4%bd%8e%e7%bb%b4%e5%9c%ba%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>source_claim：Anti-de Sitter / Conformal Field Theory correspondence（AdS/CFT）联系 <span class="math inline">\(AdS_{d+1}\)</span> quantum gravity 与 <span class="math inline">\(d\)</span> 维 boundary quantum field theory。经典例子是 type IIB string theory on <span class="math inline">\(AdS_5\times S^5\)</span> 与四维 <span class="math inline">\(\mathcal N=4\)</span> super Yang–Mills theory。Classical gravity approximation 要求适当的 large-<span class="math inline">\(N\)</span>、strong-coupling 与小 bulk curvature regime。<a href="https://arxiv.org/abs/hep-th/9711200"  target="_blank" rel="noreferrer">Maldacena，AdS/CFT 原始 proposal</a></p>
+<p><strong>不要混淆两次“降维”：</strong>在 <span class="math inline">\(S^5\)</span> 上 KK reduction 得到五维 bulk theory；从 <span class="math inline">\(AdS_5\)</span> 到四维 boundary theory 则是 holographic duality。前者按 internal modes 重写自由度，后者把整个 bulk quantum theory 用 boundary variables 描述。</p>
+
+<h3 class="relative group">11.1 Radial coordinate 与 RG scale
+    <div id="111-radial-coordinate-与-rg-scale" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#111-radial-coordinate-%e4%b8%8e-rg-scale" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>analytic_derivation：Poincaré AdS 在
+<span class="math inline">\((x^\mu,z)\mapsto(sx^\mu,sz)\)</span> 下保持 metric invariant。由此获得直观的 energy–radius relation：</p>
+<div class="math display">\[
+\mu\sim z^{-1}.
+\]</div><p><span class="math inline">\(z\to0\)</span> 对应 UV，较大 <span class="math inline">\(z\)</span> 对应 IR；比例系数依坐标与 normalization 而定。Radial coordinate 的 renormalization-group（RG）解释属于 holographic interpretation，不等于普通空间维度的 compactification。</p>
+<p>source_claim：RS 的 UV brane 可对应 ultraviolet cutoff 与 dynamical gravity；RS1 的 IR brane 对应 infrared conformal-symmetry breaking / mass scale；RS2 可用 cutoff CFT coupled to gravity 解释。具体 dual field theory 依 completion 和 fields 而定。<a href="https://arxiv.org/abs/hep-th/0012148"  target="_blank" rel="noreferrer">Arkani-Hamed, Porrati and Randall，Holography and Phenomenology</a></p>
+
+<h3 class="relative group">11.2 最基本的 scalar dictionary
+    <div id="112-最基本的-scalar-dictionary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#112-%e6%9c%80%e5%9f%ba%e6%9c%ac%e7%9a%84-scalar-dictionary" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>source_claim：Euclidean generating-functional relation 示意为</p>
+<div class="math display">\[
+Z_{\rm bulk}[\Phi|_{\partial}=J]\simeq e^{-S_{\rm ren,on-shell}[J]}
+=Z_{\rm CFT}[J],
+\qquad
+Z_{\rm CFT}[J]=\left\langle e^{\int d^dx\,J\mathcal O}\right\rangle.
+\]</div><p>这里 boundary value 指适当 rescaling 后的 source coefficient；<span class="math inline">\(S_{\rm ren,on-shell}\)</span> 包含 boundary counterterms。Correlators 来自 source functional derivatives。<a href="https://arxiv.org/abs/hep-th/9802150"  target="_blank" rel="noreferrer">Witten，correlators 与 operator dimensions</a></p>
+<p>analytic_derivation：<span class="math inline">\(AdS_{d+1}\)</span> 上 mass 为 <span class="math inline">\(m\)</span> 的 scalar，其 near-boundary radial equation 为</p>
+<div class="math display">\[
+z^2\Phi&#39;&#39;-(d-1)z\Phi&#39;-m^2\ell^2\Phi\simeq0.
+\]</div><p>设 <span class="math inline">\(\Phi\sim(z/\ell)^s\)</span>，得</p>
+<div class="math display">\[
+s(s-d)=m^2\ell^2,\qquad
+\Delta_\pm=\frac d2\pm\sqrt{\frac{d^2}{4}+m^2\ell^2}.
+\]</div><p>所以</p>
+<div class="math display">\[
+\Phi\sim(z/\ell)^{\Delta_-}J_b(x)+(z/\ell)^{\Delta_+}B(x)+\cdots,
+\qquad m^2\ell^2=\Delta(\Delta-d).
+\]</div><p>在 standard quantization 中，operator dimension 是 <span class="math inline">\(\Delta_+\)</span>，<span class="math inline">\(J_b\)</span> 是 bulk source coefficient，<span class="math inline">\(B\)</span> 与 expectation value 相关；其比例因子与 contact terms 由 action normalization 和 renormalization 决定，不能普遍写成 <span class="math inline">\(\langle\mathcal O\rangle=B\)</span>。</p>
+<p>本文 bulk scalar <span class="math inline">\(\Phi\)</span> 使用统一引力前因子，可取为无量纲，因而 <span class="math inline">\(J_b,B\)</span> 无量纲；QFT normalization 中 <span class="math inline">\([J]=\mathrm{length}^{\Delta-d}\)</span>。二者需要 powers of <span class="math inline">\(\ell\)</span> 与 action-dependent normalization 映射，例如可写 <span class="math inline">\(J=\mathcal N_J\ell^{\Delta-d}J_b\)</span>，其中 <span class="math inline">\(\mathcal N_J\)</span> 为 normalization constant；不能把两个 source 的单位直接混同。上面的 generating functional 示意式已经隐含这一 source mapping。</p>
+<p>source_claim：Breitenlohner–Freedman（BF）bound 为
+<span class="math inline">\(m^2\ell^2\ge-d^2/4\)</span>；AdS 中某些 negative mass-squared scalars 仍可稳定。该条件讨论 linear scalar dynamics 与适当 boundary conditions，不是全体系稳定性证明。根号为实数只是局部检查。<a href="https://arxiv.org/abs/hep-th/9802150"  target="_blank" rel="noreferrer">Witten，scalar dimensions 与 negative mass-squared</a></p>
+<p>例如 <span class="math inline">\(AdS_5\)</span> 有 <span class="math inline">\(d=4\)</span>；<span class="math inline">\(m^2\ell^2=-3\)</span> 时两根为 <span class="math inline">\(1,3\)</span>。<span class="math inline">\(AdS_4\)</span> 有 <span class="math inline">\(d=3\)</span>；<span class="math inline">\(m^2\ell^2=-2\)</span> 时两根为 <span class="math inline">\(1,2\)</span>。整数根差不自动要求 logarithmic term；是否出现 log 需检查完整 Frobenius recurrence、boundary condition 和 interactions。</p>
+
+<h3 class="relative group">11.3 Gravity dimension 与 CFT dimension
+    <div id="113-gravity-dimension-与-cft-dimension" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#113-gravity-dimension-%e4%b8%8e-cft-dimension" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Bulk external factor</th>
+					<th>相应 conformal boundary dimension</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="math inline">\(AdS_5\)</span>，如 RS bulk 局部几何</td>
+					<td>四维；RS branes 引入 cutoff 与 dynamical ingredients。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(AdS_3\)</span>，如 <span class="math inline">\(AdS_3\times S^2\)</span></td>
+					<td>二维；<span class="math inline">\(S^2\)</span> internal modes 编码 operator content 等信息。</td>
+			</tr>
+			<tr>
+					<td><span class="math inline">\(AdS_4\)</span>，如 <span class="math inline">\(AdS_4\times S^1\)</span></td>
+					<td>三维；circle reduction 后的 gravity 本身是四维。</td>
+			</tr>
+	</tbody>
+</table>
+<p>“得到四维 gravity”与“dual CFT 是四维”是不同的维数陈述。</p>
+
+<h2 class="relative group">12. Black holes、cosmology 与 phenomenology
+    <div id="12-black-holescosmology-与-phenomenology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-black-holescosmology-%e4%b8%8e-phenomenology" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">12.1 Brane black holes：bulk 与 brane 的分工
+    <div id="121-brane-black-holesbulk-与-brane-的分工" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-brane-black-holesbulk-%e4%b8%8e-brane-%e7%9a%84%e5%88%86%e5%b7%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>source_claim：对 Einstein bulk、体中仅有 <span class="math inline">\(\Lambda_5\)</span> 与 <span class="math inline">\(Z_2\)</span> symmetric brane，膜上有效方程为</p>
+<div class="math display">\[
+G_{\mu\nu}=-\Lambda_4h_{\mu\nu}+8\pi G_4T_{\mu\nu}
++\kappa_5^4\Pi_{\mu\nu}-E_{\mu\nu},
+\qquad \kappa_5^2=8\pi G_5.
+\]</div><p><span class="math inline">\(T_{\mu\nu}\)</span> 是除 tension 外的 brane matter，<span class="math inline">\(\Pi_{\mu\nu}\)</span> 是 quadratic correction，<span class="math inline">\(E_{\mu\nu}\)</span> 是 bulk Weyl tensor 的 electric projection。<a href="https://arxiv.org/abs/gr-qc/9910076"  target="_blank" rel="noreferrer">Shiromizu–Maeda–Sasaki，effective brane equations</a></p>
+<p><span class="math inline">\(E_{\mu\nu}\)</span> 一般不能仅由 brane-local data 确定。看似四维 charged black-hole metric 的参数可能代表 bulk tidal effects，不能只凭 metric 形式解释为 Maxwell charge。加入 EMD bulk matter 或 GB 后，上式需修改。</p>
+
+<h3 class="relative group">12.2 不同问题对应的结构
+    <div id="122-不同问题对应的结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#122-%e4%b8%8d%e5%90%8c%e9%97%ae%e9%a2%98%e5%af%b9%e5%ba%94%e7%9a%84%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>研究问题</th>
+					<th>优先考虑的结构</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Electroweak hierarchy、spin-2 resonances、radion</td>
+					<td>RS1 与 stabilization；masses 和 couplings 依 model parameters。</td>
+			</tr>
+			<tr>
+					<td>Long-distance gravity 与 infinite extra dimension</td>
+					<td>RS2 zero mode 与 continuum corrections。</td>
+			</tr>
+			<tr>
+					<td>Higher-dimensional solution generation</td>
+					<td>Circle KK uplift / reduction 与特定 EMD coupling。</td>
+			</tr>
+			<tr>
+					<td>Charged scalar dynamics、holographic matter</td>
+					<td>指定 <span class="math inline">\(f(\phi),V(\phi)\)</span> 的 EMD，检查 asymptotics 与 boundary data。</td>
+			</tr>
+			<tr>
+					<td>Curvature corrections、branches、entropy</td>
+					<td>EGB 或明确指定的 higher-derivative theory。</td>
+			</tr>
+			<tr>
+					<td>Magnetic strings、Bañados–Teitelboim–Zanelli（BTZ）sectors</td>
+					<td><span class="math inline">\(AdS_3\times S^2\)</span> 与支撑它的 flux / matter。</td>
+			</tr>
+			<tr>
+					<td>Four-dimensional AdS effective theory</td>
+					<td><span class="math inline">\(AdS_4\times S^1\)</span> 的支撑、radius stabilization 与 retained fields。</td>
+			</tr>
+	</tbody>
+</table>
+<p>source_claim：RS2 cosmological extension 中，高能密度可产生 Friedmann equation 的 <span class="math inline">\(\rho^2\)</span> correction 和 bulk-related dark radiation；需要指定 cosmological ansatz，不从静态 flat-brane metric 自动得到。<a href="https://arxiv.org/abs/hep-ph/0103214"  target="_blank" rel="noreferrer">Hebecker and March-Russell，RSII Cosmology, AdS/CFT, and the Bulk Black Hole</a></p>
+<p>hypothesis：具体 brane scalarization 项目中，EMD coupling、radion dynamics 或 GB 可能改变 scalar instability threshold；必须先冻结 action、background、boundary conditions 和 perturbation sector 再计算。本文不把这种可能性作为已有结果，也不把它变成原项目当前 numerical task 的前置门槛。</p>
+
+<h2 class="relative group">13. 常见混淆与约定差异
+    <div id="13-常见混淆与约定差异" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-%e5%b8%b8%e8%a7%81%e6%b7%b7%e6%b7%86%e4%b8%8e%e7%ba%a6%e5%ae%9a%e5%b7%ae%e5%bc%82" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><strong><span class="math inline">\(AdS_5\)</span> 不等于 <span class="math inline">\(AdS_4\times S^1\)</span>。</strong> 前者 constant curvature，后者两个因子曲率不同。</li>
+<li><strong>RS brane 不自动是 conformal boundary。</strong> 有限 radial position 的 UV brane 是 cutoff surface；tension、matter 与 gravity terms 要独立指定。</li>
+<li><strong>KK modes 不要求 compact internal space。</strong> RS2 有 continuum KK modes。</li>
+<li><strong>EMD dilaton 不自动是 radion。</strong> 一个可能是 fundamental bulk scalar，另一个来自 geometry；识别须依据 reduction action。</li>
+<li><strong>GB 不等于任意 scalar–curvature coupling。</strong> <span class="math inline">\(f(\phi)\mathcal G\)</span> 与 constant <span class="math inline">\(\alpha\mathcal G\)</span> 的动力学不同。</li>
+<li><strong>Background 存在不等于 compactification 稳定。</strong> Radius、shape 与其他 modes 需单独检查；AdS negative mass-squared 需满足相应 BF bound。</li>
+<li><strong>KK truncation 不自动 consistent。</strong> Retained fields 不应源出 discarded modes；zero-mode bookkeeping 不代替此检查。</li>
+<li><strong>AdS background 不自动给出已知完整 CFT dual。</strong> Holographic interpretation 与 microscopic identification 是不同证据等级。</li>
+<li><strong>Source exponent 不总是 operator dimension。</strong> Standard quantization 中 source falloff 为 <span class="math inline">\(d-\Delta\)</span>；特殊 masses 与 alternative quantization 要另述。</li>
+<li><strong>Compile success 不是物理证明。</strong> PDF 检查负责呈现，Mathematica/xAct 检查明确范围的公式，完整模型仍有独立证据要求。</li>
+</ol>
+
+<h2 class="relative group">14. 建议练习与答案
+    <div id="14-建议练习与答案" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-%e5%bb%ba%e8%ae%ae%e7%bb%83%e4%b9%a0%e4%b8%8e%e7%ad%94%e6%a1%88" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">练习一：RS hierarchy
+    <div id="练习一rs-hierarchy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%b8%80rs-hierarchy" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>取 <span class="math inline">\(m_0=10^{18}\,\mathrm{GeV}\)</span>、<span class="math inline">\(m_{\rm 4D}=10^3\,\mathrm{GeV}\)</span>，求 <span class="math inline">\(kL\)</span> 并检查量纲。</p>
+<p>答案：<span class="math inline">\(kL=\ln(10^{15})\simeq34.54\)</span>；
+<span class="math inline">\([k]=\mathrm{length}^{-1}\)</span>、<span class="math inline">\([L]=\mathrm{length}\)</span>。
+这只是 mass-ratio 示例，不是 experimental constraints 的最佳拟合。</p>
+
+<h3 class="relative group">练习二：RS1 graviphoton parity
+    <div id="练习二rs1-graviphoton-parity" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%ba%8crs1-graviphoton-parity" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Reflection 如何作用于 <span class="math inline">\(dx^\mu dy\)</span>？</p>
+<p>答案：<span class="math inline">\(dy\mapsto-dy\)</span>；保持 line element invariant 要求
+<span class="math inline">\(g_{\mu y}(x,-y)=-g_{\mu y}(x,y)\)</span>。
+Constant vector zero mode 不满足 odd condition，被 projection 去掉。</p>
+
+<h3 class="relative group">练习三：product-vacuum obstruction
+    <div id="练习三product-vacuum-obstruction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%b8%89product-vacuum-obstruction" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><span class="math inline">\(\Lambda_5&lt;0\)</span>、没有 matter 时，为什么 <span class="math inline">\(AdS_4\times S^1\)</span> 不成立？</p>
+<p>答案：circle equation 左边为零，右边为非零 <span class="math inline">\(\frac23\Lambda_5g_{\theta\theta}\)</span>；只满足 AdS directions 不够。</p>
+
+<h3 class="relative group">练习四：constant EMD scalar
+    <div id="练习四constant-emd-scalar" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e5%9b%9bconstant-emd-scalar" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><span class="math inline">\(f=e^{-a\phi}\)</span>、<span class="math inline">\(V=0\)</span>、<span class="math inline">\(a\ne0\)</span> 时，能否取 nonzero pure magnetic field 与 constant <span class="math inline">\(\phi\)</span>？</p>
+<p>答案：scalar equation 要求 <span class="math inline">\(f&#39;F^2=0\)</span>；pure magnetic field 的 <span class="math inline">\(F^2&gt;0\)</span> 且 <span class="math inline">\(f&#39;\ne0\)</span>，所以 ansatz 不成立。适当 <span class="math inline">\(V\)</span>、不同 field configuration 或 varying scalar 可能解除 obstruction。</p>
+
+<h3 class="relative group">练习五：operator dimension
+    <div id="练习五operator-dimension" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e4%ba%94operator-dimension" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><span class="math inline">\(AdS_4\)</span> 中 <span class="math inline">\(m^2\ell^2=-2\)</span>，求 falloff exponents。</p>
+<p>答案：<span class="math inline">\(d=3\)</span>，<span class="math inline">\(\Delta_-=1\)</span>、<span class="math inline">\(\Delta_+=2\)</span>。
+Standard quantization 有 <span class="math inline">\(\Delta=2\)</span>，source falloff 为 <span class="math inline">\(z^{d-\Delta}=z\)</span>。
+两个 roots 不足以决定是否有 log。</p>
+
+<h3 class="relative group">练习六：GB Einstein branch
+    <div id="练习六gb-einstein-branch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%83%e4%b9%a0%e5%85%adgb-einstein-branch" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>为什么 <span class="math inline">\(u_-\)</span> 有 Einstein limit，而 <span class="math inline">\(u_+\)</span> 没有？</p>
+<p>答案：</p>
+<div class="math display">\[
+\sqrt{1+\frac43\alpha\Lambda_5}
+=1+\frac23\alpha\Lambda_5+\mathcal O(\alpha^2).
+\]</div><p>所以 <span class="math inline">\(u_-=-\Lambda_5/6+\mathcal O(\alpha)\)</span>，
+<span class="math inline">\(u_+=1/(2\alpha)+\mathcal O(1)\)</span>。
+这仅验证 limit，不证明 perturbative stability。</p>
+
+<h2 class="relative group">15. 证据、来源与核验范围
+    <div id="15-证据来源与核验范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-%e8%af%81%e6%8d%ae%e6%9d%a5%e6%ba%90%e4%b8%8e%e6%a0%b8%e9%aa%8c%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">15.1 Evidence types
+    <div id="151-evidence-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#151-evidence-types" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>source_claim：</strong>完整 KK reduction、RS spectrum、junction conditions、duality、phenomenology 与文献完整 solutions；各节给出 primary-source links。</li>
+<li><strong>analytic_derivation：</strong>coordinate transformation、scalar normalization、Planck integral、Einstein-frame factors、curvature contractions、product obstruction、两个 toy backgrounds 与 scalar indicial polynomial。</li>
+<li><strong>numerical_evidence：</strong>本文不提供 numerical black-hole solutions、stability scan 或 experimental fits。指数示例与图示不承担存在性和稳定性证明。</li>
+<li><strong>hypothesis：</strong>第 12 节研究方向尚未成为任何项目已确认结论。</li>
+</ul>
+<p>本文整体为 concept synthesis；frontmatter 的 verified 仅表示列出的局部数学检查已通过与来源可追溯，不表示全部 source_claim 获独立证明。Mathematica 15.0 与 xTensor 已完成 28 项 exact checks，全部通过；只有 checks/ 列出的等式和假设范围标为 verified；来源陈述不因排版或软件化简变成独立证明。</p>
+
+<h3 class="relative group">15.2 Primary sources 与定位
+    <div id="152-primary-sources-与定位" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#152-primary-sources-%e4%b8%8e%e5%ae%9a%e4%bd%8d" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><a href="https://arxiv.org/abs/hep-ph/9905221"  target="_blank" rel="noreferrer">Randall and Sundrum, A Large Mass Hierarchy from a Small Extra Dimension</a>：set-up、metric、Planck scale、mass redshift 与 phenomenology。</li>
+<li><a href="https://arxiv.org/abs/hep-th/9906064"  target="_blank" rel="noreferrer">Randall and Sundrum, An Alternative to Compactification</a>：zero mode、continuum modes 与 Newton potential。</li>
+<li><a href="https://arxiv.org/abs/hep-ph/9907447"  target="_blank" rel="noreferrer">Goldberger and Wise, Modulus Stabilization with Bulk Fields</a>：bulk scalar 与 radion potential。</li>
+<li><a href="https://arxiv.org/abs/1909.00970"  target="_blank" rel="noreferrer">Lü, Mao and Wu, Asymptotic Structure of Einstein-Maxwell-Dilaton Theory and Its Five Dimensional Origin</a>：EMD Lagrangian Eq. (1)、uplift Eq. (60)；本文用 <span class="math inline">\(\phi\mapsto-\phi\)</span> 对齐 exponent signs。</li>
+<li><a href="https://arxiv.org/abs/hep-th/0010193"  target="_blank" rel="noreferrer">Lee, Gauss-Bonnet interaction in Randall-Sundrum compactification</a>：GB–RS branches；本文 <span class="math inline">\(\alpha\)</span> 为 dimensionful coupling，需映射 normalization。</li>
+<li><a href="https://arxiv.org/abs/hep-th/0703087"  target="_blank" rel="noreferrer">Castro, Davis, Kraus and Larsen, 5D Black Holes and Strings with Higher Derivatives</a>：magnetic-string near-horizon geometry；supersymmetric action 不等于本文 toy EM action。</li>
+<li><a href="https://arxiv.org/abs/2101.07264"  target="_blank" rel="noreferrer">Arav et al., A new family of AdS4 S-folds in type IIB string theory</a>：circle monodromy 与 higher-dimensional completion。</li>
+<li><a href="https://arxiv.org/abs/hep-th/0011156"  target="_blank" rel="noreferrer">Karch and Randall, Locally Localized Gravity</a>：<span class="math inline">\(AdS_4\)</span> brane in <span class="math inline">\(AdS_5\)</span>。</li>
+<li><a href="https://arxiv.org/abs/hep-th/9711200"  target="_blank" rel="noreferrer">Maldacena, The Large N Limit of Superconformal Field Theories and Supergravity</a>：AdS/CFT proposal。</li>
+<li><a href="https://arxiv.org/abs/hep-th/9802150"  target="_blank" rel="noreferrer">Witten, Anti De Sitter Space And Holography</a>：correlators、masses 与 operator dimensions。</li>
+<li><a href="https://arxiv.org/abs/hep-th/0012148"  target="_blank" rel="noreferrer">Arkani-Hamed, Porrati and Randall, Holography and Phenomenology</a>：cutoff CFT 与 dynamical gravity。</li>
+<li><a href="https://arxiv.org/abs/gr-qc/9910076"  target="_blank" rel="noreferrer">Shiromizu, Maeda and Sasaki, The Einstein Equations on the 3-Brane World</a>：effective brane equations 与 projected Weyl tensor。</li>
+<li><a href="https://arxiv.org/abs/hep-ph/0103214"  target="_blank" rel="noreferrer">Hebecker and March-Russell, Randall-Sundrum II Cosmology, AdS/CFT, and the Bulk Black Hole</a>：cosmological extension。</li>
+</ol>
+<p>来源链接与 web metadata 核对日期：2026-09-30。只有明确列出的 source equation numbers 使用原文编号；未声称逐式重新验证所有 cited papers。</p>
+
+<h2 class="relative group">16. 开放问题、相关笔记与移植说明
+    <div id="16-开放问题相关笔记与移植说明" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-%e5%bc%80%e6%94%be%e9%97%ae%e9%a2%98%e7%9b%b8%e5%85%b3%e7%ac%94%e8%ae%b0%e4%b8%8e%e7%a7%bb%e6%a4%8d%e8%af%b4%e6%98%8e" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">16.1 Optional study
+    <div id="161-optional-study" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#161-optional-study" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>hypothesis / optional study：</p>
+<ol>
+<li>完整推导 circle reduction 的 scalar kinetic term 与 total derivatives。</li>
+<li>求解 RS tensor perturbation 的 Schrödinger problem，比较 bound state 与 continuum。</li>
+<li>求 toy backgrounds 的 radius-mode potential，检查 BF bounds。</li>
+<li>学习 holographic renormalization 的 source、response、counterterms 与 logarithmic terms。</li>
+<li>具体 black-hole problem 中，先明确 bulk / brane action、embedding、normal conventions 与 boundary conditions，再建立 numerical task。</li>
+</ol>
+<p>这些是学习方向，不是本次笔记或原项目现有 task 的完成门槛。</p>
+
+<h3 class="relative group">16.2 与已有概念笔记的联系
+    <div id="162-与已有概念笔记的联系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#162-%e4%b8%8e%e5%b7%b2%e6%9c%89%e6%a6%82%e5%bf%b5%e7%ac%94%e8%ae%b0%e7%9a%84%e8%81%94%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>参考项目中的 Frobenius method 笔记帮助理解第 11 节 indicial roots 与 logarithmic terms；Gauss hypergeometric function 笔记帮助理解 BTZ perturbations 与可解析 radial equations。本文借用其规范和模板，不引用原项目未核验的 black-hole 结果。</p>
+
+<h3 class="relative group">16.3 Portable artifacts
+    <div id="163-portable-artifacts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#163-portable-artifacts" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>目录含 Markdown、shareable PDF、单文件 LaTeX source 和局部核验记录。LaTeX 内嵌图示、目录与参考链接，不使用原项目绝对路径、外部图片、custom class 或独立 bibliography file。XeLaTeX 编译两遍；默认 Fandol 字体，保留参考讲义 A4、字号、边距、配色、页眉页脚与独立封面。核验与 layout check 见 checks/verification.md。</p>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/randall-sundrum-and-related-theories/markdown.zip" download>Markdown &#43; resources</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/zotero-typora-obsidian-chatgpt-workflow/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/mcp-ai-research-environment/">
+              <span class="leading-6">
+                MCP 与 AI 辅助科研工作环境&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-一句话定义与阅读范围">1. 一句话定义与阅读范围</a></li>
+    <li><a href="#2-知识网络方法理论与背景">2. 知识网络：方法、理论与背景</a></li>
+    <li><a href="#3-符号单位与约定">3. 符号、单位与约定</a></li>
+    <li><a href="#4-ads-geometry四维切片可以平直">4. AdS geometry：四维切片可以平直</a></li>
+    <li><a href="#5-rs1geometric-redshift-与-hierarchy">5. RS1：geometric redshift 与 hierarchy</a>
+      <ul>
+        <li><a href="#51-为什么质量只带一个-warp-factor">5.1 为什么质量只带一个 warp factor？</a></li>
+        <li><a href="#52-radion-与-stabilization">5.2 Radion 与 stabilization</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-rs2非紧致额外维与-graviton-localization">6. RS2：非紧致额外维与 graviton localization</a></li>
+    <li><a href="#7-kk-reductionrs-也有-kk-modes但不是经典圆模型">7. KK reduction：RS 也有 KK modes，但不是经典圆模型</a>
+      <ul>
+        <li><a href="#71-metric-components-的低维解释">7.1 Metric components 的低维解释</a></li>
+        <li><a href="#72-rs-orbifold-改变-zero-mode-content">7.2 RS orbifold 改变 zero-mode content</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-emd特定-kk-理论是其中一个成员">8. EMD：特定 KK 理论是其中一个成员</a>
+      <ul>
+        <li><a href="#81-五维-cosmological-constant-降维后是什么">8.1 五维 cosmological constant 降维后是什么？</a></li>
+        <li><a href="#82-何时能得到-rs-like-background">8.2 何时能得到 RS-like background？</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-gaussbonnet修改动力学不是选择-compactification">9. Gauss–Bonnet：修改动力学，不是选择 compactification</a>
+      <ul>
+        <li><a href="#91-相同-ads-geometry参数关系已经改变">9.1 相同 AdS geometry，参数关系已经改变</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-product-backgrounds维数相同几何不同">10. Product backgrounds：维数相同，几何不同</a>
+      <ul>
+        <li><a href="#101-pure-einstein-加-cosmological-constant-为什么不够">10.1 Pure Einstein 加 cosmological constant 为什么不够？</a></li>
+        <li><a href="#102-magnetic-flux-支撑">10.2 Magnetic flux 支撑 $AdS_3\times S^2$</a></li>
+        <li><a href="#103--需要何种支撑">10.3 $AdS_4\times S^1$ 需要何种支撑？</a></li>
+        <li><a href="#104-ads-brane-与-ads-product-是两回事">10.4 AdS brane 与 AdS product 是两回事</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-adscft连接几何与低维场论">11. AdS/CFT：连接几何与低维场论</a>
+      <ul>
+        <li><a href="#111-radial-coordinate-与-rg-scale">11.1 Radial coordinate 与 RG scale</a></li>
+        <li><a href="#112-最基本的-scalar-dictionary">11.2 最基本的 scalar dictionary</a></li>
+        <li><a href="#113-gravity-dimension-与-cft-dimension">11.3 Gravity dimension 与 CFT dimension</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-black-holescosmology-与-phenomenology">12. Black holes、cosmology 与 phenomenology</a>
+      <ul>
+        <li><a href="#121-brane-black-holesbulk-与-brane-的分工">12.1 Brane black holes：bulk 与 brane 的分工</a></li>
+        <li><a href="#122-不同问题对应的结构">12.2 不同问题对应的结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-常见混淆与约定差异">13. 常见混淆与约定差异</a></li>
+    <li><a href="#14-建议练习与答案">14. 建议练习与答案</a>
+      <ul>
+        <li><a href="#练习一rs-hierarchy">练习一：RS hierarchy</a></li>
+        <li><a href="#练习二rs1-graviphoton-parity">练习二：RS1 graviphoton parity</a></li>
+        <li><a href="#练习三product-vacuum-obstruction">练习三：product-vacuum obstruction</a></li>
+        <li><a href="#练习四constant-emd-scalar">练习四：constant EMD scalar</a></li>
+        <li><a href="#练习五operator-dimension">练习五：operator dimension</a></li>
+        <li><a href="#练习六gb-einstein-branch">练习六：GB Einstein branch</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-证据来源与核验范围">15. 证据、来源与核验范围</a>
+      <ul>
+        <li><a href="#151-evidence-types">15.1 Evidence types</a></li>
+        <li><a href="#152-primary-sources-与定位">15.2 Primary sources 与定位</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-开放问题相关笔记与移植说明">16. 开放问题、相关笔记与移植说明</a>
+      <ul>
+        <li><a href="#161-optional-study">16.1 Optional study</a></li>
+        <li><a href="#162-与已有概念笔记的联系">16.2 与已有概念笔记的联系</a></li>
+        <li><a href="#163-portable-artifacts">16.3 Portable artifacts</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>

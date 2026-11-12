@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微分几何入门与广义相对论读书笔记 on 学物理的咸鱼</title>
+    <link>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/</link>
+    <description>Recent content in 微分几何入门与广义相对论读书笔记 on 学物理的咸鱼</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
+    <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
+    <copyright>© 2026 Peter Benjamin Zhu</copyright>
+    <lastBuildDate>Thu, 12 Nov 2026 11:00:00 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>微分几何入门与广义相对论(1)——集合与拓扑空间</title>
+      <link>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-01-sets-topology/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-01-sets-topology/</guid>
+      <description>梁灿彬教材学习笔记：集合、映射、拓扑空间、同胚与集合的拓扑性质</description>
+      
+    </item>
+    
+    <item>
+      <title>微分几何入门与广义相对论(2)——微分流形</title>
+      <link>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-02-manifolds/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-02-manifolds/</guid>
+      <description>梁灿彬教材学习笔记：坐标图、图册、微分结构、微分同胚与标量场</description>
+      
+    </item>
+    
+  </channel>
+</rss>

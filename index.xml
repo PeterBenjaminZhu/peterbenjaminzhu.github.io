@@ -9,7 +9,17 @@
     <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
     <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
     <copyright>© 2026 Peter Benjamin Zhu</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 01:10:59 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2026 11:00:00 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>微分几何入门与广义相对论(1)——集合与拓扑空间</title>
+      <link>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-01-sets-topology/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-01-sets-topology/</guid>
+      <description>梁灿彬教材学习笔记：集合、映射、拓扑空间、同胚与集合的拓扑性质</description>
+      
+    </item>
     
     <item>
       <title>第1章：数学物理方程的引入</title>
@@ -18,6 +28,66 @@
       <author>19973397352@163.com (Peter Benjamin Zhu)</author>
       <guid>https://peterbenjaminzhu.github.io/topics/kristensson-second-order-differential-equations/chapter-01-introduction/</guid>
       <description>从物理问题引入分离变量法，讨论其适用条件，并引入二阶线性微分方程与特殊函数的研究对象</description>
+      
+    </item>
+    
+    <item>
+      <title>微分几何入门与广义相对论(2)——微分流形</title>
+      <link>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-02-manifolds/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-02-manifolds/</guid>
+      <description>梁灿彬教材学习笔记：坐标图、图册、微分结构、微分同胚与标量场</description>
+      
+    </item>
+    
+    <item>
+      <title>MCP 与 AI 辅助科研工作环境</title>
+      <link>https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/mcp-ai-research-environment/</guid>
+      <description>介绍 MCP 的基本结构，以及 README、AGENTS.md 和项目目录在 AI 辅助研究中的作用</description>
+      
+    </item>
+    
+    <item>
+      <title>Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT</title>
+      <link>https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/randall-sundrum-and-related-theories/</guid>
+      <description>围绕五维几何理解 Randall–Sundrum 模型，并梳理 KK reduction、EMD、Gauss–Bonnet gravity 与 AdS/CFT 的关系</description>
+      
+    </item>
+    
+    <item>
+      <title>Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流</title>
+      <link>https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/</guid>
+      <description>记录文献管理、Markdown 笔记、知识库、计算验证与正式写作之间的个人科研工作流</description>
+      
+    </item>
+    
+    <item>
+      <title>在Schwarzschild时空中关于极角的测地线方程的解的问题</title>
+      <link>https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/schwarzschild-theta-geodesic/</guid>
+      <description>利用存在唯一性定理讨论Schwarzschild时空赤道面测地线的初值问题</description>
+      
+    </item>
+    
+    <item>
+      <title>证明：在一维无限深方势阱外波函数仅存在平凡解</title>
+      <link>https://peterbenjaminzhu.github.io/notes/infinite-square-well/</link>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/infinite-square-well/</guid>
+      <description>从有限深方势阱出发讨论束缚态波函数与无限深势阱极限</description>
       
     </item>
     

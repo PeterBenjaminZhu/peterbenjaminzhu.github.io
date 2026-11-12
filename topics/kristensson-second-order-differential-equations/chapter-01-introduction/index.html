@@ -122,8 +122,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.19172c069c9ef167acdc55f4179e5d78e991e03a164bbbe6f91510e206ed5061bd331b14dcb6680caea02ea77286012f42275c4d5c4b53820293357fd33874a7.css"
-    integrity="sha512-GRcsBpye8Wes3FX0F55deOmR4DoWS7vm&#43;RUQ4gbtUGG9MxsU3LZoDK6gLqdyhgEvQidcTVxLU4ICkzV/0zh0pw==">
+    href="/css/main.bundle.min.c24868d3816b0b801269d32ee43bb4a1084a81b542e1d5c0a3f705ef46543e287e32b68941a40f8fc765c0d38cc1b54e2af4901a12c4058d9089a50064c50aaf.css"
+    integrity="sha512-wkho04FrC4ASadMu5Du0oQhKgbVC4dXAo/cF70ZUPih&#43;MraJQaQPj8dlwNOMwbVOKvSQGhLEBY2QiaUAZMUKrw==">
 
   
   
@@ -295,16 +295,20 @@
   
   
     
+  
+  
+  
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
         tags: 'ams',
-        packages: {'[+]': ['tagformat']},
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
         tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
       },
-      loader: {load: ['[tex]/tagformat']},
+      loader: {load: ["[tex]/tagformat"]},
       options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
       chtml: {displayAlign: 'center'},
       startup: {
@@ -888,12 +892,12 @@
     
 </h2>
 <p>对于一个物理问题，我们一般是在一定的边界条件/初值条件下对 EOM (equation of motion) 进行求解。根据具体的问题我们有具体的 EOM，对于一般的物理问题，每一个 EOM 我们通常会得到一个 SODE (second-order differential equation)，要么是一个 SOODE (second-order ordinary differential equation)，要么是一个 SOPDE (second-order partial differential equation)。但无论怎样，我们总可以得到下面的数学形式：</p>
-$$
+<div class="math display">\[
 \begin{cases}
 \ \text{EOM}\\
 \ \text{Boundary value and/or initial value condition}
 \end{cases}
-$$<p>通过求解上面的数学问题，我们可以得到相关物理问题的解，从而明确我们所研究问题的行为。对于一个确定的物理问题，我们会利用坐标系在一个确定的维度下进行定量求解，通常来说我们的问题不会是一个单变量的情形。例如三维中的波动问题以及热传导问题均为一个多变量情形下的数学问题，为此我们物理人通常会使用一个 trick 将数学问题简化，这个 trick 就是 Separation of Variables (SOV，分离变量法)。</p>
+\]</div><p>通过求解上面的数学问题，我们可以得到相关物理问题的解，从而明确我们所研究问题的行为。对于一个确定的物理问题，我们会利用坐标系在一个确定的维度下进行定量求解，通常来说我们的问题不会是一个单变量的情形。例如三维中的波动问题以及热传导问题均为一个多变量情形下的数学问题，为此我们物理人通常会使用一个 trick 将数学问题简化，这个 trick 就是 Separation of Variables (SOV，分离变量法)。</p>
 
 <h2 class="relative group">SOV 以及其适用性
     <div id="sov-以及其适用性" class="anchor"></div>
@@ -906,39 +910,39 @@ $$<p>通过求解上面的数学问题，我们可以得到相关物理问题的
 </h2>
 <p>举一个简单例子来说明 SOV 是怎么做的。考虑二维波动方程</p>
 <p><span id="eq-wave-equation"></span></p>
-$$
+<div class="math display">\[
 \frac{\partial^2 u}{\partial t^2}=c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \tag{1}
-$$<p>我们的 ansatz (试解) 设为</p>
+\]</div><p>我们的 ansatz (试解) 设为</p>
 <p><span id="eq-wave-ansatz"></span></p>
-$$
+<div class="math display">\[
 u(t,x,y)=T(t)X(x)Y(y) \tag{2}
-$$<p>代入<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-wave-equation" >式 (1)</a> 并化简后可以得到</p>
-$$
-\frac{T''(t)}{c^2 T(t)}=\frac{X''(x)}{X(x)}+\frac{Y''(y)}{Y(y)}
-$$<p>上式左边仅依赖 $t$，右边仅依赖 $x$， $y$，又因为这三个变量的变化本身是独立的，故而等式两边必须等于同一个常数。接下来可以继续分离 $x$ 和 $y$，得到三个 ODE。</p>
+\]</div><p>代入<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-wave-equation" >式 (1)</a> 并化简后可以得到</p>
+<div class="math display">\[
+\frac{T&#39;&#39;(t)}{c^2 T(t)}=\frac{X&#39;&#39;(x)}{X(x)}+\frac{Y&#39;&#39;(y)}{Y(y)}
+\]</div><p>上式左边仅依赖 <span class="math inline">\(t\)</span>，右边仅依赖 <span class="math inline">\(x\)</span>， <span class="math inline">\(y\)</span>，又因为这三个变量的变化本身是独立的，故而等式两边必须等于同一个常数。接下来可以继续分离 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span>，得到三个 ODE。</p>
 <p>再举一个不含时的例子，考虑 Helmholtz 方程</p>
 <p><span id="eq-helmholtz-equation"></span></p>
-$$
+<div class="math display">\[
 \nabla^2 \Phi(x,y,z) + k^2 \Phi(x,y,z) = 0 \tag{3}
-$$<p>我们的 ansatz 设为</p>
+\]</div><p>我们的 ansatz 设为</p>
 <p><span id="eq-helmholtz-ansatz"></span></p>
-$$
+<div class="math display">\[
 \Phi(x,y,z)=X_\alpha(x)Y_\beta(y)Z_\gamma(z) \tag{4}
-$$<p>其中 $(\alpha, \beta, \gamma)$ 为满足 Helmholtz 方程的 $X_\alpha(x), Y_\beta(y),Z_\gamma(z)$ 的一组指标。通过求解 Helmholtz 方程可以得到函数 $\Phi(x,y,z)$ 满足</p>
-$$
+\]</div><p>其中 <span class="math inline">\((\alpha, \beta, \gamma)\)</span> 为满足 Helmholtz 方程的 <span class="math inline">\(X_\alpha(x), Y_\beta(y),Z_\gamma(z)\)</span> 的一组指标。通过求解 Helmholtz 方程可以得到函数 <span class="math inline">\(\Phi(x,y,z)\)</span> 满足</p>
+<div class="math display">\[
 \Phi(x,y,z)=\sum_{\alpha,\beta,\gamma} X_\alpha(x)Y_\beta(y)Z_\gamma(z)
-$$<p>代入<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-helmholtz-equation" >式 (3)</a> 并化简后可以得到</p>
-$$
-\frac{X''_\alpha(x)}{X_\alpha(x)} + \frac{Y''_\beta(y)}{Y_\beta(y)} + \frac{Z''_\gamma(z)}{Z_\gamma(z)} = -k^2
-$$<p>考虑到 $x$，$y$ 和 $z$ 均是独立变化，故而三个分式应当都各自等于一个常数，即有</p>
-$$
+\]</div><p>代入<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-helmholtz-equation" >式 (3)</a> 并化简后可以得到</p>
+<div class="math display">\[
+\frac{X&#39;&#39;_\alpha(x)}{X_\alpha(x)} + \frac{Y&#39;&#39;_\beta(y)}{Y_\beta(y)} + \frac{Z&#39;&#39;_\gamma(z)}{Z_\gamma(z)} = -k^2
+\]</div><p>考虑到 <span class="math inline">\(x\)</span>，<span class="math inline">\(y\)</span> 和 <span class="math inline">\(z\)</span> 均是独立变化，故而三个分式应当都各自等于一个常数，即有</p>
+<div class="math display">\[
 \begin{cases}
-\ X''_\alpha(x) + \alpha X_\alpha(x) = 0\\
-\ Y''_\beta(y) + \beta Y_\beta(y) = 0\\
-\ Z''_\gamma(z) + \gamma Z_\gamma(z) = 0\\
+\ X&#39;&#39;_\alpha(x) + \alpha X_\alpha(x) = 0\\
+\ Y&#39;&#39;_\beta(y) + \beta Y_\beta(y) = 0\\
+\ Z&#39;&#39;_\gamma(z) + \gamma Z_\gamma(z) = 0\\
 \ \alpha + \beta + \gamma = k^2
 \end{cases}
-$$<p>具体的 $(\alpha, \beta, \gamma)$ 的大小由边界条件确定，明确边界条件后可通过指标的正负判断各部分是振荡的，还是线性的，或者是指数衰减的。</p>
+\]</div><p>具体的 <span class="math inline">\((\alpha, \beta, \gamma)\)</span> 的大小由边界条件确定，明确边界条件后可通过指标的正负判断各部分是振荡的，还是线性的，或者是指数衰减的。</p>
 <p>一般情况下，我们似乎并没有讨论过 SOV 这个方法的适用性问题，通常情况下都是先如式 (<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-wave-ansatz" >2</a>,<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-helmholtz-ansatz" >4</a>) 写一个 ansatz 然后代进去，看看原方程能不能整理成分离变量的形式，如果可以那么 SOV 方法就适用，如果不行就不适用。<del>这就是我们物理人的适用性判断方法，问题解决。</del>为此，我们将利用很小的篇幅简单说一下这个小问题应该怎么理解。</p>
 
 <h3 class="relative group">适用性 (1) —— 方程无耦合项
@@ -951,21 +955,21 @@ $$<p>具体的 $(\alpha, \beta, \gamma)$ 的大小由边界条件确定，明确
     
 </h3>
 <p>以一个具体的物理问题为切入点，考虑二维定态 Schrodinger 方程</p>
-$$
+<div class="math display">\[
 -\frac{\hbar^2}{2m} \left( \frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} \right) + V(x,y)\psi = E\psi
-$$<p>如果势能项 $V(x,y)$ 满足</p>
-$$
+\]</div><p>如果势能项 <span class="math inline">\(V(x,y)\)</span> 满足</p>
+<div class="math display">\[
 V(x,y)=V(x)+V(y)
-$$<p>那么 SOV 方法能正常进行。如果 $V(x,y)$ 存在耦合项，例如</p>
-$$
+\]</div><p>那么 SOV 方法能正常进行。如果 <span class="math inline">\(V(x,y)\)</span> 存在耦合项，例如</p>
+<div class="math display">\[
 V(x,y) = \frac{1}{2}m\omega^2(x^2 + y^2) + \lambda x^2y^2,\quad \lambda\neq 0
-$$<p>利用 SOV 可得， $\psi=X(x)Y(y)$，代入后可得</p>
-$$
--\frac{\hbar^2}{2m}\frac{X''}{X} + \frac{1}{2}m\omega^2x^2 - \frac{\hbar^2}{2m}\frac{Y''}{Y} + \frac{1}{2}m\omega^2y^2 + \lambda x^2y^2 = E
-$$<p>很明显的是，由于存在了 $x^2y^2$ 这一同时依赖两个变量的项，我们无法将上面的方程化为 SOV 期待的形式。如果还不清楚，我们可以对上式求混合偏导数 $\partial_x\partial_y$ 可以发现，最后留下的是</p>
-$$
+\]</div><p>利用 SOV 可得， <span class="math inline">\(\psi=X(x)Y(y)\)</span>，代入后可得</p>
+<div class="math display">\[
+-\frac{\hbar^2}{2m}\frac{X&#39;&#39;}{X} + \frac{1}{2}m\omega^2x^2 - \frac{\hbar^2}{2m}\frac{Y&#39;&#39;}{Y} + \frac{1}{2}m\omega^2y^2 + \lambda x^2y^2 = E
+\]</div><p>很明显的是，由于存在了 <span class="math inline">\(x^2y^2\)</span> 这一同时依赖两个变量的项，我们无法将上面的方程化为 SOV 期待的形式。如果还不清楚，我们可以对上式求混合偏导数 <span class="math inline">\(\partial_x\partial_y\)</span> 可以发现，最后留下的是</p>
+<div class="math display">\[
 4\lambda xy = 0
-$$<p>而上式不能在一个二维的开区域中恒成立。像这样，<strong>存在耦合</strong>的 EOM 特别是有关非谐耦合的束缚问题，会由于存在同时由两个或多个方向共同决定的项而不好或者不能使用 SOV 进行计算。在某些情况下，这种耦合项可以通过坐标选择消除，例如使用球坐标系可以将一些在笛卡尔坐标系下有耦合的情形解耦，这时候我们又可以开心地使用 SOV 解决问题了😊。</p>
+\]</div><p>而上式不能在一个二维的开区域中恒成立。像这样，<strong>存在耦合</strong>的 EOM 特别是有关非谐耦合的束缚问题，会由于存在同时由两个或多个方向共同决定的项而不好或者不能使用 SOV 进行计算。在某些情况下，这种耦合项可以通过坐标选择消除，例如使用球坐标系可以将一些在笛卡尔坐标系下有耦合的情形解耦，这时候我们又可以开心地使用 SOV 解决问题了😊。</p>
 
 <h3 class="relative group">适用性 (2) —— 边界条件允许
     <div id="适用性-2--边界条件允许" class="anchor"></div>
@@ -976,19 +980,19 @@ $$<p>而上式不能在一个二维的开区域中恒成立。像这样，<stron
     </span>
     
 </h3>
-<p>回到<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-helmholtz-equation" >式 (3)</a> 的情形，假设在长宽高分别为 $a$，$b$，$c$ 的盒边界 $\partial\Omega$ 处满足 $\Phi\vert_{\partial\Omega}=0$，那么我们可以解得</p>
-$$
+<p>回到<a href="/topics/kristensson-second-order-differential-equations/chapter-01-introduction/#eq-helmholtz-equation" >式 (3)</a> 的情形，假设在长宽高分别为 <span class="math inline">\(a\)</span>，<span class="math inline">\(b\)</span>，<span class="math inline">\(c\)</span> 的盒边界 <span class="math inline">\(\partial\Omega\)</span> 处满足 <span class="math inline">\(\Phi\vert_{\partial\Omega}=0\)</span>，那么我们可以解得</p>
+<div class="math display">\[
 \Phi_{\alpha\beta\gamma}(x,y,z) = \sin\frac{\alpha\pi x}{a}\sin\frac{\beta\pi y}{b}\sin\frac{\gamma\pi z}{c}
-$$<p>但如果有一个边缘不规则，比如在 $y=b$ 处其边界变成沿 $z$ 方向延伸的不规则曲面（先不考虑这样的设定是否合理），那么该侧面上的边界条件变为</p>
-$$
+\]</div><p>但如果有一个边缘不规则，比如在 <span class="math inline">\(y=b\)</span> 处其边界变成沿 <span class="math inline">\(z\)</span> 方向延伸的不规则曲面（先不考虑这样的设定是否合理），那么该侧面上的边界条件变为</p>
+<div class="math display">\[
 X_\alpha(x)Y_\beta(f(x))Z_\gamma(z)=0
-$$<p>在 non-trivial 的情形下，$Z_\gamma(z)$ 不恒为零，因此</p>
-$$
+\]</div><p>在 non-trivial 的情形下，<span class="math inline">\(Z_\gamma(z)\)</span> 不恒为零，因此</p>
+<div class="math display">\[
 X_\alpha(x)Y_\beta(f(x))=0
-$$<p>这个条件就同时约束了 $X_\alpha(x)$ 和 $Y_\beta(y)$ 。我们假设 其边界为 $y=f(x)=b+\epsilon x$ 这样的小斜面，由于 $X_\alpha (x)$ 不恒为零，故有 $Y_\beta(b+\epsilon x)=0$。而在所有 $b+\epsilon x$ 遍历的区间上，$Y_\beta(y)=0$ 始终成立，又由分离变量后的方程</p>
-$$
-Y_\beta''(y)+\beta Y_\beta(y)=0
-$$<p>在这个区间上任选一点 $y_0$ 都有 $Y_\beta(y_0)=Y'_\beta(y_0)=0$，此时的解变成了 trivial 解。这个解显然是不正常的，虽然 EOM 支持分离变量操作，但是边界条件同时限制了两个方向的行为，从而不能得到正常的物理解。关于这个小斜面的问题如果在倾角较小的时候可以通过微扰理论分析，如果是一般倾斜程度可以直接考虑利用有限元方法求解本征值和本征函数。</p>
+\]</div><p>这个条件就同时约束了 <span class="math inline">\(X_\alpha(x)\)</span> 和 <span class="math inline">\(Y_\beta(y)\)</span> 。我们假设 其边界为 <span class="math inline">\(y=f(x)=b+\epsilon x\)</span> 这样的小斜面，由于 <span class="math inline">\(X_\alpha (x)\)</span> 不恒为零，故有 <span class="math inline">\(Y_\beta(b+\epsilon x)=0\)</span>。而在所有 <span class="math inline">\(b+\epsilon x\)</span> 遍历的区间上，<span class="math inline">\(Y_\beta(y)=0\)</span> 始终成立，又由分离变量后的方程</p>
+<div class="math display">\[
+Y_\beta&#39;&#39;(y)+\beta Y_\beta(y)=0
+\]</div><p>在这个区间上任选一点 <span class="math inline">\(y_0\)</span> 都有 <span class="math inline">\(Y_\beta(y_0)=Y&#39;_\beta(y_0)=0\)</span>，此时的解变成了 trivial 解。这个解显然是不正常的，虽然 EOM 支持分离变量操作，但是边界条件同时限制了两个方向的行为，从而不能得到正常的物理解。关于这个小斜面的问题如果在倾角较小的时候可以通过微扰理论分析，如果是一般倾斜程度可以直接考虑利用有限元方法求解本征值和本征函数。</p>
 
 <h3 class="relative group">适用性 (3) —— 方程保持线性
     <div id="适用性-3--方程保持线性" class="anchor"></div>
@@ -1000,12 +1004,12 @@ $$<p>在这个区间上任选一点 $y_0$ 都有 $Y_\beta(y_0)=Y'_\beta(y_0)=0$�
     
 </h3>
 <p>考虑一个非线性回复力的连续介质中的波动方程</p>
-$$
+<div class="math display">\[
 \frac{\partial^2 u}{\partial t^2}-c^2\frac{\partial^2 u}{\partial x^2}+\alpha u +\beta u^3=0
-$$<p>尝试使用 SOV $u(t,x)=T(t)X(x)$ 并化简后得</p>
-$$
-\frac{T''(t)}{T(t)} - c^2\frac{X''(x)}{X(x)} + \alpha + \beta T^2(t)X^2(x) = 0
-$$<p>这个问题就更显然了，分离变量后直接出现了非线性耦合的时间和空间项，这直接使得我们乘积形式的分离变量方法“破产”。而且，对于非线性的方程，我们也不能通过找到的若干特殊解通过线性组合得到满足原方程的新解，这使得使用 SOV 方法求解更无望了😭。</p>
+\]</div><p>尝试使用 SOV <span class="math inline">\(u(t,x)=T(t)X(x)\)</span> 并化简后得</p>
+<div class="math display">\[
+\frac{T&#39;&#39;(t)}{T(t)} - c^2\frac{X&#39;&#39;(x)}{X(x)} + \alpha + \beta T^2(t)X^2(x) = 0
+\]</div><p>这个问题就更显然了，分离变量后直接出现了非线性耦合的时间和空间项，这直接使得我们乘积形式的分离变量方法“破产”。而且，对于非线性的方程，我们也不能通过找到的若干特殊解通过线性组合得到满足原方程的新解，这使得使用 SOV 方法求解更无望了😭。</p>
 
 <h2 class="relative group">我们考虑的微分方程长啥样
     <div id="我们考虑的微分方程长啥样" class="anchor"></div>
@@ -1017,16 +1021,16 @@ $$<p>这个问题就更显然了，分离变量后直接出现了非线性耦合
     
 </h2>
 <p>很明显，不是所有的 DE (differential equation) 都可以用 SOV 方法求解，更不是所有的 SODE 或者说 SOLDE (second order linear differential equation) 都是理论物理研究中常见的。一般情况下，我们考虑的 DE 满足下面的形式：</p>
-$$
+<div class="math display">\[
 A(x)\frac{\mathrm{d}^2 u(x)}{\mathrm{d}x^2} + B(x)\frac{\mathrm{d}u(x)}{\mathrm{d}x} + C(x)u(x) = 0
-$$<p>其中 $A(x)$，$B(x)$，$C(x)$ 都是 $x\in\mathbb{R}$ 的多项式/有理函数。</p>
-<p>绝大部分情况下，对于一个物理问题的 EOM 就长这上面的样子，<del>那么这节就应该结束了</del>为了便于我们对 SODE 进行一个一般性的认识，我们可以把变量 $x$ 从实数域“擢升”到复数域 $z$，相对应的原来的几个系数也是一个复变函数。重中之重的是，我们对 $A(z)$ 的零点非常感兴趣，故而通常情况下会把 $A(z)$ 写成</p>
-$$
+\]</div><p>其中 <span class="math inline">\(A(x)\)</span>，<span class="math inline">\(B(x)\)</span>，<span class="math inline">\(C(x)\)</span> 都是 <span class="math inline">\(x\in\mathbb{R}\)</span> 的多项式/有理函数。</p>
+<p>绝大部分情况下，对于一个物理问题的 EOM 就长这上面的样子，<del>那么这节就应该结束了</del>为了便于我们对 SODE 进行一个一般性的认识，我们可以把变量 <span class="math inline">\(x\)</span> 从实数域“擢升”到复数域 <span class="math inline">\(z\)</span>，相对应的原来的几个系数也是一个复变函数。重中之重的是，我们对 <span class="math inline">\(A(z)\)</span> 的零点非常感兴趣，故而通常情况下会把 <span class="math inline">\(A(z)\)</span> 写成</p>
+<div class="math display">\[
 A(z)=\prod_{i=1}^m (z-a_i)
-$$<p>然后我们再根据 $m\in\mathbb{Z}_+$ 来对解进行分类，并且我们只考虑 $m=1, 2, 3, 4$ 时的 ODE 以及对应的解。现在我们可以完整地提出我们考虑的微分方程的形式</p>
-$$
+\]</div><p>然后我们再根据 <span class="math inline">\(m\in\mathbb{Z}_+\)</span> 来对解进行分类，并且我们只考虑 <span class="math inline">\(m=1, 2, 3, 4\)</span> 时的 ODE 以及对应的解。现在我们可以完整地提出我们考虑的微分方程的形式</p>
+<div class="math display">\[
 A(z)\frac{\mathrm{d}^2 u(z)}{\mathrm{d}z^2} + B(z)\frac{\mathrm{d}u(z)}{\mathrm{d}z} + C(z)u(z) = 0
-$$<p>其中 $B(z)$ 和 $C(z)$ 为亚纯函数或者是域 $S\subset\mathbb{C}$ 上的有理函数。在数学物理中，我们考虑的特殊函数绝大部分都在这样形式的方程中。</p>
+\]</div><p>其中 <span class="math inline">\(B(z)\)</span> 和 <span class="math inline">\(C(z)\)</span> 为亚纯函数或者是域 <span class="math inline">\(S\subset\mathbb{C}\)</span> 上的有理函数。在数学物理中，我们考虑的特殊函数绝大部分都在这样形式的方程中。</p>
 
         </div>
         

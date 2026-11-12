@@ -1,0 +1,1584 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流 &middot; 学物理的咸鱼</title>
+    <meta name="title" content="Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流 &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="记录文献管理、Markdown 笔记、知识库、计算验证与正式写作之间的个人科研工作流">
+  
+  
+    <meta name="keywords" content="科研工作流,Zotero,Typora,Obsidian,ChatGPT,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流">
+	<meta property="og:description" content="记录文献管理、Markdown 笔记、知识库、计算验证与正式写作之间的个人科研工作流">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-12T11:00:00+08:00">
+		<meta property="article:modified_time" content="2026-11-12T11:00:00+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流">
+	<meta name="twitter:description" content="记录文献管理、Markdown 笔记、知识库、计算验证与正式写作之间的个人科研工作流">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c24868d3816b0b801269d32ee43bb4a1084a81b542e1d5c0a3f705ef46543e287e32b68941a40f8fc765c0d38cc1b54e2af4901a12c4058d9089a50064c50aaf.css"
+    integrity="sha512-wkho04FrC4ASadMu5Du0oQhKgbVC4dXAo/cF70ZUPih&#43;MraJQaQPj8dlwNOMwbVOKvSQGhLEBY2QiaUAZMUKrw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流",
+    "headline": "Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-12T11:00:00\u002b08:00",
+    "datePublished": "2026-11-12T11:00:00\u002b08:00",
+    
+    "dateModified": "2026-11-12T11:00:00\u002b08:00",
+    
+    "keywords": ["科研工作流","Zotero","Typora","Obsidian","ChatGPT"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/zotero-typora-obsidian-chatgpt-workflow/",
+    "wordCount":  519 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            document.dispatchEvent(new Event('site:math-ready'));
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/zotero-typora-obsidian-chatgpt-workflow/"
+      >Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>Zotero、Typora、Obsidian 与 ChatGPT 的个人科研工作流</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          
+<h2 class="relative group">文稿目的
+    <div id="文稿目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%87%e7%a8%bf%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>本文整理一套面向中长期研究项目的个人工作流：以 <strong>Zotero</strong> 管理文献，以 <strong>Typora</strong> 编写日常 Markdown 笔记，以 <strong>Obsidian</strong> 建立和维护本地知识库，以 <strong>ChatGPT</strong> 承担解释、梳理、连接和协作辅助的角色，并在需要时结合 Wolfram、LaTeX、Git 与 MCP（Model Context Protocol，模型上下文协议）。</p>
+<p>它不是要让某一个软件取代其余工具，也不是一开始就搭建复杂的自动化系统；核心是给不同工具分配清晰职责，使研究材料能从“收集”逐步转化为“自己的理解”，再沉淀为可验证的推导与正式输出。</p>
+<hr>
+
+<h2 class="relative group">1. 总体认识：不是工具堆叠，而是研究信息的分层流动
+    <div id="1-总体认识不是工具堆叠而是研究信息的分层流动" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%80%bb%e4%bd%93%e8%ae%a4%e8%af%86%e4%b8%8d%e6%98%af%e5%b7%a5%e5%85%b7%e5%a0%86%e5%8f%a0%e8%80%8c%e6%98%af%e7%a0%94%e7%a9%b6%e4%bf%a1%e6%81%af%e7%9a%84%e5%88%86%e5%b1%82%e6%b5%81%e5%8a%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>这套工作流可以理解为四类研究对象的流动：外部资料、个人理解、计算验证和正式成果。</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">外部文献与书目资料
+</span></span><span class="line"><span class="cl">        │
+</span></span><span class="line"><span class="cl">        ▼
+</span></span><span class="line"><span class="cl">      Zotero
+</span></span><span class="line"><span class="cl">        │  阅读、标注、筛选、记录出处
+</span></span><span class="line"><span class="cl">        ▼
+</span></span><span class="line"><span class="cl">Typora / Obsidian 中的 Markdown 笔记
+</span></span><span class="line"><span class="cl">        │  形成自己的理解、问题、概念联系与研究计划
+</span></span><span class="line"><span class="cl">        ▼
+</span></span><span class="line"><span class="cl">ChatGPT 协助梳理、解释、比较与生成工作草稿
+</span></span><span class="line"><span class="cl">        │
+</span></span><span class="line"><span class="cl">        ├────────────► Wolfram / Mathematica：符号或数值检验
+</span></span><span class="line"><span class="cl">        │
+</span></span><span class="line"><span class="cl">        ▼
+</span></span><span class="line"><span class="cl">推导记录、已确认结果与 LaTeX 正式文稿
+</span></span><span class="line"><span class="cl">        │
+</span></span><span class="line"><span class="cl">        ▼
+</span></span><span class="line"><span class="cl">      论文、报告、图表或其他成果</span></span></code></pre></div></div>
+<p>其中，ChatGPT 不应被定位为“取代阅读、理解或判断的人”，而应成为研究过程中的智能中间层：帮助从文献中提炼问题，连接分散笔记，检查表达是否自洽，准备可供人审阅的草稿，并在授权范围内调用合适的工具。</p>
+<hr>
+
+<h2 class="relative group">2. 各工具的职责边界
+    <div id="2-各工具的职责边界" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e5%90%84%e5%b7%a5%e5%85%b7%e7%9a%84%e8%81%8c%e8%b4%a3%e8%be%b9%e7%95%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.1 Zotero：外部文献资产与可追溯出处
+    <div id="21-zotero外部文献资产与可追溯出处" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-zotero%e5%a4%96%e9%83%a8%e6%96%87%e7%8c%ae%e8%b5%84%e4%ba%a7%e4%b8%8e%e5%8f%af%e8%bf%bd%e6%ba%af%e5%87%ba%e5%a4%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Zotero 最适合保存和管理外部来源，而不是承载全部研究思考。它可以负责：</p>
+<ul>
+<li>保存 PDF、DOI、作者、期刊、年份和标签等书目信息；</li>
+<li>按研究主题、阅读状态或项目对文献分类；</li>
+<li>进行高亮、批注和简短阅读备注；</li>
+<li>管理引用信息，并按需要导出 BibTeX 等格式；</li>
+<li>保留“某个结论来自哪里”的可追溯线索。</li>
+</ul>
+<p>例如，阅读一篇关于 AdS/CFT 的论文时，Zotero 中应保存论文原件与元数据，并可留下“需要复核的页码”“值得回看的公式”或初步疑问。这样，当日后写作或核查时，可以返回原文，而非只依赖记忆或二手转述。</p>
+<p>但 Zotero 不必承担如下内容的长期管理：</p>
+<ul>
+<li>自己对概念之间关系的系统理解；</li>
+<li>多篇文献比较后形成的判断；</li>
+<li>尚未解决的研究问题；</li>
+<li>逐步发展的推导、计算尝试和项目决策。</li>
+</ul>
+<p>这些属于个人研究知识，更适合进入 Markdown 笔记与知识库。</p>
+
+<h3 class="relative group">2.2 Typora：低摩擦的日常思考与写作入口
+    <div id="22-typora低摩擦的日常思考与写作入口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-typora%e4%bd%8e%e6%91%a9%e6%93%a6%e7%9a%84%e6%97%a5%e5%b8%b8%e6%80%9d%e8%80%83%e4%b8%8e%e5%86%99%e4%bd%9c%e5%85%a5%e5%8f%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Typora 可以作为日常编写 Markdown 的主要界面。它的价值不在于“替代知识库”，而在于让记录过程足够顺手：读论文时写阅读笔记、出现想法时写问题、完成一段计算时写推导说明，都不应被复杂的格式或管理步骤打断。</p>
+<p>适合用 Typora 写的内容包括：</p>
+<ul>
+<li>一篇论文的阅读摘记与个人理解；</li>
+<li>某个公式、定义或物理图像的解释；</li>
+<li>当天的研究日志；</li>
+<li>某次计算或推导的过程记录；</li>
+<li>临时问题、待验证猜想和后续行动项；</li>
+<li>计划放入论文的段落草稿。</li>
+</ul>
+<p>Markdown 文件本身是普通文本文件，因此可以先由 Typora 写作，之后再由 Obsidian 统一管理；两者不是竞争关系。只要文件保存于同一套有组织的目录中，Typora 负责“写”，Obsidian 负责“连接、检索与回看”。</p>
+
+<h3 class="relative group">2.3 Obsidian：长期知识库与概念网络
+    <div id="23-obsidian长期知识库与概念网络" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-obsidian%e9%95%bf%e6%9c%9f%e7%9f%a5%e8%af%86%e5%ba%93%e4%b8%8e%e6%a6%82%e5%bf%b5%e7%bd%91%e7%bb%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Obsidian 适合将 Markdown 文件组织成一个 Vault（知识库），并通过内部链接、标签、搜索和图谱等方式展示知识之间的关联。对理论物理、数学或持续性技术研究而言，许多概念不是线性章节关系，而是网络关系。</p>
+<p>例如，Chern&ndash;Simons 项可能同时关联拓扑、异常、边界理论、全息、量子霍尔效应和规范场论。将这些主题各自形成笔记并以链接连接，通常比把所有内容塞进一份长文档更便于长期维护。</p>
+<p>Obsidian 中更值得保存的是“消化后的知识”，例如：</p>
+<ul>
+<li><code>Chern-Simons 项</code>：定义、适用维度、变分要点、常见约定与未解问题；</li>
+<li><code>异常</code>：类型、物理含义、与边界条件或反常流入的关系；</li>
+<li><code>Maldacena 1997</code>：论文主旨、关键公式、个人疑问以及与其他概念的连接；</li>
+<li><code>开放问题</code>：当前尚无结论、需要检索、推导或讨论的问题；</li>
+<li><code>项目决策</code>：已确认的度规号差、单位制、符号约定和选择理由。</li>
+</ul>
+<p>知识库的目标不是复制所有原文，而是让未来的自己和协作中的 AI 能回答：<strong>我为什么相信这个说法？它与什么相连？依据在哪里？下一步还缺什么？</strong></p>
+
+<h3 class="relative group">2.4 ChatGPT：推理、整理、连接与协作辅助层
+    <div id="24-chatgpt推理整理连接与协作辅助层" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-chatgpt%e6%8e%a8%e7%90%86%e6%95%b4%e7%90%86%e8%bf%9e%e6%8e%a5%e4%b8%8e%e5%8d%8f%e4%bd%9c%e8%be%85%e5%8a%a9%e5%b1%82" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>ChatGPT 最适合参与“知识转换”，而不是成为未经核验的结论来源。它可协助：</p>
+<ul>
+<li>根据已有笔记解释难点、补全逻辑链和比较不同表述；</li>
+<li>将多篇文献笔记按问题、方法、结论与分歧进行整理；</li>
+<li>把零散记录转为清晰的提纲、研究日志或 Markdown 草稿；</li>
+<li>找出概念笔记之间可能缺失的链接；</li>
+<li>把确认过的笔记整理为 LaTeX 写作的结构与初稿；</li>
+<li>设计计算检查步骤，并在具备相应工具连接时协助调用计算环境；</li>
+<li>提醒区分原文事实、个人推断、计算证据和尚待验证的猜想。</li>
+</ul>
+<p>对于关键公式、原始文献含义、数值结果和学术引用，最终仍应由研究者回到论文、计算输出或可靠来源完成核验。推荐的路径是：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">想法或文献内容
+</span></span><span class="line"><span class="cl">  → Markdown 记录
+</span></span><span class="line"><span class="cl">  → ChatGPT 协助梳理
+</span></span><span class="line"><span class="cl">  → 人工审阅与必要的计算/原文核查
+</span></span><span class="line"><span class="cl">  → 已确认结果
+</span></span><span class="line"><span class="cl">  → 正式论文或报告</span></span></code></pre></div></div>
+
+<h3 class="relative group">2.5 Wolfram / Mathematica、LaTeX 与 Git：验证、输出和版本
+    <div id="25-wolfram--mathematicalatex-与-git验证输出和版本" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#25-wolfram--mathematicalatex-%e4%b8%8e-git%e9%aa%8c%e8%af%81%e8%be%93%e5%87%ba%e5%92%8c%e7%89%88%e6%9c%ac" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Wolfram / Mathematica</strong>：适合符号运算、张量计算、积分、极限、数值实验及对中间推导的交叉检查。计算输入、前提与结果摘要应当保留在项目文件中，使结论可复现。</li>
+<li><strong>LaTeX</strong>：适合论文、报告等正式输出。正式稿只应吸收已确认的内容，避免将尚未检验的尝试直接写入最终文本。</li>
+<li><strong>Git</strong>：适合为研究笔记、推导、代码与 LaTeX 源文件保留版本历史。它不是取代思考的工具，但能帮助回答“这个结论或段落何时、为何发生变化”。</li>
+</ul>
+<hr>
+
+<h2 class="relative group">3. 推荐的知识流：Zotero → Markdown → Obsidian → 成果
+    <div id="3-推荐的知识流zotero--markdown--obsidian--成果" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e6%8e%a8%e8%8d%90%e7%9a%84%e7%9f%a5%e8%af%86%e6%b5%81zotero--markdown--obsidian--%e6%88%90%e6%9e%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">第一步：在 Zotero 中收集、筛选并阅读来源
+    <div id="第一步在-zotero-中收集筛选并阅读来源" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%9c%a8-zotero-%e4%b8%ad%e6%94%b6%e9%9b%86%e7%ad%9b%e9%80%89%e5%b9%b6%e9%98%85%e8%af%bb%e6%9d%a5%e6%ba%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>先将论文作为“外部资料”管理。每篇准备深入阅读的论文，至少保留准确书目信息和 PDF；阅读时可使用高亮与批注，但不必追求把全部内容摘录下来。</p>
+<p>更有价值的是留下少量高密度线索，例如：</p>
+<ul>
+<li>该论文要解决什么问题；</li>
+<li>哪个公式、论证或图像值得回看；</li>
+<li>它依赖哪些假设或约定；</li>
+<li>它与当前项目的关系；</li>
+<li>读后产生的疑问。</li>
+</ul>
+
+<h3 class="relative group">第二步：建立对应的 Markdown 文献笔记
+    <div id="第二步建立对应的-markdown-文献笔记" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e5%bb%ba%e7%ab%8b%e5%af%b9%e5%ba%94%e7%9a%84-markdown-%e6%96%87%e7%8c%ae%e7%ac%94%e8%ae%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当一篇论文对研究有持续价值时，为它建立一份 Markdown 笔记。笔记不需要复述全文，可采用如下结构：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># 文献：作者 - 年份 - 简短标题
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 书目信息
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> Zotero 条目：
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 主题标签：
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 阅读状态：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 这篇论文回答的问题
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 核心方法与关键结论
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 需要回到原文核对的内容
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 我的理解与疑问
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 与当前项目的关联
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## 相关笔记
+</span></span></span><span class="line"><span class="cl"><span class="k">-</span> [[概念 A]]
+</span></span><span class="line"><span class="cl">- [[概念 B]]</span></span></code></pre></div></div>
+<p>其中“我的理解与疑问”尤其重要。它使文献阅读从收藏行为转化为研究过程，也给后续与 ChatGPT 的讨论提供了清晰上下文。</p>
+
+<h3 class="relative group">第三步：在 Obsidian 中将文献笔记连接到概念与问题
+    <div id="第三步在-obsidian-中将文献笔记连接到概念与问题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%9c%a8-obsidian-%e4%b8%ad%e5%b0%86%e6%96%87%e7%8c%ae%e7%ac%94%e8%ae%b0%e8%bf%9e%e6%8e%a5%e5%88%b0%e6%a6%82%e5%bf%b5%e4%b8%8e%e9%97%ae%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>同一篇文献往往不只属于一个文件夹。除了按主题或项目放置，还可在笔记中通过链接连接概念、推导和问题，例如：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">本文对 [[全息异常]] 的讨论可能依赖 [[Chern-Simons 项]] 的边界变分。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">待核对：[[开放问题：边界条件如何影响异常项]]</span></span></code></pre></div></div>
+<p>这样，未来从一个概念进入时，可以回溯到相关文献、推导和问题，而不必仅靠记忆翻找文件。</p>
+
+<h3 class="relative group">第四步：把需要深入处理的内容转入项目推导区
+    <div id="第四步把需要深入处理的内容转入项目推导区" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e6%8a%8a%e9%9c%80%e8%a6%81%e6%b7%b1%e5%85%a5%e5%a4%84%e7%90%86%e7%9a%84%e5%86%85%e5%ae%b9%e8%bd%ac%e5%85%a5%e9%a1%b9%e7%9b%ae%e6%8e%a8%e5%af%bc%e5%8c%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当某个问题从阅读阶段进入实际研究时，应建立单独的推导或计算文件，明确写出：已知前提、符号约定、目标、每一步推导、检查方法、当前状态和待解决问题。</p>
+<p>推导文件允许包含失败的尝试与修正记录；正式论文不应承担这一功能。将二者分开，可以保护研究过程的可追溯性，也避免把未经确认的内容误写为结论。</p>
+
+<h3 class="relative group">第五步：确认后再进入 LaTeX 正式输出
+    <div id="第五步确认后再进入-latex-正式输出" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e7%a1%ae%e8%ae%a4%e5%90%8e%e5%86%8d%e8%bf%9b%e5%85%a5-latex-%e6%ad%a3%e5%bc%8f%e8%be%93%e5%87%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当逻辑、计算和来源已经核对，再把内容转入论文或报告。建议在每次转入前检查：</p>
+<ul>
+<li>公式中所有符号是否已经定义；</li>
+<li>前提、边界条件和单位制是否一致；</li>
+<li>结论是严格推导、计算证据还是推测；</li>
+<li>文献出处是否可追溯；</li>
+<li>对关键计算是否有可复现记录。</li>
+</ul>
+<hr>
+
+<h2 class="relative group">4. 面向研究项目的目录建议
+    <div id="4-面向研究项目的目录建议" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-%e9%9d%a2%e5%90%91%e7%a0%94%e7%a9%b6%e9%a1%b9%e7%9b%ae%e7%9a%84%e7%9b%ae%e5%bd%95%e5%bb%ba%e8%ae%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>不必一开始建立庞杂目录。下面是一套可由 Typora 编写、由 Obsidian 打开管理、并能逐步接入 LaTeX 与计算工具的结构：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Research_Project/
+</span></span><span class="line"><span class="cl">├── README.md                    # 项目目标、范围、现状与导航
+</span></span><span class="line"><span class="cl">├── AGENTS.md                    # AI 协作规则、质量要求和工具约定
+</span></span><span class="line"><span class="cl">├── 00_inbox/                    # 待整理的聊天记录、临时资料、想法
+</span></span><span class="line"><span class="cl">├── 01_literature/               # 文献笔记；Zotero 仍保存 PDF 与书目信息
+</span></span><span class="line"><span class="cl">├── 02_concepts/                 # 概念卡片、定义、关系与背景知识
+</span></span><span class="line"><span class="cl">├── 03_derivations/              # 中间推导、计算记录和检查
+</span></span><span class="line"><span class="cl">├── 04_questions/                # 开放问题、待验证事项、研究计划
+</span></span><span class="line"><span class="cl">├── 05_results/                  # 已确认结论、图表、数据和可复现结果
+</span></span><span class="line"><span class="cl">├── 06_paper/                    # LaTeX 正式文稿及相关资源
+</span></span><span class="line"><span class="cl">└── 07_archive/                  # 历史版本或不再使用的材料</span></span></code></pre></div></div>
+<p>这不是唯一正确的结构。关键分界在于：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">原始资料 → 个人笔记与问题 → 中间推导 → 已确认结果 → 正式输出</span></span></code></pre></div></div>
+<p>文件夹编号只是为了让文件浏览器保持稳定顺序；Obsidian 中真正的关联可通过链接建立。</p>
+<hr>
+
+<h2 class="relative group">5. README.md 与 AGENTS.md 在该系统中的位置
+    <div id="5-readmemd-与-agentsmd-在该系统中的位置" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-readmemd-%e4%b8%8e-agentsmd-%e5%9c%a8%e8%af%a5%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84%e4%bd%8d%e7%bd%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">README.md：项目入口与共同上下文
+    <div id="readmemd项目入口与共同上下文" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#readmemd%e9%a1%b9%e7%9b%ae%e5%85%a5%e5%8f%a3%e4%b8%8e%e5%85%b1%e5%90%8c%e4%b8%8a%e4%b8%8b%e6%96%87" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>README 应主要回答“这个项目是什么、现在走到哪里、资料在哪里”。它既帮助未来的自己回到项目，也帮助新的合作者或 AI 快速建立必要上下文。</p>
+<p>可写入：</p>
+<ul>
+<li>研究问题和范围；</li>
+<li>当前阶段、已完成事项与下一步；</li>
+<li>重要材料和关键文献；</li>
+<li>目录导航；</li>
+<li>重要假设、符号约定或边界条件；</li>
+<li>仍待解决的核心问题。</li>
+</ul>
+
+<h3 class="relative group">AGENTS.md：AI 协作行为约定
+    <div id="agentsmdai-协作行为约定" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#agentsmdai-%e5%8d%8f%e4%bd%9c%e8%a1%8c%e4%b8%ba%e7%ba%a6%e5%ae%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>AGENTS.md 应主要回答“AI 在此项目中应如何工作”。它可以规定：</p>
+<ul>
+<li>所有新符号首次出现时必须定义；</li>
+<li>明确标注“原文事实”“推导结论”“数值证据”“个人猜想”；</li>
+<li>重要公式应做量纲、符号、极限或数值检验；</li>
+<li>中间尝试先放入 <code>03_derivations/</code>，不要直接改正式论文；</li>
+<li>修改正式稿前先说明拟议改变；</li>
+<li>引用与计算结果应保留可追溯来源和可复现记录。</li>
+</ul>
+<p>README 与 AGENTS.md 都不必一开始完美。它们应随研究推进持续更新，记录真正影响后续工作的决定。</p>
+<hr>
+
+<h2 class="relative group">6. ChatGPT 的具体使用场景
+    <div id="6-chatgpt-的具体使用场景" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-chatgpt-%e7%9a%84%e5%85%b7%e4%bd%93%e4%bd%bf%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">场景一：论文阅读后的针对性讨论
+    <div id="场景一论文阅读后的针对性讨论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%ba%e6%99%af%e4%b8%80%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e5%90%8e%e7%9a%84%e9%92%88%e5%af%b9%e6%80%a7%e8%ae%a8%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>不要只要求“总结这篇论文”。先将问题写入文献笔记，例如：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">需要理解：
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> 大 N 极限在本文中承担什么作用？
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> 某个边界项为何会出现？
+</span></span><span class="line"><span class="cl">3. 这一论证与当前项目中的 Chern-Simons 修正有什么关系？</span></span></code></pre></div></div>
+<p>再请 ChatGPT 围绕这些问题解释、比较或提出验证路线。这样得到的内容会更贴合研究目标；回答中的关键点仍应回到论文核对。</p>
+
+<h3 class="relative group">场景二：发现知识网络缺口
+    <div id="场景二发现知识网络缺口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%ba%e6%99%af%e4%ba%8c%e5%8f%91%e7%8e%b0%e7%9f%a5%e8%af%86%e7%bd%91%e7%bb%9c%e7%bc%ba%e5%8f%a3" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当 Obsidian 中已有概念笔记时，可以让 ChatGPT 根据笔记提出可能的连接或缺口，例如：某个“异常”笔记是否应关联“异常流入”“边界条件”或“全息重整化”。这类建议是导航，而不是自动成立的知识；添加前应由研究者判断其物理或数学关系是否准确。</p>
+
+<h3 class="relative group">场景三：从笔记到论证结构
+    <div id="场景三从笔记到论证结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%ba%e6%99%af%e4%b8%89%e4%bb%8e%e7%ac%94%e8%ae%b0%e5%88%b0%e8%ae%ba%e8%af%81%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>可将已经核对的文献笔记、推导摘要和结果交给 ChatGPT，要求整理为论文小节的逻辑骨架：研究问题、假设、方法、结果、局限与下一步。随后由研究者审阅、补充引用，并写入 LaTeX。</p>
+
+<h3 class="relative group">场景四：推导和计算的交叉检查
+    <div id="场景四推导和计算的交叉检查" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%ba%e6%99%af%e5%9b%9b%e6%8e%a8%e5%af%bc%e5%92%8c%e8%ae%a1%e7%ae%97%e7%9a%84%e4%ba%a4%e5%8f%89%e6%a3%80%e6%9f%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>可让 ChatGPT 帮助将一段手算推导拆解为可检查的子步骤，并在具备相应连接或本地工具时，准备 Wolfram/Mathematica 的验证思路。需要保存的不是一句“已验证”，而是计算的输入、参数约定、输出摘要和解释。</p>
+
+<h3 class="relative group">场景五：项目连续性维护
+    <div id="场景五项目连续性维护" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9c%ba%e6%99%af%e4%ba%94%e9%a1%b9%e7%9b%ae%e8%bf%9e%e7%bb%ad%e6%80%a7%e7%bb%b4%e6%8a%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在一次工作结束时，可让 ChatGPT 根据当天的笔记生成简短研究日志，列出：完成内容、确认结论、仍不确定的地方、下一步和所需资料。下次开始研究时，先读 README、最近的日志和开放问题，就能显著降低重新进入项目的成本。</p>
+<hr>
+
+<h2 class="relative group">7. MCP 在未来架构中的作用
+    <div id="7-mcp-在未来架构中的作用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-mcp-%e5%9c%a8%e6%9c%aa%e6%9d%a5%e6%9e%b6%e6%9e%84%e4%b8%ad%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>MCP 的价值不是让研究自动化失控，而是为已授权的工具与数据提供统一连接方式。未来在实际可用、可信并经过授权的连接条件下，ChatGPT 可通过相应能力协助：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ChatGPT
+</span></span><span class="line"><span class="cl">   │
+</span></span><span class="line"><span class="cl">   ├── 文献与引用管理：检索 Zotero 条目、读取允许访问的资料
+</span></span><span class="line"><span class="cl">   ├── 本地知识库：读取或整理指定的 Markdown 笔记
+</span></span><span class="line"><span class="cl">   ├── 计算环境：调用 Wolfram / Mathematica 进行指定检查
+</span></span><span class="line"><span class="cl">   ├── 项目文件：编辑 Markdown、LaTeX 或代码
+</span></span><span class="line"><span class="cl">   └── 版本管理：查看变更、准备提交说明</span></span></code></pre></div></div>
+<p>是否能够连接某一具体应用，取决于当时平台支持、所安装的连接器、权限范围与本地配置。因而现阶段最优先的工作不是追求“所有工具自动打通”，而是先让文件结构、命名、笔记习惯和项目规范稳定下来。结构清晰后，未来接入工具时才不会把混乱的资料自动化地放大。</p>
+<hr>
+
+<h2 class="relative group">8. 分阶段实施建议
+    <div id="8-分阶段实施建议" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e5%88%86%e9%98%b6%e6%ae%b5%e5%ae%9e%e6%96%bd%e5%bb%ba%e8%ae%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">阶段一：先形成最小可用习惯
+    <div id="阶段一先形成最小可用习惯" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%b6%e6%ae%b5%e4%b8%80%e5%85%88%e5%bd%a2%e6%88%90%e6%9c%80%e5%b0%8f%e5%8f%af%e7%94%a8%e4%b9%a0%e6%83%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当前可先稳定使用：</p>
+<ul>
+<li>Zotero：收集、分类和阅读文献；</li>
+<li>Typora：随时写 Markdown；</li>
+<li>一个固定的本地项目目录：存放笔记、推导和正式材料；</li>
+<li>README.md：写清研究目标、当前问题与资料位置。</li>
+</ul>
+<p>此阶段不需要依赖复杂的插件或自动同步。</p>
+
+<h3 class="relative group">阶段二：完成 Obsidian 本地环境并整理 Vault
+    <div id="阶段二完成-obsidian-本地环境并整理-vault" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%b6%e6%ae%b5%e4%ba%8c%e5%ae%8c%e6%88%90-obsidian-%e6%9c%ac%e5%9c%b0%e7%8e%af%e5%a2%83%e5%b9%b6%e6%95%b4%e7%90%86-vault" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>将已有 Markdown 纳入 Obsidian Vault，逐步建立文献笔记、概念笔记、推导和问题之间的链接。先从当前一个真实研究项目开始，而不是试图一次整理全部历史资料。</p>
+
+<h3 class="relative group">阶段三：加入项目模板与版本管理
+    <div id="阶段三加入项目模板与版本管理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%b6%e6%ae%b5%e4%b8%89%e5%8a%a0%e5%85%a5%e9%a1%b9%e7%9b%ae%e6%a8%a1%e6%9d%bf%e4%b8%8e%e7%89%88%e6%9c%ac%e7%ae%a1%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>为每个中长期项目复制统一模板，包含 README、AGENTS、文献、概念、推导、问题、结果和论文目录。对需要长期维护的项目，可开始使用 Git 保存 Markdown、代码和 LaTeX 源文件的历史。</p>
+
+<h3 class="relative group">阶段四：按实际需要接入计算与 MCP
+    <div id="阶段四按实际需要接入计算与-mcp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%b6%e6%ae%b5%e5%9b%9b%e6%8c%89%e5%ae%9e%e9%99%85%e9%9c%80%e8%a6%81%e6%8e%a5%e5%85%a5%e8%ae%a1%e7%ae%97%e4%b8%8e-mcp" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>当某个重复步骤已被证明稳定、明确且值得自动化时，再考虑连接 Zotero、计算环境、文件系统或其他服务。每次增加连接时都应先明确：它能访问什么、是否可以写入、执行错误如何回滚、哪些操作必须人工确认。</p>
+<hr>
+
+<h2 class="relative group">9. 可长期坚持的原则
+    <div id="9-可长期坚持的原则" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-%e5%8f%af%e9%95%bf%e6%9c%9f%e5%9d%9a%e6%8c%81%e7%9a%84%e5%8e%9f%e5%88%99" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><strong>Zotero 保存别人产生的知识。</strong> 保留文献原件、书目与出处。</li>
+<li><strong>Obsidian 保存自己消化后的知识。</strong> 用自己的语言记录理解、关系、问题与决定。</li>
+<li><strong>Typora 让思考保持低摩擦。</strong> 先把内容写下来，再逐步整理。</li>
+<li><strong>ChatGPT 协助知识转换，而不替代核验。</strong> 它可以解释、组织和提出检查路线；关键结论仍须回到资料与计算。</li>
+<li><strong>推导区与正式稿分离。</strong> 允许探索、修正和失败的中间记录存在，同时保护正式输出的可信度。</li>
+<li><strong>所有重要结论保持可追溯。</strong> 能找到原文、笔记、计算输入或明确的推导依据。</li>
+<li><strong>先稳定工作流，再增加自动化。</strong> 复杂集成应服务于已经有效的研究习惯。</li>
+</ol>
+<hr>
+
+<h2 class="relative group">结语
+    <div id="结语" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%93%e8%af%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>这套环境的核心不是把 Zotero、Typora、Obsidian、ChatGPT、Wolfram 和 LaTeX 简单并列，而是建立一条清晰的研究链：Zotero 管理外部文献，Typora 记录即时思考，Obsidian 组织长期知识网络，ChatGPT 协助连接与整理，计算工具负责检验，LaTeX 承载正式成果。</p>
+<p>当每个研究项目都保留目标、约定、文献笔记、问题、推导和已确认结果时，研究过程就不再依赖某次对话或个人短期记忆。未来无论由自己、合作者还是具备适当权限的 AI 接续工作，都能从已有上下文继续，而不是重新开始。</p>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/zotero-typora-obsidian-chatgpt-workflow/markdown.zip" download>Markdown &#43; resources</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/schwarzschild-theta-geodesic/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;在Schwarzschild时空中关于极角的测地线方程的解的问题
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/randall-sundrum-and-related-theories/">
+              <span class="leading-6">
+                Randall–Sundrum 与相关理论：从五维几何到 AdS/CFT&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文稿目的">文稿目的</a></li>
+    <li><a href="#1-总体认识不是工具堆叠而是研究信息的分层流动">1. 总体认识：不是工具堆叠，而是研究信息的分层流动</a></li>
+    <li><a href="#2-各工具的职责边界">2. 各工具的职责边界</a>
+      <ul>
+        <li><a href="#21-zotero外部文献资产与可追溯出处">2.1 Zotero：外部文献资产与可追溯出处</a></li>
+        <li><a href="#22-typora低摩擦的日常思考与写作入口">2.2 Typora：低摩擦的日常思考与写作入口</a></li>
+        <li><a href="#23-obsidian长期知识库与概念网络">2.3 Obsidian：长期知识库与概念网络</a></li>
+        <li><a href="#24-chatgpt推理整理连接与协作辅助层">2.4 ChatGPT：推理、整理、连接与协作辅助层</a></li>
+        <li><a href="#25-wolfram--mathematicalatex-与-git验证输出和版本">2.5 Wolfram / Mathematica、LaTeX 与 Git：验证、输出和版本</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-推荐的知识流zotero--markdown--obsidian--成果">3. 推荐的知识流：Zotero → Markdown → Obsidian → 成果</a>
+      <ul>
+        <li><a href="#第一步在-zotero-中收集筛选并阅读来源">第一步：在 Zotero 中收集、筛选并阅读来源</a></li>
+        <li><a href="#第二步建立对应的-markdown-文献笔记">第二步：建立对应的 Markdown 文献笔记</a></li>
+        <li><a href="#第三步在-obsidian-中将文献笔记连接到概念与问题">第三步：在 Obsidian 中将文献笔记连接到概念与问题</a></li>
+        <li><a href="#第四步把需要深入处理的内容转入项目推导区">第四步：把需要深入处理的内容转入项目推导区</a></li>
+        <li><a href="#第五步确认后再进入-latex-正式输出">第五步：确认后再进入 LaTeX 正式输出</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-面向研究项目的目录建议">4. 面向研究项目的目录建议</a></li>
+    <li><a href="#5-readmemd-与-agentsmd-在该系统中的位置">5. README.md 与 AGENTS.md 在该系统中的位置</a>
+      <ul>
+        <li><a href="#readmemd项目入口与共同上下文">README.md：项目入口与共同上下文</a></li>
+        <li><a href="#agentsmdai-协作行为约定">AGENTS.md：AI 协作行为约定</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-chatgpt-的具体使用场景">6. ChatGPT 的具体使用场景</a>
+      <ul>
+        <li><a href="#场景一论文阅读后的针对性讨论">场景一：论文阅读后的针对性讨论</a></li>
+        <li><a href="#场景二发现知识网络缺口">场景二：发现知识网络缺口</a></li>
+        <li><a href="#场景三从笔记到论证结构">场景三：从笔记到论证结构</a></li>
+        <li><a href="#场景四推导和计算的交叉检查">场景四：推导和计算的交叉检查</a></li>
+        <li><a href="#场景五项目连续性维护">场景五：项目连续性维护</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-mcp-在未来架构中的作用">7. MCP 在未来架构中的作用</a></li>
+    <li><a href="#8-分阶段实施建议">8. 分阶段实施建议</a>
+      <ul>
+        <li><a href="#阶段一先形成最小可用习惯">阶段一：先形成最小可用习惯</a></li>
+        <li><a href="#阶段二完成-obsidian-本地环境并整理-vault">阶段二：完成 Obsidian 本地环境并整理 Vault</a></li>
+        <li><a href="#阶段三加入项目模板与版本管理">阶段三：加入项目模板与版本管理</a></li>
+        <li><a href="#阶段四按实际需要接入计算与-mcp">阶段四：按实际需要接入计算与 MCP</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-可长期坚持的原则">9. 可长期坚持的原则</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>
