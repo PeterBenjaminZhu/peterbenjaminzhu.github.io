@@ -1,0 +1,3284 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力 &middot; 学物理的咸鱼</title>
+    <meta name="title" content="同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力 &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="从群论与商结构、同伦和同调出发，讨论 Chern–Gauss–Bonnet、纠缠熵，以及五维 Kaluza–Klein、规范 Chern–Simons 与 Gauss–Bonnet 理论。">
+  
+  
+    <meta name="keywords" content="代数拓扑,同调,广义相对论,AdS/CFT,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力">
+	<meta property="og:description" content="从群论与商结构、同伦和同调出发，讨论 Chern–Gauss–Bonnet、纠缠熵，以及五维 Kaluza–Klein、规范 Chern–Simons 与 Gauss–Bonnet 理论。">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-16T14:25:37+08:00">
+		<meta property="article:modified_time" content="2026-11-16T14:25:37+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力">
+	<meta name="twitter:description" content="从群论与商结构、同伦和同调出发，讨论 Chern–Gauss–Bonnet、纠缠熵，以及五维 Kaluza–Klein、规范 Chern–Simons 与 Gauss–Bonnet 理论。">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.afa37b631f158a8ccd4138ab338c7f1292989640ba856de4f1976986832300624bc97612f92be7328e3f938496d1c7931d459db5f2697457e72f3bd9cfbfa1f8.css"
+    integrity="sha512-r6N7Yx8ViozNQTirM4x/EpKYlkC6hW3k8ZdphoMjAGJLyXYS&#43;SvnMo4/k4SW0ceTHUWdtfJpdFfnLzvZz7&#43;h&#43;A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力",
+    "headline": "同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-16T14:25:37\u002b08:00",
+    "datePublished": "2026-11-16T14:25:37\u002b08:00",
+    
+    "dateModified": "2026-11-16T14:25:37\u002b08:00",
+    
+    "keywords": ["代数拓扑","同调","广义相对论","AdS/CFT"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/",
+    "wordCount":  3248 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+
+  <meta name="giscus:backlink" content="https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/">
+
+
+  
+  
+  
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            
+            document.dispatchEvent(new Event('site:math-ready'));
+            
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/topology-five-dimensional-gravity/"
+      >同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-16T14:25:37&#43;08:00">2026年11月16日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          <p><strong>从代数拓扑基础到五维 KK–Gauss–Bonnet–Chern–Simons 有效理论</strong></p>
+<p>原稿作者：理论物理与量子引力学习笔记（修订版）；原稿日期：2026年7月15日。</p>
+<p>本文面向尚未系统学习群论和代数拓扑的物理系读者，详细解释同态、同构、同胚、同伦与同调，并补足正规子群、陪集、商空间、核、像、路径同伦、基本群和相对同调等必要背景。正文以同伦为中心，比较同胚、同伦等价和同调群同构的条件强弱，再说明这些结构在量子引力、AdS/CFT、弦论和全息岛中的作用。附录 A 从凸多面体的 Euler 公式出发推导 Betti 数与 Euler&ndash;Poincaré 公式；附录 B 先给出一般 Chern&ndash;Gauss&ndash;Bonnet 定理，再讨论陈类、陈数、Chern&ndash;Simons 下降关系、二维与四维 Gauss&ndash;Bonnet、纠缠熵和高导全息纠缠熵；附录 C 介绍五维 Kaluza&ndash;Klein 降维、仅含规范型 <span class="math inline">\(A\wedge F\wedge F\)</span> 的 Chern&ndash;Simons 项以及 Einstein&ndash;Gauss&ndash;Bonnet 动力学。五维规范场降到四维后统一采用 <span class="math inline">\(\chi=\chi_0\)</span>、<span class="math inline">\(\mathrm d\chi=0\)</span> 的常数零模截断。</p>
+<p><strong>关键词：同态；同构；同胚；同伦；同调；Euler 示性数；Chern&ndash;Simons；纠缠熵；五维引力</strong></p>
+
+<h2 class="relative group">阅读导图
+    <div id="阅读导图" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%85%e8%af%bb%e5%af%bc%e5%9b%be" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div id="fig:concept-tree-v2" style="scroll-margin-top:110px"></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="五个概念的纵向总览。箭头表示&quot;由较一般的结构进入较特殊的结构&quot;或&quot;构造出不变量&quot;，并不把五个名词混成同一种关系。"
+    src="/notes/topology-five-dimensional-gravity/concept-tree.svg"
+    ></figure>
+</p>
+<p>图 1：五个概念的纵向总览。箭头表示&quot;由较一般的结构进入较特殊的结构&quot;或&quot;构造出不变量&quot;，并不把五个名词混成同一种关系。</p>
+
+<h3 class="relative group">五个核心概念
+    <div id="五个核心概念" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94%e4%b8%aa%e6%a0%b8%e5%bf%83%e6%a6%82%e5%bf%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left"><strong>中文概念</strong></th>
+					<th style="text-align: left">英文</th>
+					<th style="text-align: left">简短理解</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>同态</strong></td>
+					<td style="text-align: left">homomorphism</td>
+					<td style="text-align: left">保持指定代数运算，但允许压缩信息</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>同构</strong></td>
+					<td style="text-align: left">isomorphism</td>
+					<td style="text-align: left">可逆的同态；在指定结构层面无损等价</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>同胚</strong></td>
+					<td style="text-align: left">homeomorphism</td>
+					<td style="text-align: left">拓扑空间范畴中的同构，保留邻近和开集结构</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>同伦</strong></td>
+					<td style="text-align: left">homotopy</td>
+					<td style="text-align: left">两个连续映射之间的一参数连续变形</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>同调</strong></td>
+					<td style="text-align: left">homology</td>
+					<td style="text-align: left">用阿贝尔群记录闭链模去边界链后的&quot;洞&quot;</td>
+			</tr>
+	</tbody>
+</table>
+
+<h3 class="relative group">代数与拓扑符号
+    <div id="代数与拓扑符号" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%a3%e6%95%b0%e4%b8%8e%e6%8b%93%e6%89%91%e7%ac%a6%e5%8f%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">符号</th>
+					<th style="text-align: left">名称</th>
+					<th style="text-align: left">含义</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(N\triangleleft G\)</span></td>
+					<td style="text-align: left">正规子群</td>
+					<td style="text-align: left"><span class="math inline">\(gNg^{-1}=N\)</span>，从而陪集乘法可良定义</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(G/H\)</span></td>
+					<td style="text-align: left">陪集空间</td>
+					<td style="text-align: left">左陪集 <span class="math inline">\(gH\)</span> 组成的集合；<span class="math inline">\(H\)</span> 正规时才自然成为商群</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X/{\sim}\)</span></td>
+					<td style="text-align: left">商空间</td>
+					<td style="text-align: left">把等价关系下的等价类当成新空间中的点</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X/A\)</span></td>
+					<td style="text-align: left">子空间商</td>
+					<td style="text-align: left">将整个子空间 <span class="math inline">\(A\)</span> 压缩成一个点</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X\setminus A\)</span></td>
+					<td style="text-align: left">集合差</td>
+					<td style="text-align: left">从 <span class="math inline">\(X\)</span> 中删除 <span class="math inline">\(A\)</span>，与压缩完全不同</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\ker\varphi,\operatorname{im}\varphi\)</span></td>
+					<td style="text-align: left">核、像</td>
+					<td style="text-align: left">被映到单位元的部分；实际到达的部分</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(C_k,Z_k,B_k,H_k\)</span></td>
+					<td style="text-align: left">链、闭链、边界链、同调群</td>
+					<td style="text-align: left"><span class="math inline">\(Z_k=\ker\partial_k\)</span>，<span class="math inline">\(B_k=\operatorname{im}\partial_{k+1}\)</span>，<span class="math inline">\(H_k=Z_k/B_k\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\pi_1(X,x_0)\)</span></td>
+					<td style="text-align: left">基本群</td>
+					<td style="text-align: left">以 <span class="math inline">\(x_0\)</span> 为基点的闭合路径按端点固定同伦分类</td>
+			</tr>
+	</tbody>
+</table>
+
+<h3 class="relative group">微分几何与特征类符号
+    <div id="微分几何与特征类符号" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%be%ae%e5%88%86%e5%87%a0%e4%bd%95%e4%b8%8e%e7%89%b9%e5%be%81%e7%b1%bb%e7%ac%a6%e5%8f%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">符号</th>
+					<th style="text-align: left">名称</th>
+					<th style="text-align: left">含义</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(TM\)</span></td>
+					<td style="text-align: left">切丛</td>
+					<td style="text-align: left">把流形每一点的切空间组合成向量丛</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(T^{1,0}M\)</span></td>
+					<td style="text-align: left">全纯切丛</td>
+					<td style="text-align: left">复流形切丛的 <span class="math inline">\((1,0)\)</span> 部分</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\Omega\)</span></td>
+					<td style="text-align: left">曲率二形式矩阵</td>
+					<td style="text-align: left">Levi&ndash;Civita 联络在正交标架中的曲率</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(e(TM)\)</span></td>
+					<td style="text-align: left">Euler 类</td>
+					<td style="text-align: left">切丛的最高次数特征类，其积分给 Euler 示性数</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\operatorname{Pf}\)</span></td>
+					<td style="text-align: left">Pfaffian</td>
+					<td style="text-align: left">反对称矩阵的多项式，满足 <span class="math inline">\(\operatorname{Pf}(A)^2=\det A\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\mathcal E_{2n}\)</span></td>
+					<td style="text-align: left">Euler 密度</td>
+					<td style="text-align: left">由 <span class="math inline">\(n\)</span> 个 Riemann 张量反对称收缩得到的 <span class="math inline">\(2n\)</span> 维密度</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(c_k(E)\)</span></td>
+					<td style="text-align: left">第 <span class="math inline">\(k\)</span> 陈类</td>
+					<td style="text-align: left">复向量丛 <span class="math inline">\(E\)</span> 的 <span class="math inline">\(2k\)</span> 次上同调特征类</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\operatorname{ch}(E)\)</span></td>
+					<td style="text-align: left">Chern character</td>
+					<td style="text-align: left"><span class="math inline">\(\operatorname{Tr}\exp(i\mathcal F/2\pi)\)</span>，把陈类组织成可加形式</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\mathcal F\)</span></td>
+					<td style="text-align: left">丛联络曲率</td>
+					<td style="text-align: left">规范联络的二形式场强</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\wedge,\star\)</span></td>
+					<td style="text-align: left">外积、Hodge 对偶</td>
+					<td style="text-align: left">组合微分形式；利用度规把 <span class="math inline">\(p\)</span>-形式映为互补次数形式</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">1 群论与商结构准备
+    <div id="1-群论与商结构准备" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e7%be%a4%e8%ae%ba%e4%b8%8e%e5%95%86%e7%bb%93%e6%9e%84%e5%87%86%e5%a4%87" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.1 为什么先谈&quot;结构&quot;
+    <div id="11-为什么先谈结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e4%b8%ba%e4%bb%80%e4%b9%88%e5%85%88%e8%b0%88%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>一个数学对象通常不只是若干元素的集合，还带有附加结构。群带有乘法，向量空间带有加法和数乘，拓扑空间指定哪些子集是开集，光滑流形还规定哪些坐标变换可以微分。因此，&ldquo;两个对象相同&quot;必须先回答：我们要求保留哪一种结构？同态、同构、同胚、同伦和同调，正是在不同层次回答这个问题。</p>
+<blockquote>
+<p><strong>定义：群与子群</strong></p>
+<p>群 <span class="math inline">\(G\)</span> 是带有二元运算的集合，满足封闭性、结合律、单位元和逆元。若 <span class="math inline">\(H\subseteq G\)</span> 在同一运算下也构成群，则写作 <span class="math inline">\(H\leq G\)</span>。若任意元素交换，称为阿贝尔群（Abelian group）。</p>
+</blockquote>
+<p>整数加法群 <span class="math inline">\((\mathbb Z,+)\)</span> 是阿贝尔群；一般可逆矩阵群 <span class="math inline">\(GL(n,\mathbb R)\)</span> 则不交换。抽象群论的意义不在于把物理对象变成符号游戏，而在于把&quot;复合对称变换&quot;的共同规律提取出来。例如量子态空间上的对称作用、规范变换和时空等距变换都自然形成群。</p>
+
+<h3 class="relative group">1.2 陪集和正规子群
+    <div id="12-陪集和正规子群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-%e9%99%aa%e9%9b%86%e5%92%8c%e6%ad%a3%e8%a7%84%e5%ad%90%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>给定 <span class="math inline">\(H\leq G\)</span>，对 <span class="math inline">\(g\in G\)</span> 定义左陪集和右陪集</p>
+<p><span id="formula-1"></span></p>
+<div class="math display">\[
+gH=\{gh\mid h\in H\},\qquad Hg=\{hg\mid h\in H\}.
+\tag{1}
+\]</div><p>每个陪集可以理解为把整个子群 <span class="math inline">\(H\)</span> 平移到一个新位置。两个左陪集要么完全相同，要么不相交，因此左陪集把 <span class="math inline">\(G\)</span> 分割成若干等价类。</p>
+<blockquote>
+<p><strong>定义：正规子群（normal subgroup）</strong></p>
+<p>若对任意 <span class="math inline">\(g\in G\)</span> 都有</p>
+<p><span id="formula-2"></span></p>
+<div class="math display">\[
+gNg^{-1}=N,
+\tag{2}
+\]</div><p>则称 <span class="math inline">\(N\)</span> 是 <span class="math inline">\(G\)</span> 的正规子群，记作 <span class="math inline">\(N\triangleleft G\)</span>。等价地，任意 <span class="math inline">\(g\)</span> 都满足 <span class="math inline">\(gN=Ng\)</span>。</p>
+</blockquote>
+<p>正规性不是为了让符号更漂亮，而是为了保证陪集可以相乘。若尝试定义</p>
+<p><span id="formula-3"></span></p>
+<div class="math display">\[
+(g_1N)(g_2N):=(g_1g_2)N,
+\tag{3}
+\]</div><p>则同一个陪集可以选择不同代表元。只有 <span class="math inline">\(N\)</span> 正规时，结果才不依赖代表元的选择。</p>
+
+<h3 class="relative group">1.3 商空间、集合差、陪集空间和商群
+    <div id="13-商空间集合差陪集空间和商群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-%e5%95%86%e7%a9%ba%e9%97%b4%e9%9b%86%e5%90%88%e5%b7%ae%e9%99%aa%e9%9b%86%e7%a9%ba%e9%97%b4%e5%92%8c%e5%95%86%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>这些概念都带有&quot;除去某些信息&quot;的直觉，但操作完全不同。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">对象</th>
+					<th style="text-align: left">构造</th>
+					<th style="text-align: left">直观含义</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X/{\sim}\)</span></td>
+					<td style="text-align: left">等价类集合</td>
+					<td style="text-align: left">把被等价关系判定为相同的点识别起来</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X/A\)</span></td>
+					<td style="text-align: left">将 <span class="math inline">\(A\)</span> 视作一个等价类</td>
+					<td style="text-align: left">把 <span class="math inline">\(A\)</span> 整体压缩成一个点，而不是删除</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(X\setminus A\)</span></td>
+					<td style="text-align: left">删除 <span class="math inline">\(A\)</span> 中的点</td>
+					<td style="text-align: left">原来属于 <span class="math inline">\(A\)</span> 的点不再存在</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(G/H\)</span></td>
+					<td style="text-align: left">左陪集 <span class="math inline">\(gH\)</span> 的集合</td>
+					<td style="text-align: left">对任意子群均存在；通常只是集合或齐性空间</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(G/N\)</span></td>
+					<td style="text-align: left">正规子群的陪集</td>
+					<td style="text-align: left">具有良定义的陪集乘法，因而是商群</td>
+			</tr>
+	</tbody>
+</table>
+
+<h5 class="relative group">例一：<span class="math inline">\(\mathbb Z/n\mathbb Z\)</span>。
+    <div id="例一" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e4%b8%80" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>子群 <span class="math inline">\(n\mathbb Z\)</span> 在阿贝尔群 <span class="math inline">\(\mathbb Z\)</span> 中自动正规。两个整数相差 <span class="math inline">\(n\)</span> 的倍数时属于同一陪集，于是</p>
+<p><span id="formula-4"></span></p>
+<div class="math display">\[
+\mathbb Z/n\mathbb Z=\{[0],[1],\ldots,[n-1]\}
+\tag{4}
+\]</div><p>形成模 <span class="math inline">\(n\)</span> 加法群。</p>
+
+<h5 class="relative group">例二：<span class="math inline">\(\mathbb R/\mathbb Z\simeq S^1\)</span>。
+    <div id="例二" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e4%ba%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>把相差整数的实数识别，即 <span class="math inline">\(x\sim x+m\)</span>。映射 <span class="math inline">\(x\mapsto e^{2\pi i x}\)</span> 将每个等价类映到单位圆上的一点，所以直线按整数平移取商得到圆周。这是&quot;识别&quot;而非&quot;截掉&quot;整数点；<span class="math inline">\(\mathbb R\setminus\mathbb Z\)</span> 是许多开区间的并，与圆周完全不同。</p>
+
+<h5 class="relative group">例三：非正规子群的陪集空间。
+    <div id="例三非正规子群的陪集空间" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%be%8b%e4%b8%89%e9%9d%9e%e6%ad%a3%e8%a7%84%e5%ad%90%e7%be%a4%e7%9a%84%e9%99%aa%e9%9b%86%e7%a9%ba%e9%97%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>在置换群 <span class="math inline">\(S_3\)</span> 中取 <span class="math inline">\(H=\{e,(12)\}\)</span>。由于 <span class="math inline">\((13)(12)(13)^{-1}=(23)\notin H\)</span>，<span class="math inline">\(H\)</span> 不正规。因此 <span class="math inline">\(S_3/H\)</span> 有三个左陪集，却没有由 <span class="math inline">\(S_3\)</span> 乘法自然诱导的商群结构。这正是&quot;陪集空间&quot;与&quot;商群&quot;的差别。</p>
+
+<h2 class="relative group">2 同态、核、像与同构
+    <div id="2-同态核像与同构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e5%90%8c%e6%80%81%e6%a0%b8%e5%83%8f%e4%b8%8e%e5%90%8c%e6%9e%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.1 同态：保持运算的映射
+    <div id="21-同态保持运算的映射" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-%e5%90%8c%e6%80%81%e4%bf%9d%e6%8c%81%e8%bf%90%e7%ae%97%e7%9a%84%e6%98%a0%e5%b0%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定义：群同态（homomorphism）</strong></p>
+<p>映射 <span class="math inline">\(\varphi:G_1\to G_2\)</span> 若满足</p>
+<p><span id="formula-5"></span></p>
+<div class="math display">\[
+\varphi(g_1g_2)=\varphi(g_1)\varphi(g_2),
+\tag{5}
+\]</div><p>则称为群同态。它表达&quot;先复合再映射&quot;与&quot;先映射再复合&quot;一致。</p>
+</blockquote>
+<p>同态不要求一一对应。例如指数映射 <span class="math inline">\(\varphi:\mathbb R\to U(1)\)</span>，<span class="math inline">\(\varphi(x)=e^{ix}\)</span> 满足 <span class="math inline">\(\varphi(x+y)=\varphi(x)\varphi(y)\)</span>，但所有相差 <span class="math inline">\(2\pi n\)</span> 的实数映到同一点。它保持群运算，却压缩了信息。</p>
+
+<h3 class="relative group">2.2 像和核
+    <div id="22-像和核" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-%e5%83%8f%e5%92%8c%e6%a0%b8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>像（image）是实际能够到达的目标：</p>
+<p><span id="formula-6"></span></p>
+<div class="math display">\[
+\operatorname{im}\varphi=\{\varphi(g)\mid g\in G_1\}\subseteq G_2.
+\tag{6}
+\]</div><p>当 <span class="math inline">\(\operatorname{im}\varphi=G_2\)</span> 时，<span class="math inline">\(\varphi\)</span> 是满射。核（kernel）则记录被压缩为单位元的全部信息：</p>
+<p><span id="formula-7"></span></p>
+<div class="math display">\[
+\ker\varphi=\{g\in G_1\mid \varphi(g)=e_{G_2}\}.
+\tag{7}
+\]</div><p>在线性映射 <span class="math inline">\(T:\mathbb R^3\to\mathbb R^2\)</span>、<span class="math inline">\(T(x,y,z)=(x,y)\)</span> 中，核是 <span class="math inline">\(z\)</span> 轴。物理上可把核想成观测或约化过程看不见的方向；像则是该过程实际能产生的状态或变换。</p>
+
+<h3 class="relative group">2.3 为什么核必为正规子群
+    <div id="23-为什么核必为正规子群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-%e4%b8%ba%e4%bb%80%e4%b9%88%e6%a0%b8%e5%bf%85%e4%b8%ba%e6%ad%a3%e8%a7%84%e5%ad%90%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>先验证 <span class="math inline">\(\ker\varphi\)</span> 是子群。若 <span class="math inline">\(a,b\in\ker\varphi\)</span>，则</p>
+<p><span id="formula-8"></span></p>
+<div class="math display">\[
+\varphi(ab^{-1})=\varphi(a)\varphi(b)^{-1}=e,
+\tag{8}
+\]</div><p>所以 <span class="math inline">\(ab^{-1}\in\ker\varphi\)</span>。再取任意 <span class="math inline">\(g\in G_1\)</span> 和 <span class="math inline">\(n\in\ker\varphi\)</span>，有</p>
+<p><span id="formula-9"></span></p>
+<div class="math display">\[
+\varphi(gng^{-1})=\varphi(g)e\varphi(g)^{-1}=e.
+\tag{9}
+\]</div><p>因此 <span class="math inline">\(gng^{-1}\in\ker\varphi\)</span>，故</p>
+<p><span id="formula-10"></span></p>
+<div class="math display">\[
+\boxed{\ker\varphi\triangleleft G_1.}
+\tag{10}
+\]</div><p>这一步非常关键：因为核正规，我们才能把&quot;映射无法区分的方向&quot;取商。</p>
+
+<h3 class="relative group">2.4 同构和第一同构定理
+    <div id="24-同构和第一同构定理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-%e5%90%8c%e6%9e%84%e5%92%8c%e7%ac%ac%e4%b8%80%e5%90%8c%e6%9e%84%e5%ae%9a%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定义：同构（isomorphism）</strong></p>
+<p>可逆的同态称为同构，记作 <span class="math inline">\(G_1\cong G_2\)</span>。它既保持运算又不丢失信息；等价地，<span class="math inline">\(\ker\varphi=\{e\}\)</span> 且 <span class="math inline">\(\operatorname{im}\varphi=G_2\)</span>。</p>
+</blockquote>
+<blockquote>
+<p><strong>定理：第一同构定理（first isomorphism theorem）</strong></p>
+<p>设 <span class="math inline">\(\varphi:G_1\to G_2\)</span> 是群同态，则 <span class="math inline">\(\ker\varphi\triangleleft G_1\)</span>，并且</p>
+<p><span id="formula-11"></span></p>
+<div class="math display">\[
+\boxed{G_1/\ker\varphi\cong\operatorname{im}\varphi.}
+\tag{11}
+\]</div><p>这一定理的直观含义是：先把所有被 <span class="math inline">\(\varphi\)</span> 视为相同的元素归为一类，剩下的结构恰好就是实际像。</p>
+</blockquote>
+<p>证明思路是定义</p>
+<p><span id="formula-12"></span></p>
+<div class="math display">\[
+\bar\varphi:G_1/\ker\varphi\to\operatorname{im}\varphi,
+\qquad \bar\varphi(g\ker\varphi)=\varphi(g).
+\tag{12}
+\]</div><p>若 <span class="math inline">\(g_1\ker\varphi=g_2\ker\varphi\)</span>，则 <span class="math inline">\(g_2^{-1}g_1\in\ker\varphi\)</span>，所以 <span class="math inline">\(\varphi(g_1)=\varphi(g_2)\)</span>，映射良定义。它显然满射；若两个陪集映到同一点，它们之差属于核，因而陪集相同，所以又是单射。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">概念</th>
+					<th style="text-align: left">保持运算</th>
+					<th style="text-align: left">是否可逆</th>
+					<th style="text-align: left">核与像</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">同态</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">不一定</td>
+					<td style="text-align: left">核可非平凡，像可小于陪域</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">单射同态</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">在像上可逆</td>
+					<td style="text-align: left"><span class="math inline">\(\ker\varphi=\{e\}\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">满射同态</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">不一定</td>
+					<td style="text-align: left"><span class="math inline">\(\operatorname{im}\varphi=G_2\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">同构</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">核平凡且像等于陪域</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">3 同胚与微分同胚：定义和基本联系
+    <div id="3-同胚与微分同胚定义和基本联系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e5%90%8c%e8%83%9a%e4%b8%8e%e5%be%ae%e5%88%86%e5%90%8c%e8%83%9a%e5%ae%9a%e4%b9%89%e5%92%8c%e5%9f%ba%e6%9c%ac%e8%81%94%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote>
+<p><strong>定义：同胚（homeomorphism）</strong></p>
+<p>拓扑空间间的映射 <span class="math inline">\(f:X\to Y\)</span> 若双射、连续且逆映射 <span class="math inline">\(f^{-1}\)</span> 也连续，则称为同胚。同胚是拓扑空间范畴中的同构。</p>
+</blockquote>
+<p>同胚允许拉伸、弯曲和非均匀缩放，但不允许撕裂、粘点、打孔或填洞。它保持连通性、紧致性、基本群、同调群和 Euler 示性数等拓扑信息。</p>
+<p>若 <span class="math inline">\(X,Y\)</span> 是光滑流形，并且 <span class="math inline">\(f\)</span> 与 <span class="math inline">\(f^{-1}\)</span> 都光滑，则称为微分同胚（diffeomorphism）。因此</p>
+<p><span id="formula-13"></span></p>
+<div class="math display">\[
+\boxed{\text{微分同胚}\Longrightarrow\text{同胚},}
+\tag{13}
+\]</div><p>反向一般不成立，因为拓扑结构不必决定光滑结构。在广义相对论中，微分同胚体现光滑坐标重标记不改变几何物理内容。</p>
+
+<h2 class="relative group">4 同伦：把连续变形看成一部电影
+    <div id="4-同伦把连续变形看成一部电影" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-%e5%90%8c%e4%bc%a6%e6%8a%8a%e8%bf%9e%e7%bb%ad%e5%8f%98%e5%bd%a2%e7%9c%8b%e6%88%90%e4%b8%80%e9%83%a8%e7%94%b5%e5%bd%b1" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">4.1 电影比喻和标准定义
+    <div id="41-电影比喻和标准定义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-%e7%94%b5%e5%bd%b1%e6%af%94%e5%96%bb%e5%92%8c%e6%a0%87%e5%87%86%e5%ae%9a%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定义：同伦（homotopy）</strong></p>
+<p>设 <span class="math inline">\(f,g:X\to Y\)</span> 连续。若存在连续映射</p>
+<p><span id="formula-14"></span></p>
+<div class="math display">\[
+\mathscr F:X\times I\to Y,\qquad I=[0,1],
+\tag{14}
+\]</div><p>满足 <span class="math inline">\(\mathscr F(x,0)=f(x)\)</span>、<span class="math inline">\(\mathscr F(x,1)=g(x)\)</span>，则称 <span class="math inline">\(f\)</span> 与 <span class="math inline">\(g\)</span> 同伦，记作 <span class="math inline">\(f\simeq g\)</span>。</p>
+</blockquote>
+<p>把参数 <span class="math inline">\(t\)</span> 看成电影时间。第一帧 <span class="math inline">\(\mathscr F_0=f\)</span>，最后一帧 <span class="math inline">\(\mathscr F_1=g\)</span>，中间每一帧是映射 <span class="math inline">\(\mathscr F_t(x)=\mathscr F(x,t)\)</span>。同伦要求整部电影连续播放，但不要求每一帧可逆。不同的点可以在中途重合，整个图形也可以被压扁到一点。</p>
+<p>同伦映射的标准记号常写作 <span class="math inline">\(H(x,t)\)</span>。为避免与同调群 <span class="math inline">\(H_k(X)\)</span> 和 Hamiltonian 混淆，以下改用 <span class="math inline">\(\mathscr F(x,t)\)</span>。</p>
+
+<h3 class="relative group">4.2 同痕与单参数微分同胚群
+    <div id="42-同痕与单参数微分同胚群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-%e5%90%8c%e7%97%95%e4%b8%8e%e5%8d%95%e5%8f%82%e6%95%b0%e5%be%ae%e5%88%86%e5%90%8c%e8%83%9a%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>同痕（isotopy）比同伦更强。粗略说，若 <span class="math inline">\(\mathscr F_t\)</span> 的每一帧都保持为嵌入；在流形自映射情形若每一帧都是微分同胚，则称为微分同胚同痕。一般同伦只要求连续，所以允许压缩和粘合；同痕不允许在中间帧丢失嵌入性或可逆性。</p>
+<p>向量场 <span class="math inline">\(\xi\)</span> 生成的流 <span class="math inline">\(\phi_t:M\to M\)</span> 满足</p>
+<p><span id="formula-15"></span></p>
+<div class="math display">\[
+\phi_0=\operatorname{id}_M,\qquad
+\phi_{s+t}=\phi_s\circ\phi_t,\qquad
+\frac{\mathrm d}{\mathrm dt}\phi_t(p)=\xi(\phi_t(p)).
+\tag{15}
+\]</div><p>它不仅每一帧都是微分同胚，还满足群律。因此</p>
+<p><span id="formula-16"></span></p>
+<div class="math display">\[
+\boxed{\text{单参数微分同胚群}
+\Longrightarrow\text{微分同胚同痕}
+\Longrightarrow\text{同伦}.}
+\tag{16}
+\]</div><p>圆盘上的 <span class="math inline">\(\mathscr F_t(x)=(1-t)x\)</span> 在 <span class="math inline">\(t=1\)</span> 把所有点压到原点，是合法同伦，却不是同痕。这说明单参数微分同胚群只是理解同伦的特殊辅助例子。</p>
+
+<h3 class="relative group">4.3 路径、路径同伦和闭合路径
+    <div id="43-路径路径同伦和闭合路径" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-%e8%b7%af%e5%be%84%e8%b7%af%e5%be%84%e5%90%8c%e4%bc%a6%e5%92%8c%e9%97%ad%e5%90%88%e8%b7%af%e5%be%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>路径（path）是连续映射</p>
+<p><span id="formula-17"></span></p>
+<div class="math display">\[
+\gamma:I\to X,\qquad \gamma(0)=x_0,\qquad\gamma(1)=x_1.
+\tag{17}
+\]</div><p>两条具有相同端点的路径 <span class="math inline">\(\gamma_0,\gamma_1\)</span> 若存在 <span class="math inline">\(\mathscr F:I\times I\to X\)</span>，且</p>
+<p><span id="formula-18"></span></p>
+<div class="math display">\[
+\mathscr F(s,0)=\gamma_0(s),\quad
+\mathscr F(s,1)=\gamma_1(s),\quad
+\mathscr F(0,t)=x_0,\quad
+\mathscr F(1,t)=x_1,
+\tag{18}
+\]</div><p>则称它们端点固定路径同伦（path homotopy relative to endpoints）。最后两个条件防止端点在变形中滑走；否则一个闭合路径可能仅靠移动端点就被错误地消除。</p>
+<p>当 <span class="math inline">\(x_0=x_1\)</span> 时，<span class="math inline">\(\gamma\)</span> 是闭合路径或环路（loop）。两条首尾相接的路径可拼接：</p>
+<p><span id="formula-19"></span></p>
+<div class="math display">\[
+(\gamma_1*\gamma_2)(s)=
+\begin{cases}
+\gamma_1(2s),&amp;0\le s\le\tfrac12,\\
+\gamma_2(2s-1),&amp;\tfrac12\le s\le1.
+\end{cases}
+\tag{19}
+\]</div><p>反向路径为 <span class="math inline">\(\gamma^{-1}(s)=\gamma(1-s)\)</span>，常值路径充当单位元。</p>
+<blockquote>
+<p><strong>定义：基本群（fundamental group）</strong></p>
+<p>以 <span class="math inline">\(x_0\)</span> 为基点的环路按端点固定同伦分类，所得同伦类在路径拼接下形成基本群 <span class="math inline">\(\pi_1(X,x_0)\)</span>。</p>
+</blockquote>
+<p>圆周上的环路按绕数分类：顺时针与逆时针给正负整数，拼接使绕数相加，因此</p>
+<p><span id="formula-20"></span></p>
+<div class="math display">\[
+\boxed{\pi_1(S^1)\cong\mathbb Z.}
+\tag{20}
+\]</div><p>基本群一般可以非阿贝尔，因此比第一同调群保留更多&quot;绕洞次序&quot;的信息。</p>
+
+<h3 class="relative group">4.4 映射同伦和空间同伦等价
+    <div id="44-映射同伦和空间同伦等价" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-%e6%98%a0%e5%b0%84%e5%90%8c%e4%bc%a6%e5%92%8c%e7%a9%ba%e9%97%b4%e5%90%8c%e4%bc%a6%e7%ad%89%e4%bb%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>同伦首先比较映射。要比较空间，需要同伦等价（homotopy equivalence）。若存在</p>
+<p><span id="formula-21"></span></p>
+<div class="math display">\[
+f:X\to Y,\qquad g:Y\to X
+\tag{21}
+\]</div><p>使</p>
+<p><span id="formula-22"></span></p>
+<div class="math display">\[
+g\circ f\simeq\operatorname{id}_X,\qquad f\circ g\simeq\operatorname{id}_Y,
+\tag{22}
+\]</div><p>则写作 <span class="math inline">\(X\simeq Y\)</span>。这里不要求 <span class="math inline">\(f,g\)</span> 严格互逆，只要求复合映射可以连续变形成恒等映射。</p>
+<p>圆环 <span class="math inline">\(S^1\times[0,1]\)</span> 可沿径向收缩到中心圆周，故与 <span class="math inline">\(S^1\)</span> 同伦等价；但两者维数不同，不可能同胚。这是&quot;同伦等价弱于同胚&quot;的最直观例子。</p>
+
+<h2 class="relative group">5 同调：闭链模去边界链
+    <div id="5-同调闭链模去边界链" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-%e5%90%8c%e8%b0%83%e9%97%ad%e9%93%be%e6%a8%a1%e5%8e%bb%e8%be%b9%e7%95%8c%e9%93%be" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">5.1 链和边界算子
+    <div id="51-链和边界算子" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-%e9%93%be%e5%92%8c%e8%be%b9%e7%95%8c%e7%ae%97%e5%ad%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>把空间切成有向的点、边、面和更高维胞腔。<span class="math inline">\(k\)</span> 维胞腔的形式整数线性组合构成链群 <span class="math inline">\(C_k(X)\)</span>。边界算子</p>
+<p><span id="formula-23"></span></p>
+<div class="math display">\[
+\partial_k:C_k\to C_{k-1}
+\tag{23}
+\]</div><p>把一个几何块送到它的有向边界。例如有向边 <span class="math inline">\([v_0v_1]\)</span> 的边界是 <span class="math inline">\(v_1-v_0\)</span>；有向三角形的边界是三条带符号的边。</p>
+<blockquote>
+<p><strong>定理：边界的边界为零</strong></p>
+<p>对任意链复形，连续两次取边界满足</p>
+<p><span id="formula-24"></span></p>
+<div class="math display">\[
+\boxed{\partial_k\partial_{k+1}=0.}
+\tag{24}
+\]</div><p>几何上，每条棱在一个面的边界之边界中出现两次且取向相反，因而抵消。这一恒等式保证所有边界链必为闭链。</p>
+</blockquote>
+<p>定义闭链群和边界链群</p>
+<p><span id="formula-25"></span></p>
+<div class="math display">\[
+Z_k=\ker\partial_k,\qquad B_k=\operatorname{im}\partial_{k+1}.
+\tag{25}
+\]</div><p>由 <span class="math inline">\(\partial^2=0\)</span> 得 <span class="math inline">\(B_k\subseteq Z_k\)</span>。</p>
+<blockquote>
+<p><strong>定义：同调群（homology group）</strong></p>
+<p>第 <span class="math inline">\(k\)</span> 阶同调群为</p>
+<p><span id="formula-26"></span></p>
+<div class="math display">\[
+\boxed{H_k(X)=\frac{Z_k}{B_k}
+=\frac{\ker\partial_k}{\operatorname{im}\partial_{k+1}}.}
+\tag{26}
+\]</div><p>它把只相差一个高一维边界的闭链视为同一个同调类。</p>
+</blockquote>
+<p>直观上，闭链是&quot;没有边界的探针&rdquo;，边界链则能在空间内部填充。若一个闭合环能围成空间中的圆盘，它在 <span class="math inline">\(H_1\)</span> 中为零；若洞阻止填充，它代表非平凡同调类。</p>
+
+<h3 class="relative group">5.2 同伦不变性
+    <div id="52-同伦不变性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-%e5%90%8c%e4%bc%a6%e4%b8%8d%e5%8f%98%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>连续映射 <span class="math inline">\(f:X\to Y\)</span> 诱导同调同态 <span class="math inline">\(f_*:H_k(X)\to H_k(Y)\)</span>。这种构造保持复合：</p>
+<p><span id="formula-27"></span></p>
+<div class="math display">\[
+(g\circ f)_*=g_*\circ f_*,\qquad (\operatorname{id}_X)_*=\operatorname{id}_{H_k(X)}.
+\tag{27}
+\]</div><blockquote>
+<p><strong>定理：同伦不变性（homotopy invariance）</strong></p>
+<p>若 <span class="math inline">\(f,g:X\to Y\)</span> 同伦，则它们诱导相同的同调映射：<span class="math inline">\(f_*=g_*\)</span>。因此若 <span class="math inline">\(X\simeq Y\)</span>，则对所有 <span class="math inline">\(k\)</span> 都有</p>
+<p><span id="formula-28"></span></p>
+<div class="math display">\[
+\boxed{H_k(X)\cong H_k(Y).}
+\tag{28}
+\]</div><p>因此，同伦等价必然蕴含各阶同调群同构，从而得到二者的条件强弱关系。</p>
+</blockquote>
+<p>反向一般不成立。同调群把信息阿贝尔化，并且不记录所有乘法结构、基本群的非交换性或更高同伦信息。</p>
+
+<h3 class="relative group">5.3 RT/HRT 与岛中的相对同调约束
+    <div id="53-rthrt-与岛中的相对同调约束" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#53-rthrt-%e4%b8%8e%e5%b2%9b%e4%b8%ad%e7%9a%84%e7%9b%b8%e5%af%b9%e5%90%8c%e8%b0%83%e7%ba%a6%e6%9d%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在全息纠缠熵中，边界区域 <span class="math inline">\(A\)</span> 的候选极值面 <span class="math inline">\(\gamma_A\)</span> 仅满足 <span class="math inline">\(\partial\gamma_A=\partial A\)</span> 还不够；还要求存在 bulk 区域 <span class="math inline">\(r_A\)</span>，使</p>
+<p><span id="formula-29"></span></p>
+<div class="math display">\[
+\partial r_A=A\cup\gamma_A
+\tag{29}
+\]</div><p>（取向符号略去）。这称为同调约束（homology constraint）。它排除虽然锚定于同一纠缠面、却包围错误 bulk 区域的极值面。</p>
+<p>若极值面允许终止在 Planck brane <span class="math inline">\(Q\)</span> 上，应使用相对同调 <span class="math inline">\(H_k(M,Q)\)</span>：位于 <span class="math inline">\(Q\)</span> 上的边界可在相对链群中被视为零。对辐射区域 <span class="math inline">\(R\)</span> 和膜上岛 <span class="math inline">\(\mathcal I\)</span>，可写成</p>
+<p><span id="formula-30"></span></p>
+<div class="math display">\[
+\partial r_R=R\cup\gamma_R\cup\mathcal I.
+\tag{30}
+\]</div><p>这并不意味着 <span class="math inline">\(R\)</span>、<span class="math inline">\(\gamma_R\)</span> 和 <span class="math inline">\(\mathcal I\)</span> 同胚或同伦等价，而是说它们作为链共同围出一个高一维 bulk 区域。</p>
+
+<h2 class="relative group">6 同胚、同伦与同调的区别和联系
+    <div id="6-同胚同伦与同调的区别和联系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-%e5%90%8c%e8%83%9a%e5%90%8c%e4%bc%a6%e4%b8%8e%e5%90%8c%e8%b0%83%e7%9a%84%e5%8c%ba%e5%88%ab%e5%92%8c%e8%81%94%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">概念</th>
+					<th style="text-align: left">比较对象</th>
+					<th style="text-align: left">核心条件</th>
+					<th style="text-align: left">是否要求中间过程可逆</th>
+					<th style="text-align: left">主要保留的信息</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">同胚</td>
+					<td style="text-align: left">两个空间</td>
+					<td style="text-align: left">存在连续双射且逆连续</td>
+					<td style="text-align: left">是</td>
+					<td style="text-align: left">全部拓扑结构</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">同伦</td>
+					<td style="text-align: left">两个映射</td>
+					<td style="text-align: left">存在连续的一参数映射族</td>
+					<td style="text-align: left">否</td>
+					<td style="text-align: left">映射的连续变形类</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">同伦等价</td>
+					<td style="text-align: left">两个空间</td>
+					<td style="text-align: left">往返复合只需同伦于恒等</td>
+					<td style="text-align: left">否</td>
+					<td style="text-align: left">形变收缩后仍存在的信息</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">同调</td>
+					<td style="text-align: left">单个空间的代数不变量</td>
+					<td style="text-align: left">闭链模去边界链</td>
+					<td style="text-align: left">不适用</td>
+					<td style="text-align: left">各维洞的阿贝尔群信息</td>
+			</tr>
+	</tbody>
+</table>
+<p>必须注意：同胚是一个特殊映射；同伦是映射之间的关系；同伦等价才是空间之间的关系；同调则是从空间构造出的代数不变量。它们并不是同一种对象。</p>
+<p>对空间对 <span class="math inline">\((X,Y)\)</span> 而言，条件强弱为</p>
+<p><span id="formula-31"></span></p>
+<div class="math display">\[
+\boxed{
+\text{微分同胚}
+\Longrightarrow\text{同胚}
+\Longrightarrow\text{同伦等价}
+\Longrightarrow\text{各阶同调群同构}.}
+\tag{31}
+\]</div><p>&ldquo;更强&quot;与微分形式中&quot;恰当必闭合，但闭合未必恰当&quot;的说法相同：满足强条件自动满足弱条件，而只满足弱条件的反例存在。</p>
+<p>圆环与圆周同伦等价但不同胚。另一方面，二维环面 <span class="math inline">\(T^2\)</span> 与楔和 <span class="math inline">\(S^1\vee S^1\vee S^2\)</span> 都满足 <span class="math inline">\(H_1\cong\mathbb Z^2\)</span>、<span class="math inline">\(H_2\cong\mathbb Z\)</span>，但</p>
+<p><span id="formula-32"></span></p>
+<div class="math display">\[
+\pi_1(T^2)=\mathbb Z^2,\qquad
+\pi_1(S^1\vee S^1\vee S^2)=F_2,
+\tag{32}
+\]</div><p>后者是两个生成元的自由非阿贝尔群，所以二者不同伦等价。</p>
+
+<h2 class="relative group">7 在量子引力、AdS/CFT 与弦论中的位置
+    <div id="7-在量子引力adscft-与弦论中的位置" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-%e5%9c%a8%e9%87%8f%e5%ad%90%e5%bc%95%e5%8a%9badscft-%e4%b8%8e%e5%bc%a6%e8%ae%ba%e4%b8%ad%e7%9a%84%e4%bd%8d%e7%bd%ae" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>群表示 <span class="math inline">\(\rho:G\to GL(\mathcal H)\)</span> 是同态；若核非平凡，某些对称变换在态空间上不可见。</p>
+</li>
+<li>
+<p>微分同胚刻画引力中的坐标无关性；大微分同胚和边界条件还可能携带物理荷。</p>
+</li>
+<li>
+<p>同伦群分类涡旋、宇宙弦、磁单极、瞬子以及大规范变换的拓扑扇区。</p>
+</li>
+<li>
+<p>同调循环支撑弦和膜的缠绕；上同调类则描述可积通量。配对 <span class="math inline">\(\int_{C_p}F_p\)</span> 把同调循环与上同调形式联系起来。</p>
+</li>
+<li>
+<p>AdS/CFT 中的 RT/HRT 同调约束选择正确纠缠楔；岛公式使用相对同调处理膜上的端点。</p>
+</li>
+<li>
+<p>奇数维 bulk 的 Chern&ndash;Simons 项通过反常流入编码偶数维 boundary anomaly；Gauss&ndash;Bonnet 项则修改高曲率引力、中心荷和全息纠缠熵泛函。</p>
+</li>
+</ul>
+
+<h2 class="relative group">8 正文总结：空间等价条件的嵌套关系
+    <div id="8-正文总结空间等价条件的嵌套关系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e6%ad%a3%e6%96%87%e6%80%bb%e7%bb%93%e7%a9%ba%e9%97%b4%e7%ad%89%e4%bb%b7%e6%9d%a1%e4%bb%b6%e7%9a%84%e5%b5%8c%e5%a5%97%e5%85%b3%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<div id="fig:equivalence-v2" style="scroll-margin-top:110px"></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="满足不同空间等价条件的&quot;空间对集合&quot;之间的嵌套关系。"
+    src="/notes/topology-five-dimensional-gravity/equivalence-nesting.svg"
+    ></figure>
+</p>
+<p>图 2：满足不同空间等价条件的&quot;空间对集合&quot;之间的嵌套关系。</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">一句话问题</th>
+					<th style="text-align: left">应使用的概念</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">映射是否保持代数运算？</td>
+					<td style="text-align: left">同态</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">代数结构能否无损往返？</td>
+					<td style="text-align: left">同构</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">空间是否仅靠连续可逆变形完全一致？</td>
+					<td style="text-align: left">同胚</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">两个映射能否连续播放成同一部&quot;电影&rdquo;？</td>
+					<td style="text-align: left">同伦</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">空间是否在形变收缩后仍等价？</td>
+					<td style="text-align: left">同伦等价</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">空间中哪些闭链无法被高一维链填充？</td>
+					<td style="text-align: left">同调</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">附录 A：Betti 数与 Euler 示性数
+    <div id="附录-abetti-数与-euler-示性数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%99%84%e5%bd%95-abetti-%e6%95%b0%e4%b8%8e-euler-%e7%a4%ba%e6%80%a7%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">A.1 从凸多面体的 <span class="math inline">\(V-E+F=2\)</span> 开始
+    <div id="a1-从凸多面体的--开始" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a1-%e4%bb%8e%e5%87%b8%e5%a4%9a%e9%9d%a2%e4%bd%93%e7%9a%84--%e5%bc%80%e5%a7%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定理：Euler 多面体定理</strong></p>
+<p>设一个凸多面体的顶点数、棱数和面数分别为 <span class="math inline">\(V,E,F\)</span>，则</p>
+<p><span id="formula-33"></span></p>
+<div class="math display">\[
+\boxed{V-E+F=2.}
+\tag{33}
+\]</div><p>凸性保证其表面与二维球面 <span class="math inline">\(S^2\)</span> 同胚。因此，<span class="math inline">\(V-E+F=2\)</span> 是 Euler 示性数从组合计数走向拓扑不变量的起点。</p>
+</blockquote>
+<p>例如四面体有 <span class="math inline">\((V,E,F)=(4,6,4)\)</span>，立方体有 <span class="math inline">\((8,12,6)\)</span>，两者都给出 2。重要的不是恰巧算出同一个数，而是任何不改变球面拓扑的细分都不改变这个交错和。</p>
+
+<h3 class="relative group">A.2 为什么细分不改变 Euler 示性数
+    <div id="a2-为什么细分不改变-euler-示性数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a2-%e4%b8%ba%e4%bb%80%e4%b9%88%e7%bb%86%e5%88%86%e4%b8%8d%e6%94%b9%e5%8f%98-euler-%e7%a4%ba%e6%80%a7%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>若在一条棱上加入新顶点，该棱被分成两条，于是</p>
+<p><span id="formula-34"></span></p>
+<div class="math display">\[
+\Delta V=1,\qquad\Delta E=1,\qquad\Delta F=0,
+\tag{34}
+\]</div><p>所以 <span class="math inline">\(\Delta(V-E+F)=0\)</span>。若在一个面内加入对角线，把一个面分为两个，则</p>
+<p><span id="formula-35"></span></p>
+<div class="math display">\[
+\Delta V=0,\qquad\Delta E=1,\qquad\Delta F=1,
+\tag{35}
+\]</div><p>交错和仍不变。反复使用这两种操作可把多面体表面三角剖分。删除一个面并展平为平面图后，可以逐步去掉边界三角形而保持 <span class="math inline">\(V-E+F\)</span> 的相应关系，最终归结为单个三角形。这给出定理的组合证明思路。</p>
+<p>一般有限胞腔复形的 Euler 示性数定义为</p>
+<p><span id="formula-36"></span></p>
+<div class="math display">\[
+\chi(X)=\sum_{k\ge0}(-1)^k n_k,
+\tag{36}
+\]</div><p>其中 <span class="math inline">\(n_k\)</span> 是 <span class="math inline">\(k\)</span> 维胞腔数。对二维多面体表面就是 <span class="math inline">\(V-E+F\)</span>。</p>
+
+<h3 class="relative group">A.3 链群和边界矩阵
+    <div id="a3-链群和边界矩阵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a3-%e9%93%be%e7%be%a4%e5%92%8c%e8%be%b9%e7%95%8c%e7%9f%a9%e9%98%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>选定各胞腔的取向后，边界算子可写成矩阵</p>
+<p><span id="formula-37"></span></p>
+<div class="math display">\[
+D_k=[\partial_k]:C_k\to C_{k-1}.
+\tag{37}
+\]</div><p>矩阵的每一列记录一个 <span class="math inline">\(k\)</span>-胞腔的边界如何由 <span class="math inline">\((k-1)\)</span>-胞腔线性组合而成。条件 <span class="math inline">\(\partial_{k-1}\partial_k=0\)</span> 变成</p>
+<p><span id="formula-38"></span></p>
+<div class="math display">\[
+D_{k-1}D_k=0.
+\tag{38}
+\]</div><p>因此 <span class="math inline">\(D_k\)</span> 的像包含在 <span class="math inline">\(D_{k-1}\)</span> 的核中。</p>
+
+<h3 class="relative group">A.4 秩&ndash;零化度定理和 Betti 数
+    <div id="a4-秩零化度定理和-betti-数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a4-%e7%a7%a9%e9%9b%b6%e5%8c%96%e5%ba%a6%e5%ae%9a%e7%90%86%e5%92%8c-betti-%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定理：秩&ndash;零化度定理（rank&ndash;nullity theorem）</strong></p>
+<p>若 <span class="math inline">\(T:V\to W\)</span> 是有限维向量空间之间的线性映射，则</p>
+<p><span id="formula-39"></span></p>
+<div class="math display">\[
+\boxed{\dim V=\dim\ker T+\operatorname{rank}T.}
+\tag{39}
+\]</div><p>对边界矩阵 <span class="math inline">\(D_k\)</span> 应用该定理，便可计算闭链空间的维数。</p>
+</blockquote>
+<p>在系数域 <span class="math inline">\(\mathbb F\)</span> 上，第 <span class="math inline">\(k\)</span> 个 Betti 数定义为</p>
+<p><span id="formula-40"></span></p>
+<div class="math display">\[
+b_k(X)=\dim_{\mathbb F}H_k(X;\mathbb F).
+\tag{40}
+\]</div><p>令 <span class="math inline">\(n_k=\dim C_k\)</span>、<span class="math inline">\(r_k=\operatorname{rank}D_k\)</span>。秩&ndash;零化度定理给出</p>
+<p><span id="formula-41"></span></p>
+<div class="math display">\[
+\dim\ker D_k=n_k-r_k,\qquad
+\dim\operatorname{im}D_{k+1}=r_{k+1}.
+\tag{41}
+\]</div><p>因为 <span class="math inline">\(H_k=\ker D_k/\operatorname{im}D_{k+1}\)</span>，所以</p>
+<p><span id="formula-42"></span></p>
+<div class="math display">\[
+\boxed{b_k=n_k-r_k-r_{k+1}.}
+\tag{42}
+\]</div><p>物理上，<span class="math inline">\(b_0\)</span> 数连通分支，<span class="math inline">\(b_1\)</span> 数独立一维循环，<span class="math inline">\(b_2\)</span> 数独立二维闭壳；更高 <span class="math inline">\(b_k\)</span> 是高维类比。</p>
+
+<h3 class="relative group">A.5 圆周与圆盘的完整计算
+    <div id="a5-圆周与圆盘的完整计算" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a5-%e5%9c%86%e5%91%a8%e4%b8%8e%e5%9c%86%e7%9b%98%e7%9a%84%e5%ae%8c%e6%95%b4%e8%ae%a1%e7%ae%97" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>用三个顶点 <span class="math inline">\(v_0,v_1,v_2\)</span> 和三条有向边 <span class="math inline">\(e_0,e_1,e_2\)</span> 表示圆周。取</p>
+<p><span id="formula-43"></span></p>
+<div class="math display">\[
+\partial e_0=v_1-v_0,\qquad
+\partial e_1=v_2-v_1,\qquad
+\partial e_2=v_0-v_2,
+\tag{43}
+\]</div><p>则</p>
+<p><span id="formula-44"></span></p>
+<div class="math display">\[
+D_1=\begin{pmatrix}
+-1&amp;0&amp;1\\
+1&amp;-1&amp;0\\
+0&amp;1&amp;-1
+\end{pmatrix},\qquad \operatorname{rank}D_1=2.
+\tag{44}
+\]</div><p>圆周没有二维胞腔，所以 <span class="math inline">\(r_2=0\)</span>，从而</p>
+<p><span id="formula-45"></span></p>
+<div class="math display">\[
+b_0=3-0-2=1,\qquad b_1=3-2-0=1.
+\tag{45}
+\]</div><p>这说明圆周连通且有一个独立一维洞。</p>
+<p>现在加入一个二维面 <span class="math inline">\(f\)</span>，使 <span class="math inline">\(\partial f=e_0+e_1+e_2\)</span>。于是 <span class="math inline">\(r_2=1\)</span>，这个面填掉了原来的闭合环：</p>
+<p><span id="formula-46"></span></p>
+<div class="math display">\[
+b_0=1,\qquad b_1=3-2-1=0,\qquad b_2=1-1=0.
+\tag{46}
+\]</div><p>同一条边界曲线在圆周中代表洞，在圆盘中却是二维面的边界。这正体现同调依赖整个空间，而非只看曲线本身。</p>
+
+<h3 class="relative group">A.6 球面和环面
+    <div id="a6-球面和环面" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a6-%e7%90%83%e9%9d%a2%e5%92%8c%e7%8e%af%e9%9d%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>球面 <span class="math inline">\(S^2\)</span> 可用一个 0-胞腔和一个 2-胞腔给出胞腔分解，故</p>
+<p><span id="formula-47"></span></p>
+<div class="math display">\[
+(b_0,b_1,b_2)=(1,0,1),\qquad \chi(S^2)=2.
+\tag{47}
+\]</div><p>环面 <span class="math inline">\(T^2\)</span> 可由一个 0-胞腔、两个 1-胞腔 <span class="math inline">\(a,b\)</span> 和一个 2-胞腔组成。胞腔边界在阿贝尔化后为零，因此</p>
+<p><span id="formula-48"></span></p>
+<div class="math display">\[
+(b_0,b_1,b_2)=(1,2,1),\qquad \chi(T^2)=0.
+\tag{48}
+\]</div><p>两个 <span class="math inline">\(b_1\)</span> 分别对应经向和纬向循环。</p>
+
+<h3 class="relative group">A.7 Euler&ndash;Poincaré 定理
+    <div id="a7-eulerpoincaré-定理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a7-eulerpoincar%c3%a9-%e5%ae%9a%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>定理：Euler&ndash;Poincaré 定理</strong></p>
+<p>对有限链复形，在任意系数域上都有</p>
+<p><span id="formula-49"></span></p>
+<div class="math display">\[
+\boxed{\chi(X)=\sum_k(-1)^k n_k=\sum_k(-1)^k b_k.}
+\tag{49}
+\]</div><p>该定理把依赖胞腔分解的组合计数改写为同调不变量。</p>
+</blockquote>
+<p>把 <span class="math inline">\(b_k=n_k-r_k-r_{k+1}\)</span> 代入右端：</p>
+<p><span id="formula-50"></span></p>
+<div class="math display">\[
+\begin{aligned}
+\sum_k(-1)^kb_k
+&amp;=\sum_k(-1)^kn_k-
+\sum_k(-1)^kr_k-
+\sum_k(-1)^kr_{k+1}.
+\end{aligned}
+\tag{50}
+\]</div><p>后两项只差一次指标平移，符号相反，完全抵消，于是只剩 <span class="math inline">\(\sum(-1)^kn_k\)</span>。这说明 Euler 示性数对细分不敏感的根本原因，是链复形中边界秩成对抵消。</p>
+<p>闭合可定向 genus-<span class="math inline">\(g\)</span> 曲面满足</p>
+<p><span id="formula-51"></span></p>
+<div class="math display">\[
+b_0=b_2=1,\qquad b_1=2g,\qquad
+\boxed{\chi(\Sigma_g)=2-2g.}
+\tag{51}
+\]</div>
+<h3 class="relative group">A.8 自由部分、挠率和四维例子
+    <div id="a8-自由部分挠率和四维例子" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a8-%e8%87%aa%e7%94%b1%e9%83%a8%e5%88%86%e6%8c%a0%e7%8e%87%e5%92%8c%e5%9b%9b%e7%bb%b4%e4%be%8b%e5%ad%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>整数同调群一般分解为</p>
+<p><span id="formula-52"></span></p>
+<div class="math display">\[
+H_k(X;\mathbb Z)\cong\mathbb Z^{b_k}\oplus
+\mathbb Z_{n_1}\oplus\cdots\oplus\mathbb Z_{n_s}.
+\tag{52}
+\]</div><p><span class="math inline">\(\mathbb Z^{b_k}\)</span> 是自由部分，有限循环群是挠率（torsion）。用 <span class="math inline">\(\mathbb R\)</span> 或 <span class="math inline">\(\mathbb Q\)</span> 作系数时，挠率消失，所以 Betti 数并不能看到所有整数同调信息。</p>
+<p>常见闭合四维流形的 Betti 数为</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left"><span class="math inline">\(M_4\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(b_0\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(b_1\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(b_2\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(b_3\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(b_4\)</span></th>
+					<th style="text-align: center"><span class="math inline">\(\chi\)</span></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(S^4\)</span></td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">2</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(\mathbb{CP}^2\)</span></td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">3</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(S^2\times S^2\)</span></td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">2</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">4</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><span class="math inline">\(T^4\)</span></td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">4</td>
+					<td style="text-align: center">6</td>
+					<td style="text-align: center">4</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">K3</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">22</td>
+					<td style="text-align: center">0</td>
+					<td style="text-align: center">1</td>
+					<td style="text-align: center">24</td>
+			</tr>
+	</tbody>
+</table>
+<p>这些整数随后通过 Chern&ndash;Gauss&ndash;Bonnet 定理与曲率积分联系起来。</p>
+
+<h2 class="relative group">附录 B：Chern&ndash;Gauss&ndash;Bonnet、陈数与纠缠熵
+    <div id="附录-bcherngaussbonnet陈数与纠缠熵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%99%84%e5%bd%95-bcherngaussbonnet%e9%99%88%e6%95%b0%e4%b8%8e%e7%ba%a0%e7%bc%a0%e7%86%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">B.1 一般 Chern&ndash;Gauss&ndash;Bonnet 定理
+    <div id="b1-一般-cherngaussbonnet-定理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b1-%e4%b8%80%e8%88%ac-cherngaussbonnet-%e5%ae%9a%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>先解释定理中的几个不常用符号。<span class="math inline">\(TM\)</span> 是切丛：纤维 <span class="math inline">\(T_pM\)</span> 是点 <span class="math inline">\(p\)</span> 的切空间。选取 Levi&ndash;Civita 联络后，其曲率可在正交标架中写成反对称矩阵值二形式 <span class="math inline">\(\Omega=(\Omega^a{}_b)\)</span>。Pfaffian <span class="math inline">\(\operatorname{Pf}\)</span> 是反对称矩阵的多项式，满足 <span class="math inline">\(\operatorname{Pf}(A)^2=\det A\)</span>。Euler 类 <span class="math inline">\(e(TM)\)</span> 是由曲率构造的最高次闭形式所代表的上同调类；换联络会改变代表形式，但只改变一个恰当形式，因此上同调类不变。</p>
+<blockquote>
+<p><strong>定理：Chern&ndash;Gauss&ndash;Bonnet 定理</strong></p>
+<p>设 <span class="math inline">\(M\)</span> 是闭合、定向的 <span class="math inline">\(2n\)</span> 维 Riemann 流形，<span class="math inline">\(\Omega\)</span> 是 Levi&ndash;Civita 联络的曲率二形式矩阵，则</p>
+<p><span id="formula-53"></span></p>
+<div class="math display">\[
+\boxed{\chi(M)=\int_M e(TM)
+=\int_M\operatorname{Pf}\!\left(\frac{\Omega}{2\pi}\right).}
+\tag{53}
+\]</div><p>若 <span class="math inline">\(M\)</span> 有边界，还必须加入由第二基本形式和边界内禀曲率构成的 Chern 边界项。下文先由该定理恢复二维和四维公式，再说明 Euler 密度作为引力作用量时的维数依赖。</p>
+</blockquote>
+<p>分量形式可写成</p>
+<p><span id="formula-54"></span></p>
+<div class="math display">\[
+\boxed{
+\chi(M)=\frac{1}{(4\pi)^n n!}
+\int_M\sqrt g\,\mathcal E_{2n}\,\mathrm d^{2n}x,}
+\tag{54}
+\]</div><p>其中</p>
+<p><span id="formula-55"></span></p>
+<div class="math display">\[
+\mathcal E_{2n}=\frac1{2^n}
+\delta^{\mu_1\cdots\mu_{2n}}_{\nu_1\cdots\nu_{2n}}
+R^{\nu_1\nu_2}{}_{\mu_1\mu_2}\cdots
+R^{\nu_{2n-1}\nu_{2n}}{}_{\mu_{2n-1}\mu_{2n}}.
+\tag{55}
+\]</div><p>广义 Kronecker delta 对上下指标分别全反对称，它迫使曲率张量以 Lovelock 型组合出现。</p>
+
+<h3 class="relative group">B.2 物理人的直觉：局域曲率密度为何给出整数
+    <div id="b2-物理人的直觉局域曲率密度为何给出整数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b2-%e7%89%a9%e7%90%86%e4%ba%ba%e7%9a%84%e7%9b%b4%e8%a7%89%e5%b1%80%e5%9f%9f%e6%9b%b2%e7%8e%87%e5%af%86%e5%ba%a6%e4%b8%ba%e4%bd%95%e7%bb%99%e5%87%ba%e6%95%b4%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<blockquote>
+<p><strong>物理直觉</strong></p>
+<p>曲率是局域几何场，<span class="math inline">\(\chi(M)\)</span> 是整体拓扑整数。连续改变度规会让正曲率和负曲率在空间中重新分布，但只要没有撕裂、粘合或改变边界，Euler 密度积分不会改变。它类似&quot;局域电荷密度积分得到守恒总荷&quot;，只是这里的总荷由拓扑量子化。</p>
+</blockquote>
+<p>需要区分两个陈述：</p>
+<ol>
+<li>
+<p>Chern&ndash;Gauss&ndash;Bonnet 定理说特定曲率密度在临界维数 <span class="math inline">\(D=2n\)</span> 上的积分等于拓扑数；</p>
+</li>
+<li>
+<p>把同一密度乘耦合常数加入引力作用量后，在临界维数的无边界纯度规变分中不产生 bulk 场方程，但在更高维会产生真正局域动力学。</p>
+</li>
+</ol>
+<p>因此，&ldquo;Gauss&ndash;Bonnet 是拓扑项&quot;和&quot;Gauss&ndash;Bonnet 引力修改黑洞&quot;并不矛盾，它们针对不同维数或边界条件。</p>
+
+<h3 class="relative group">B.3 从 Euler 类到陈类和陈数
+    <div id="b3-从-euler-类到陈类和陈数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b3-%e4%bb%8e-euler-%e7%b1%bb%e5%88%b0%e9%99%88%e7%b1%bb%e5%92%8c%e9%99%88%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">B.3.1 复向量丛与总陈类
+    <div id="b31-复向量丛与总陈类" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b31-%e5%a4%8d%e5%90%91%e9%87%8f%e4%b8%9b%e4%b8%8e%e6%80%bb%e9%99%88%e7%b1%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>设 <span class="math inline">\(E\to M\)</span> 是秩 <span class="math inline">\(r\)</span> 的复向量丛，<span class="math inline">\(\mathcal F\)</span> 是酉联络的曲率二形式矩阵。取约定</p>
+<p><span id="formula-56"></span></p>
+<div class="math display">\[
+X=\frac{i\mathcal F}{2\pi}.
+\tag{56}
+\]</div><p>总陈类（total Chern class）由 Chern&ndash;Weil 构造定义为</p>
+<p><span id="formula-57"></span></p>
+<div class="math display">\[
+\boxed{c(E)=\det(1+X)=1+c_1(E)+c_2(E)+\cdots+c_r(E).}
+\tag{57}
+\]</div><p>展开行列式得到</p>
+<p><span id="formula-58"></span></p>
+<div class="math display">\[
+c_1(E)=\operatorname{Tr}X,\qquad
+c_2(E)=\frac12\left[(\operatorname{Tr}X)^2-\operatorname{Tr}(X^2)\right].
+\tag{58}
+\]</div><p>不同教材可能把规范场取为 Hermitian 或 anti-Hermitian，因而显式的 <span class="math inline">\(i\)</span> 和整体符号会变化；只要从总陈类约定一致展开，整数陈数不受影响。</p>
+<p>Chern character 定义为</p>
+<p><span id="formula-59"></span></p>
+<div class="math display">\[
+\boxed{\operatorname{ch}(E)=\operatorname{Tr}e^X
+=r+\operatorname{ch}_1(E)+\operatorname{ch}_2(E)+\cdots,}
+\tag{59}
+\]</div><p>其中 <span class="math inline">\(\operatorname{ch}_1=c_1\)</span>、<span class="math inline">\(\operatorname{ch}_2=\tfrac12(c_1^2-2c_2)\)</span>。陈类在直和下乘法，而 Chern character 在直和下加法，因此后者在指标定理和 D-brane 荷中更自然。</p>
+
+<h4 class="relative group">B.3.2 陈数
+    <div id="b32-陈数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b32-%e9%99%88%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>若 <span class="math inline">\(M\)</span> 是复维 <span class="math inline">\(n\)</span> 的闭合定向流形，且 <span class="math inline">\(i_1+\cdots+i_s=n\)</span>，则</p>
+<p><span id="formula-60"></span></p>
+<div class="math display">\[
+\boxed{
+\int_M c_{i_1}(E)\wedge\cdots\wedge c_{i_s}(E)}
+\tag{60}
+\]</div><p>是陈数（Chern number）。它把局域曲率信息压缩为离散拓扑数据。对复流形的自然定向，有</p>
+<p><span id="formula-61"></span></p>
+<div class="math display">\[
+\boxed{e(TM_{\mathbb R})=c_n(T^{1,0}M),}
+\tag{61}
+\]</div><p>所以 Euler 示性数是全纯切丛最高陈类的积分。这是 Chern&ndash;Gauss&ndash;Bonnet 与陈数之间最直接的桥梁。</p>
+
+<h5 class="relative group">第一陈数。
+    <div id="第一陈数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e9%99%88%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>对 <span class="math inline">\(U(1)\)</span> 线丛，物理常用实场强约定</p>
+<p><span id="formula-62"></span></p>
+<div class="math display">\[
+c_1(L)=\left[\frac{F}{2\pi}\right],\qquad
+\frac1{2\pi}\int_{\Sigma_2}F\in\mathbb Z.
+\tag{62}
+\]</div><p>它既描述 Dirac 磁单极的磁通量量子化，也描述二维能带 Berry curvature 的拓扑积分。</p>
+
+<h5 class="relative group">第二陈数与瞬子。
+    <div id="第二陈数与瞬子" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e9%99%88%e6%95%b0%e4%b8%8e%e7%9e%ac%e5%ad%90" aria-label="锚点">#</a>
+    </span>
+    
+</h5>
+<p>对 <span class="math inline">\(SU(N)\)</span> 丛，<span class="math inline">\(\operatorname{Tr}\mathcal F=0\)</span>，四维积分</p>
+<p><span id="formula-63"></span></p>
+<div class="math display">\[
+k=\frac{1}{8\pi^2}\int_{M_4}\operatorname{Tr}(F\wedge F)\in\mathbb Z
+\tag{63}
+\]</div><p>在一组常用迹约定下给出瞬子数；若生成元或 <span class="math inline">\(F\)</span> 的 Hermiticity 约定不同，整体符号需相应调整。</p>
+
+<h3 class="relative group">B.4 Chern form 与 Chern&ndash;Simons form 的下降关系
+    <div id="b4-chern-form-与-chernsimons-form-的下降关系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b4-chern-form-%e4%b8%8e-chernsimons-form-%e7%9a%84%e4%b8%8b%e9%99%8d%e5%85%b3%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>由 Bianchi 恒等式可知不变多项式 <span class="math inline">\(P_{2n}(F)=\operatorname{Tr}(F^n)\)</span> 是闭形式。局部地，它可以写成某个奇数次形式的外微分：</p>
+<p><span id="formula-64"></span></p>
+<div class="math display">\[
+\boxed{P_{2n}(F)=\mathrm dQ_{2n-1}(A).}
+\tag{64}
+\]</div><p><span class="math inline">\(Q_{2n-1}\)</span> 就是 Chern&ndash;Simons form。最常见的非 Abelian 三形式为</p>
+<p><span id="formula-65"></span></p>
+<div class="math display">\[
+\operatorname{CS}_3(A)=\operatorname{Tr}\left(A\wedge\mathrm dA+\frac23A\wedge A\wedge A\right),
+\qquad
+\mathrm d\operatorname{CS}_3(A)=\operatorname{Tr}(F\wedge F).
+\tag{65}
+\]</div><p>对 Abelian 五维形式则有</p>
+<p><span id="formula-66"></span></p>
+<div class="math display">\[
+\mathrm d(A\wedge F\wedge F)=F\wedge F\wedge F.
+\tag{66}
+\]</div><blockquote>
+<p><strong>容易混淆之处</strong></p>
+<p>Chern form 是偶数维、规范不变的闭形式；Chern&ndash;Simons form 是低一维、依赖联络且在规范变换下可变化边界项的形式；陈数是闭流形上陈类乘积的积分；CS 作用量还包含耦合常数和量子化条件。因此&quot;陈数等于 CS 系数&quot;只在特定有效理论与归一化下成立，不是一般恒等式。</p>
+</blockquote>
+
+<h3 class="relative group">B.5 量子引力、AdS/CFT 与弦论中的陈数&ndash;CS 关系
+    <div id="b5-量子引力adscft-与弦论中的陈数cs-关系" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b5-%e9%87%8f%e5%ad%90%e5%bc%95%e5%8a%9badscft-%e4%b8%8e%e5%bc%a6%e8%ae%ba%e4%b8%ad%e7%9a%84%e9%99%88%e6%95%b0cs-%e5%85%b3%e7%b3%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">B.5.1 全息反常流入
+    <div id="b51-全息反常流入" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b51-%e5%85%a8%e6%81%af%e5%8f%8d%e5%b8%b8%e6%b5%81%e5%85%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>考虑五维 Abelian bulk 作用量</p>
+<p><span id="formula-67"></span></p>
+<div class="math display">\[
+S_{\rm CS}=\kappa\int_{M_5}A\wedge F\wedge F.
+\tag{67}
+\]</div><p>在小规范变换 <span class="math inline">\(A\mapsto A+\mathrm d\lambda\)</span> 下，利用 <span class="math inline">\(\mathrm dF=0\)</span> 得</p>
+<p><span id="formula-68"></span></p>
+<div class="math display">\[
+\delta_\lambda S_{\rm CS}
+=\kappa\int_{M_5}\mathrm d(\lambda F\wedge F)
+=\kappa\int_{\partial M_5}\lambda F\wedge F.
+\tag{68}
+\]</div><p>在 AdS<span class="math inline">\(_5\)</span>/CFT<span class="math inline">\(_4\)</span> 中，bulk 规范场边界值是 CFT 全局流的源，因此这个边界变分正好给出四维流的反常 Ward identity。更系统地说，六维 anomaly polynomial 含 <span class="math inline">\(F^3\)</span>，五维 <span class="math inline">\(A\wedge F\wedge F\)</span> 是其 descent form，而四维反常方程含 <span class="math inline">\(F\wedge F\)</span>。这三者次数不同，不能统称为&quot;第二陈数&rdquo;。</p>
+<p>这就是反常流入（anomaly inflow）：bulk 本身在有边界时的非不变性，抵消或编码边界量子理论的反常。CS 系数由边界 &rsquo;t Hooft anomaly 系数固定，并受到大规范变换量子化的约束。参见文献<a href="/notes/topology-five-dimensional-gravity/#ref-Clark" >[14]</a>。</p>
+
+<h4 class="relative group">B.5.2 D-brane Wess&ndash;Zumino coupling 和 K-theory
+    <div id="b52-d-brane-wesszumino-coupling-和-k-theory" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b52-d-brane-wesszumino-coupling-%e5%92%8c-k-theory" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>D<span class="math inline">\(p\)</span>-brane 世界体 <span class="math inline">\(W\)</span> 上的 Wess&ndash;Zumino coupling 可示意写为</p>
+<p><span id="formula-69"></span></p>
+<div class="math display">\[
+S_{\rm WZ}=\mu_p\int_W C\wedge e^B\wedge\operatorname{ch}(E)
+\wedge\sqrt{\frac{\widehat A(TW)}{\widehat A(NW)}}.
+\tag{69}
+\]</div><p>这里 <span class="math inline">\(C\)</span> 是 RR 势的形式和，<span class="math inline">\(E\)</span> 是 Chan&ndash;Paton 规范丛，<span class="math inline">\(\widehat A\)</span> 是 A-roof genus。展开 <span class="math inline">\(\operatorname{ch}(E)\)</span> 会出现 <span class="math inline">\(C\wedge F\)</span>、<span class="math inline">\(C\wedge F\wedge F\)</span> 等耦合，因此世界体规范通量可诱导低维 D-brane charge。例如 <span class="math inline">\(\int F\)</span> 关联第一陈类，<span class="math inline">\(\int\operatorname{Tr}(F\wedge F)\)</span> 关联瞬子数和更低维 RR 荷。</p>
+<p>不过，完整 D-brane charge 不只是单个陈数；更精确的对象是 K-theory class 或含曲率修正的 Mukai vector。该避免把&quot;D-brane charge 等于陈数&quot;理解得过于字面化<a href="/notes/topology-five-dimensional-gravity/#ref-GreenHarveyMoore" >[12]</a>, <a href="/notes/topology-five-dimensional-gravity/#ref-MinasianMoore" >[13]</a>。</p>
+
+<h4 class="relative group">B.5.3 Page charge、黑洞和拓扑扇区
+    <div id="b53-page-charge黑洞和拓扑扇区" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b53-page-charge%e9%bb%91%e6%b4%9e%e5%92%8c%e6%8b%93%e6%89%91%e6%89%87%e5%8c%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>在含 CS 项的五维超引力中，Maxwell flux 本身通常不同时满足局域守恒、规范不变和量子化三种性质。Page charge 通过加入 <span class="math inline">\(A\wedge F\)</span> 修正获得局域守恒和量子化，但会在大规范变换下偏移。对带电旋转黑洞，这会改变荷、角动量和极端性关系。量子引力路径积分还要对不同通量和丛拓扑扇区求和，陈类正是这些扇区的离散标签之一。</p>
+<blockquote>
+<p><strong>物理联系</strong></p>
+<p>在凝聚态中，二维 Brillouin zone 上的第一陈数</p>
+<div class="math display">\[
+C_1=\frac1{2\pi}\int_{\rm BZ}F
+\]</div><p>决定整数 Hall conductivity <span class="math inline">\(\sigma_{xy}=C_1e^2/h\)</span>。积分掉有能隙的物质场后，低能有效作用量出现系数与 <span class="math inline">\(C_1\)</span> 相关的三维 <span class="math inline">\(A\wedge\mathrm dA\)</span>。这是陈数决定 CS 响应的典型特例；其数学核心与量子引力、弦论和全息反常中的下降关系相同，但物理语境不同。</p>
+</blockquote>
+
+<h3 class="relative group">B.6 二维 Gauss&ndash;Bonnet 和二维引力
+    <div id="b6-二维-gaussbonnet-和二维引力" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b6-%e4%ba%8c%e7%bb%b4-gaussbonnet-%e5%92%8c%e4%ba%8c%e7%bb%b4%e5%bc%95%e5%8a%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在 <span class="math inline">\(n=1\)</span> 时，<span class="math inline">\(\mathcal E_2=R^{(2)}\)</span>。闭合定向曲面满足</p>
+<p><span id="formula-70"></span></p>
+<div class="math display">\[
+\boxed{\chi(M)=\frac1{4\pi}\int_M\sqrt h\,R^{(2)}\,\mathrm d^2x.}
+\tag{70}
+\]</div><p>若有光滑边界，加入测地曲率 <span class="math inline">\(k_g\)</span>：</p>
+<p><span id="formula-71"></span></p>
+<div class="math display">\[
+\boxed{\chi(M)=\frac1{4\pi}\int_M\sqrt h\,R^{(2)}\,\mathrm d^2x
++\frac1{2\pi}\int_{\partial M}k_g\,\mathrm ds,}
+\tag{71}
+\]</div><p>若边界有角点还要加入外转角和。</p>
+<p>半径 <span class="math inline">\(a\)</span> 的球面满足 <span class="math inline">\(R^{(2)}=2/a^2\)</span>、面积 <span class="math inline">\(4\pi a^2\)</span>，因此 <span class="math inline">\(\chi(S^2)=2\)</span>。平面圆盘 bulk 曲率为零，但 <span class="math inline">\(k_g=1/a\)</span>，边界积分给 <span class="math inline">\(\chi(D^2)=1\)</span>。平坦环面曲率为零且无边界，故 <span class="math inline">\(\chi(T^2)=0\)</span>。对常负曲率 <span class="math inline">\(R^{(2)}=-2/\ell^2\)</span> 的 genus-<span class="math inline">\(g&gt;1\)</span> 曲面，定理给出</p>
+<p><span id="formula-72"></span></p>
+<div class="math display">\[
+\operatorname{Area}(\Sigma_g)=4\pi(g-1)\ell^2.
+\tag{72}
+\]</div><p>闭曲面上的二维 Einstein&ndash;Hilbert action 为</p>
+<p><span id="formula-73"></span></p>
+<div class="math display">\[
+S_{\rm EH}^{(2)}=\frac1{16\pi G_2}\int_M\sqrt h\,R^{(2)}
+=\frac{\chi(M)}{4G_2}.
+\tag{73}
+\]</div><p>它是拓扑数，不给普通局域引力自由度。JT gravity 通过非恒定 dilaton <span class="math inline">\(\Phi\)</span> 耦合 <span class="math inline">\(\Phi(R+2/L^2)\)</span>，使曲率约束与 dilaton 方程产生非平凡动力学。</p>
+
+<h3 class="relative group">B.7 四维 Gauss&ndash;Bonnet、Einstein manifold 与高维引力
+    <div id="b7-四维-gaussbonneteinstein-manifold-与高维引力" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b7-%e5%9b%9b%e7%bb%b4-gaussbonneteinstein-manifold-%e4%b8%8e%e9%ab%98%e7%bb%b4%e5%bc%95%e5%8a%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在四维，Euler 密度为</p>
+<p><span id="formula-74"></span></p>
+<div class="math display">\[
+\mathcal G_4=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+-4R_{\mu\nu}R^{\mu\nu}+R^2,
+\tag{74}
+\]</div><p>闭合定向四维 Riemann 流形满足</p>
+<p><span id="formula-75"></span></p>
+<div class="math display">\[
+\boxed{\chi(M_4)=\frac1{32\pi^2}\int_{M_4}\sqrt g\,\mathcal G_4\,\mathrm d^4x.}
+\tag{75}
+\]</div><p>若 <span class="math inline">\(R_{\mu\nu}=\lambda g_{\mu\nu}\)</span>，则利用 Riemann 张量的 Weyl 分解得到</p>
+<p><span id="formula-76"></span></p>
+<div class="math display">\[
+\mathcal G_4=C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma}+\frac16R^2.
+\tag{76}
+\]</div><p><span class="math inline">\(S^4\)</span> 共形平坦且 <span class="math inline">\(\chi=2\)</span>；<span class="math inline">\(\mathbb{CP}^2\)</span> 的 Fubini&ndash;Study metric 是 Einstein metric 且 <span class="math inline">\(\chi=3\)</span>；K3 可 Ricci-flat 但 Weyl curvature 非零，故仍有 <span class="math inline">\(\chi=24\)</span>。</p>
+<blockquote>
+<p><strong>定理：Lovelock 二阶性质</strong></p>
+<p>在给定维数中，由度规和 Riemann 张量构造、且度规场方程至多含二阶导数的自然对称守恒张量由 Lovelock densities 生成。二阶 Lovelock density 正是 Gauss&ndash;Bonnet combination <span class="math inline">\(\mathcal G_D\)</span>。因此，这一特殊的曲率平方组合不会产生一般高导理论中的 ghost 型场方程。</p>
+</blockquote>
+<p>Einstein&ndash;Gauss&ndash;Bonnet action 为</p>
+<p><span id="formula-77"></span></p>
+<div class="math display">\[
+S=\frac1{16\pi G_D}\int\sqrt{-g}
+\left(R-2\Lambda+\alpha\mathcal G_D\right)\mathrm d^Dx.
+\tag{77}
+\]</div><p>在 <span class="math inline">\(D=4\)</span> 的纯度规无边界理论中，<span class="math inline">\(\int\mathcal G_4\)</span> 是拓扑项；在 <span class="math inline">\(D\ge5\)</span> 中它修改局域场方程。边界、非平凡耦合函数或某些正则化极限需要另行分析，不能简单套用&quot;四维拓扑项&quot;的结论。</p>
+
+<h3 class="relative group">B.8 纠缠熵：从约化密度矩阵到 replica trick
+    <div id="b8-纠缠熵从约化密度矩阵到-replica-trick" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b8-%e7%ba%a0%e7%bc%a0%e7%86%b5%e4%bb%8e%e7%ba%a6%e5%8c%96%e5%af%86%e5%ba%a6%e7%9f%a9%e9%98%b5%e5%88%b0-replica-trick" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>以下讨论主要遵循 Nishioka 的综述<a href="/notes/topology-five-dimensional-gravity/#ref-Nishioka" >[4]</a>，并保留其中的英文专有名词。设总 Hilbert space 二分为</p>
+<p><span id="formula-78"></span></p>
+<div class="math display">\[
+\mathcal H=\mathcal H_A\otimes\mathcal H_{\bar A}.
+\tag{78}
+\]</div><p>这称为二分纠缠（bipartite entanglement）。对总密度矩阵 <span class="math inline">\(\rho\)</span>，对补区域取偏迹得到约化密度矩阵（reduced density matrix）</p>
+<p><span id="formula-79"></span></p>
+<div class="math display">\[
+\rho_A=\operatorname{Tr}_{\bar A}\rho,\qquad \operatorname{Tr}_A\rho_A=1.
+\tag{79}
+\]</div><p>纠缠熵（entanglement entropy）是 von Neumann entropy</p>
+<p><span id="formula-80"></span></p>
+<div class="math display">\[
+\boxed{S_A=-\operatorname{Tr}_A(\rho_A\log\rho_A).}
+\tag{80}
+\]</div><p>若总态纯，则 <span class="math inline">\(S_A=S_{\bar A}\)</span>；它测量 <span class="math inline">\(A\)</span> 与补系统之间的量子关联，而不是 <span class="math inline">\(A\)</span> 自身的热力学混合程度。</p>
+
+<h4 class="relative group">B.8.1 Rényi entropy 和已归一化公式
+    <div id="b81-rényi-entropy-和已归一化公式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b81-r%c3%a9nyi-entropy-%e5%92%8c%e5%b7%b2%e5%bd%92%e4%b8%80%e5%8c%96%e5%85%ac%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>Rényi entropy 定义为</p>
+<p><span id="formula-81"></span></p>
+<div class="math display">\[
+\boxed{S_n(A)=\frac{1}{1-n}\log\operatorname{Tr}_A(\rho_A^n),}
+\tag{81}
+\]</div><p>其中整数 <span class="math inline">\(n\)</span> 称为复制参数（replica parameter）。在假定可以从整数 <span class="math inline">\(n\)</span> 解析延拓（analytic continuation）到 <span class="math inline">\(n=1\)</span> 邻域后，</p>
+<p><span id="formula-82"></span></p>
+<div class="math display">\[
+\boxed{S_A=\lim_{n\to1}S_n(A)
+=-\operatorname{Tr}_A(\rho_A\log\rho_A).}
+\tag{82}
+\]</div><p>因为 <span class="math inline">\(\operatorname{Tr}\rho_A=1\)</span>，还可写为</p>
+<p><span id="formula-83"></span></p>
+<div class="math display">\[
+\boxed{S_A=-\left.\partial_n\log\operatorname{Tr}_A(\rho_A^n)\right|_{n=1}.}
+\tag{83}
+\]</div><p>归一化条件不可省略；若直接把未归一化路径积分对象代入最后一式，会漏掉 <span class="math inline">\(Z_1^n\)</span>。</p>
+
+<h4 class="relative group">B.8.2 QFT 路径积分中的 replica trick
+    <div id="b82-qft-路径积分中的-replica-trick" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b82-qft-%e8%b7%af%e5%be%84%e7%a7%af%e5%88%86%e4%b8%ad%e7%9a%84-replica-trick" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>在 Euclidean QFT 中，沿纠缠区域（entangling region）<span class="math inline">\(A\)</span> 切开时空，把 <span class="math inline">\(n\)</span> 份切开的流形循环粘合，得到 <span class="math inline">\(n\)</span> 重覆盖（<span class="math inline">\(n\)</span>-fold cover）<span class="math inline">\(M_n\)</span>。其分支位置是纠缠面（entangling surface）<span class="math inline">\(\Sigma=\partial A\)</span>。设原流形的 partition function 为 <span class="math inline">\(Z_1\equiv Z\)</span>，<span class="math inline">\(M_n\)</span> 上的 partition function 为 <span class="math inline">\(Z_n\)</span>，则</p>
+<p><span id="formula-84"></span></p>
+<div class="math display">\[
+\boxed{\operatorname{Tr}_A(\rho_A^n)=\frac{Z_n}{Z_1^n}.}
+\tag{84}
+\]</div><p>所以正确的 Rényi entropy 公式链为</p>
+<p><span id="formula-85"></span></p>
+<div class="math display">\[
+\boxed{
+S_n(A)=\frac{1}{1-n}\left(\log Z_n-n\log Z_1\right)
+=\frac{1}{1-n}\log\frac{Z_n}{Z_1^n}.}
+\tag{85}
+\]</div><p>取 <span class="math inline">\(n\to1\)</span> 得复制技巧（replica trick）</p>
+<p><span id="formula-86"></span></p>
+<div class="math display">\[
+\boxed{
+S_A=-\left.\partial_n\left(\log Z_n-n\log Z_1\right)\right|_{n=1}.}
+\tag{86}
+\]</div><p>在 <span class="math inline">\(Z_1\)</span> 是固定原流形 partition function 的前提下，等价写成</p>
+<p><span id="formula-87"></span></p>
+<div class="math display">\[
+\boxed{S_A=\left.(1-\partial_n)\log Z_n\right|_{n=1}.}
+\tag{87}
+\]</div><blockquote>
+<p><strong>容易混淆之处</strong></p>
+<p><span class="math inline">\(\operatorname{Tr}\rho_A^n\)</span>、<span class="math inline">\(Z_n\)</span> 和 <span class="math inline">\(Z_n/Z_1^n\)</span> 是三个不同对象。第一项已归一化；第二项是分支覆盖上的未归一化 partition function；第三项才与第一项相等。因此，replica trick 的路径积分公式必须始终保留 <span class="math inline">\(Z_1^n\)</span>，否则会产生归一化错误。</p>
+</blockquote>
+
+<h3 class="relative group">B.9 面积律、普适项与 CFT
+    <div id="b9-面积律普适项与-cft" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b9-%e9%9d%a2%e7%a7%af%e5%be%8b%e6%99%ae%e9%80%82%e9%a1%b9%e4%b8%8e-cft" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>局域 QFT 的基态纠缠主要来自纠缠面两侧的短程关联，因而出现面积律（area law）</p>
+<p><span id="formula-88"></span></p>
+<div class="math display">\[
+S_A=\sum_{j=1}^{d-2}\frac{c_j}{\epsilon^j}
++\begin{cases}
+c_{\log}\log(R/\epsilon)+\cdots,&amp;d\ \text{偶},\\
+F+\cdots,&amp;d\ \text{奇},
+\end{cases}
+\tag{88}
+\]</div><p>其中 <span class="math inline">\(\epsilon\)</span> 是 UV cutoff。幂次发散依赖正则化方案；偶数维的 logarithmic universal term 与 conformal anomaly 相关，奇数维的有限 universal term 则可在适当条件下定义 scheme-independent quantity。球形纠缠面（spherical entangling surface）的普适项尤其直接地读取 CFT central charges，并与 renormalization group flow 的 <span class="math inline">\(C\)</span>-theorem 或 <span class="math inline">\(F\)</span>-theorem 联系<a href="/notes/topology-five-dimensional-gravity/#ref-Nishioka" >[4]</a>。</p>
+
+<h3 class="relative group">B.10 holographic entanglement entropy
+    <div id="b10-holographic-entanglement-entropy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b10-holographic-entanglement-entropy" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">B.10.1 GKP&ndash;W relation 与全息 replica 表示
+    <div id="b101-gkpw-relation-与全息-replica-表示" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b101-gkpw-relation-%e4%b8%8e%e5%85%a8%e6%81%af-replica-%e8%a1%a8%e7%a4%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>GKP&ndash;W relation 把边界 generating functional 与 bulk on-shell action 联系：</p>
+<p><span id="formula-89"></span></p>
+<div class="math display">\[
+Z_{\rm CFT}[M]=e^{-I_{\rm bulk}[B]}.
+\tag{89}
+\]</div><p>令 <span class="math inline">\(B_n\)</span> 是边界为 <span class="math inline">\(M_n\)</span> 的光滑 bulk replica geometry，<span class="math inline">\(B_1=B\)</span>。将 <span class="math inline">\(\log Z_n=-I_{\rm bulk}[B_n]\)</span> 代入上节公式得到</p>
+<p><span id="formula-90"></span></p>
+<div class="math display">\[
+\boxed{
+S_A=\left.\partial_n\left[I_{\rm bulk}[B_n]
+-nI_{\rm bulk}[B_1]\right]\right|_{n=1}.}
+\tag{90}
+\]</div><p>这一步除 analytic continuation 外，经典推导通常还假定 replica symmetry。光滑 <span class="math inline">\(B_n\)</span>、其 orbifold</p>
+<p><span id="formula-91"></span></p>
+<div class="math display">\[
+\widehat B_n=B_n/\mathbb Z_n
+\tag{91}
+\]</div><p>以及有锥缺陷的 <span class="math inline">\(\widehat B_n\)</span> 不能混淆：锥缺陷位于延伸自 <span class="math inline">\(\Sigma\)</span> 的 codimension-two fixed locus。</p>
+
+<h4 class="relative group">B.10.2 Ryu&ndash;Takayanagi formula 与 HRT formula
+    <div id="b102-ryutakayanagi-formula-与-hrt-formula" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b102-ryutakayanagi-formula-%e4%b8%8e-hrt-formula" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<blockquote>
+<p><strong>定理：Ryu&ndash;Takayanagi formula</strong></p>
+<p>在由经典 Einstein gravity 描述的静态 asymptotically AdS bulk 中，边界区域 <span class="math inline">\(A\)</span> 的 leading large-<span class="math inline">\(N\)</span> entanglement entropy 为</p>
+<p><span id="formula-92"></span></p>
+<div class="math display">\[
+\boxed{S_A=\frac{\operatorname{Area}(\gamma_A)}{4G_N},}
+\tag{92}
+\]</div><p>其中 <span class="math inline">\(\gamma_A\)</span> 是与 <span class="math inline">\(A\)</span> 同调、满足 <span class="math inline">\(\partial\gamma_A=\partial A\)</span> 的最小 codimension-two surface<a href="/notes/topology-five-dimensional-gravity/#ref-RT" >[5]</a>。</p>
+</blockquote>
+<p>时间依赖情形使用 Hubeny&ndash;Rangamani&ndash;Takayanagi formula（HRT formula）：把同一边界和同调条件下的最小面替换为 Lorentzian extremal surface，并在多个极值面中选择适当的最小广义熵分支<a href="/notes/topology-five-dimensional-gravity/#ref-HRT" >[6]</a>。因此&quot;极值&quot;解决局部变分条件，&ldquo;同调约束&quot;选择正确的全局拓扑类。</p>
+<p>Lewkowycz&ndash;Maldacena replica derivation 的核心是：<span class="math inline">\(n\to1\)</span> 时 orbifold 锥缺陷等效于张力趋于零的 cosmic brane，其作用量对 <span class="math inline">\(n\)</span> 的导数留下面积项<a href="/notes/topology-five-dimensional-gravity/#ref-LM" >[7]</a>。</p>
+
+<h4 class="relative group">B.10.3 Rényi entropy 与 cosmic brane
+    <div id="b103-rényi-entropy-与-cosmic-brane" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b103-r%c3%a9nyi-entropy-%e4%b8%8e-cosmic-brane" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>定义模 entropy（modular entropy）</p>
+<p><span id="formula-93"></span></p>
+<div class="math display">\[
+\widetilde S_n=n^2\partial_n\left(\frac{n-1}{n}S_n\right).
+\tag{93}
+\]</div><p>在 Einstein gravity 中，它由反作用后的 cosmic brane 面积给出</p>
+<p><span id="formula-94"></span></p>
+<div class="math display">\[
+\widetilde S_n=\frac{\operatorname{Area}(\mathcal C_n)}{4G_N}.
+\tag{94}
+\]</div><p>与 <span class="math inline">\(n=1\)</span> 的 RT surface 不同，<span class="math inline">\(n\neq1\)</span> 时 cosmic brane 具有有限张力并反作用 bulk geometry。</p>
+
+<h4 class="relative group">B.10.4 spherical region 与 hyperbolic black hole
+    <div id="b104-spherical-region-与-hyperbolic-black-hole" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b104-spherical-region-%e4%b8%8e-hyperbolic-black-hole" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>对 CFT 真空中的球形区域，共形变换把约化密度矩阵映到双曲空间上的 thermal density matrix。bulk 中 RT surface 映到 hyperbolic AdS black hole horizon，因此</p>
+<p><span id="formula-95"></span></p>
+<div class="math display">\[
+S_A^{\rm sphere}=S_{\rm thermal}(\mathbb H^{d-1})=S_{\rm BH}^{\rm hyperbolic}.
+\tag{95}
+\]</div><p>这是一般 entangling surface 与黑洞 horizon 不同、但球形情形二者可以等同的特殊机制。它也解释了球形 universal term 与 central charge、RG monotonicity 的紧密联系。</p>
+
+<h3 class="relative group">B.11 Gauss&ndash;Bonnet 引力中的全息纠缠熵
+    <div id="b11-gaussbonnet-引力中的全息纠缠熵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b11-gaussbonnet-%e5%bc%95%e5%8a%9b%e4%b8%ad%e7%9a%84%e5%85%a8%e6%81%af%e7%ba%a0%e7%bc%a0%e7%86%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Wald entropy 适用于 stationary Killing horizon，但一般 RT/HRT surface 并非 Killing horizon。对一般 higher derivative gravity，replica geometry 还产生依赖 extrinsic curvature 的修正。Dong functional 和 Camps functional 系统地给出这些项<a href="/notes/topology-five-dimensional-gravity/#ref-Dong" >[8]</a>, <a href="/notes/topology-five-dimensional-gravity/#ref-Camps" >[9]</a>。</p>
+<blockquote>
+<p><strong>定理：Lovelock/Gauss&ndash;Bonnet 的 Jacobson&ndash;Myers functional</strong></p>
+<p>对 Lovelock gravity，higher derivative holographic entanglement entropy functional 化为 Jacobson&ndash;Myers type functional。对 Gauss&ndash;Bonnet action，在常用归一化和忽略 regulator boundary term 时</p>
+<p><span id="formula-96"></span></p>
+<div class="math display">\[
+\boxed{
+S_{\rm JM}[\Sigma]=\frac1{4G_D}\int_\Sigma\sqrt h
+\left(1+2\alpha\mathcal R_\Sigma\right)\mathrm d^{D-2}y,}
+\tag{96}
+\]</div><p>其中 <span class="math inline">\(\mathcal R_\Sigma\)</span> 是 codimension-two surface 的内禀标量曲率；物理解是使该泛函极值的曲面<a href="/notes/topology-five-dimensional-gravity/#ref-JM" >[10]</a>, <a href="/notes/topology-five-dimensional-gravity/#ref-Dong" >[8]</a>, <a href="/notes/topology-five-dimensional-gravity/#ref-Camps" >[9]</a>。</p>
+</blockquote>
+<p>需要区分：stationary black hole entropy 是 horizon 上的 Noether-charge/Jacobson&ndash;Myers entropy；一般 holographic entanglement entropy 在与 <span class="math inline">\(A\)</span> 同调的极值曲面上计算；只有 spherical region 映到 hyperbolic black hole 时，两种描述直接重合。</p>
+<p>在 AdS<span class="math inline">\(_5\)</span>/CFT<span class="math inline">\(_4\)</span> 中，Gauss&ndash;Bonnet coupling 改变有效 AdS radius、boundary central charges <span class="math inline">\(a,c\)</span> 的关系、球形 entanglement entropy 的 universal logarithmic term 以及 holographic RG flow。由于高导耦合还受 causality、unitarity 和 UV completion 约束，不能只把 <span class="math inline">\(\alpha\)</span> 当作任意大的现象学参数。</p>
+
+<h2 class="relative group">附录 C：五维 Kaluza&ndash;Klein、规范 Chern&ndash;Simons 与 Gauss&ndash;Bonnet 理论
+    <div id="附录-c五维-kaluzaklein规范-chernsimons-与-gaussbonnet-理论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%99%84%e5%bd%95-c%e4%ba%94%e7%bb%b4-kaluzaklein%e8%a7%84%e8%8c%83-chernsimons-%e4%b8%8e-gaussbonnet-%e7%90%86%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">C.1 范围和约定
+    <div id="c1-范围和约定" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c1-%e8%8c%83%e5%9b%b4%e5%92%8c%e7%ba%a6%e5%ae%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>以下五维模型只包含 Abelian 规范 Chern&ndash;Simons term</p>
+<p><span id="formula-97"></span></p>
+<div class="math display">\[
+A\wedge F\wedge F,
+\tag{97}
+\]</div><p>不把 <span class="math inline">\(A\wedge\operatorname{Tr}(R\wedge R)\)</span> 或纯引力 CS form 加入作用量。附录 B 为解释 descent relation 提及的非 Abelian 或引力例子不属于这一具体模型。</p>
+<p>五维规范场降到四维时，先保留动态零模 <span class="math inline">\(\chi(x)\)</span> 并完成代数展开；完成动态降维后，再在明确标出的截断点取</p>
+<p><span id="formula-98"></span></p>
+<div class="math display">\[
+\boxed{\chi(x)=\chi_0,\qquad\mathrm d\chi=0.}
+\tag{98}
+\]</div>
+<h3 class="relative group">C.2 KK 理论的几何思想和模展开
+    <div id="c2-kk-理论的几何思想和模展开" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c2-kk-%e7%90%86%e8%ae%ba%e7%9a%84%e5%87%a0%e4%bd%95%e6%80%9d%e6%83%b3%e5%92%8c%e6%a8%a1%e5%b1%95%e5%bc%80" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>Kaluza&ndash;Klein theory（KK theory）的核心是把高维几何沿紧致内部空间展开成低维场。取</p>
+<p><span id="formula-99"></span></p>
+<div class="math display">\[
+M_5=M_4\times S^1,\qquad y\sim y+2\pi R.
+\tag{99}
+\]</div><p>任意五维场都可以 Fourier 展开：</p>
+<p><span id="formula-100"></span></p>
+<div class="math display">\[
+\Phi(x,y)=\sum_{n\in\mathbb Z}\Phi_n(x)e^{iny/R},
+\qquad m_n^2=m_0^2+\frac{n^2}{R^2}.
+\tag{100}
+\]</div><p>低能 <span class="math inline">\(E\ll R^{-1}\)</span> 时，有质量的 <span class="math inline">\(n\neq0\)</span> KK modes 难以激发，常采用 zero-mode truncation。</p>
+<p>五维 metric ansatz 可取</p>
+<p><span id="formula-101"></span></p>
+<div class="math display">\[
+\mathrm ds_5^2=e^{-2\phi/\sqrt3}g_{\mu\nu}\mathrm dx^\mu\mathrm dx^\nu
++e^{4\phi/\sqrt3}(\mathrm dy+2C_\mu\mathrm dx^\mu)^2.
+\tag{101}
+\]</div><p>其中 <span class="math inline">\(g_{\mu\nu}\)</span> 是四维 Einstein-frame metric，<span class="math inline">\(\phi\)</span> 是 radion/dilaton，<span class="math inline">\(C_\mu\)</span> 是 KK gauge field。局域坐标变换</p>
+<p><span id="formula-102"></span></p>
+<div class="math display">\[
+y\mapsto y-2\lambda(x)
+\tag{102}
+\]</div><p>诱导 <span class="math inline">\(C\mapsto C+\mathrm d\lambda\)</span>。因此四维 <span class="math inline">\(U(1)\)</span> gauge symmetry 源于五维沿圆周方向的 diffeomorphism。</p>
+<p>忽略归一化细节，五维 Einstein&ndash;Hilbert term 降为</p>
+<p><span id="formula-103"></span></p>
+<div class="math display">\[
+S_4\sim\int\sqrt{-g}\left[R-2(\partial\phi)^2
+-e^{-2\sqrt3\phi}G_{\mu\nu}G^{\mu\nu}\right]\mathrm d^4x,
+\qquad G=\mathrm dC.
+\tag{103}
+\]</div><p>这展示了高维 metric 如何统一产生低维 metric、scalar 和 gauge field。</p>
+
+<h3 class="relative group">C.3 五维 Abelian gauge Chern&ndash;Simons term
+    <div id="c3-五维-abelian-gauge-chernsimons-term" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c3-%e4%ba%94%e7%bb%b4-abelian-gauge-chernsimons-term" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>取独立的五维 Abelian gauge field <span class="math inline">\(A\)</span>，<span class="math inline">\(F=\mathrm dA\)</span>。规范 CS action 写为</p>
+<p><span id="formula-104"></span></p>
+<div class="math display">\[
+\boxed{S_{\rm CS}=\frac{\kappa}{3}\int_{M_5}A\wedge F\wedge F.}
+\tag{104}
+\]</div><p>系数 <span class="math inline">\(1/3\)</span> 是一种方便约定；与 Maxwell term 合并时，<span class="math inline">\(\kappa\)</span> 的具体数值依赖整体 action normalization。</p>
+<blockquote>
+<p><strong>定理：Stokes 定理</strong></p>
+<p>若 <span class="math inline">\(M\)</span> 是定向流形、<span class="math inline">\(\omega\)</span> 是次数合适的光滑微分形式，则</p>
+<p><span id="formula-105"></span></p>
+<div class="math display">\[
+\boxed{\int_M\mathrm d\omega=\int_{\partial M}\omega.}
+\tag{105}
+\]</div><p>Stokes 定理把 CS action 的 gauge variation 化为 boundary term。</p>
+</blockquote>
+<p>在 <span class="math inline">\(A\mapsto A+\mathrm d\lambda\)</span> 下，</p>
+<p><span id="formula-106"></span></p>
+<div class="math display">\[
+\begin{align}
+\delta_\lambda S_{\rm CS}
+&amp;=\frac{\kappa}{3}\int_{M_5}\mathrm d\lambda\wedge F\wedge F\tag{106}\\
+&amp;=\frac{\kappa}{3}\int_{\partial M_5}\lambda F\wedge F.
+\tag{107}
+\end{align}
+\]</div><p>闭合流形上小规范变换不改变 action；有边界时该项产生 anomaly inflow。大规范变换还会约束 <span class="math inline">\(\kappa\)</span> 的量子化，具体单位取决于最小电荷和 gauge group normalization。</p>
+
+<h3 class="relative group">C.4 Maxwell&ndash;CS equation 与 Page charge
+    <div id="c4-maxwellcs-equation-与-page-charge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c4-maxwellcs-equation-%e4%b8%8e-page-charge" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>考虑</p>
+<p><span id="formula-108"></span></p>
+<div class="math display">\[
+S[A]=-\frac12\int F\wedge\star F
++\frac{\kappa}{3}\int A\wedge F\wedge F.
+\tag{108}
+\]</div><p>对 <span class="math inline">\(A\)</span> 变分并忽略边界项，得到</p>
+<p><span id="formula-109"></span></p>
+<div class="math display">\[
+\boxed{\mathrm d\star F+\kappa F\wedge F=0,\qquad \mathrm dF=0.}
+\tag{109}
+\]</div><p>纯规范 CS term 不显含 metric，所以没有直接 stress tensor；但它改变 <span class="math inline">\(F\)</span> 的解，继而通过 Maxwell stress tensor 间接反作用 geometry。</p>
+<p>方程可改写为</p>
+<p><span id="formula-110"></span></p>
+<div class="math display">\[
+\mathrm d(\star F+\kappa A\wedge F)=0.
+\tag{110}
+\]</div><p>因此 Page form <span class="math inline">\(\star F+\kappa A\wedge F\)</span> 局域闭合，相应 Page charge 在合适 cycle 上守恒且通常量子化；但它显含 <span class="math inline">\(A\)</span>，所以在大规范变换下可能偏移。Maxwell charge 较规范不变，却会因 bulk 的 <span class="math inline">\(F\wedge F\)</span> 而在不同曲面间流动。选择何种 charge 必须与研究的问题一致。</p>
+
+<h3 class="relative group">C.5 五维规范场降到四维：先保留动态 <span class="math inline">\(\chi\)</span>
+    <div id="c5-五维规范场降到四维先保留动态" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c5-%e4%ba%94%e7%bb%b4%e8%a7%84%e8%8c%83%e5%9c%ba%e9%99%8d%e5%88%b0%e5%9b%9b%e7%bb%b4%e5%85%88%e4%bf%9d%e7%95%99%e5%8a%a8%e6%80%81" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>定义 KK-invariant one-form</p>
+<p><span id="formula-111"></span></p>
+<div class="math display">\[
+\eta=\mathrm dy+C,\qquad G=\mathrm dC,\qquad \mathrm d\eta=G.
+\tag{111}
+\]</div><p>把五维独立 gauge field 写成</p>
+<p><span id="formula-112"></span></p>
+<div class="math display">\[
+\mathcal A=B+\chi\eta.
+\tag{112}
+\]</div><p>其 field strength 为</p>
+<p><span id="formula-113"></span></p>
+<div class="math display">\[
+\mathcal F=\mathrm d\mathcal A
+=\widehat F+\mathrm d\chi\wedge\eta,\qquad
+\widehat F=\mathrm dB+\chi G.
+\tag{113}
+\]</div><p>这里 <span class="math inline">\(B\)</span> 是四维 one-form，<span class="math inline">\(\chi=\mathcal A_y\)</span> 是 Wilson-line/axion-like scalar。注意动态 <span class="math inline">\(\chi\)</span> 时</p>
+<p><span id="formula-114"></span></p>
+<div class="math display">\[
+\mathrm d\widehat F=\mathrm d\chi\wedge G,
+\tag{114}
+\]</div><p>所以 <span class="math inline">\(\widehat F\)</span> 不是独立闭合 field strength。</p>
+<p>由于四维 base 上不存在非零五形式，只保留含一个 <span class="math inline">\(\eta\)</span> 的项：</p>
+<p><span id="formula-115"></span></p>
+<div class="math display">\[
+\begin{aligned}
+\mathcal A\wedge\mathcal F\wedge\mathcal F
+=\Bigl[\chi\widehat F\wedge\widehat F
++2B\wedge\widehat F\wedge\mathrm d\chi\Bigr]\wedge\eta.
+\end{aligned}
+\tag{115}
+\]</div><p>沿 <span class="math inline">\(S^1\)</span> 积分得到</p>
+<p><span id="formula-116"></span></p>
+<div class="math display">\[
+\boxed{
+\int_{M_5}\mathcal A\wedge\mathcal F\wedge\mathcal F
+=2\pi R\int_{M_4}\left[
+\chi\widehat F\wedge\widehat F
++2B\wedge\widehat F\wedge\mathrm d\chi\right].}
+\tag{116}
+\]</div><p>这一步展示了动态 axion 与 gauge fields 的导数耦合；归一化和全微分重排取决于四维变量选择。</p>
+
+<h3 class="relative group">C.6 常数零模截断 <span class="math inline">\(\chi=\chi_0\)</span>
+    <div id="c6-常数零模截断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c6-%e5%b8%b8%e6%95%b0%e9%9b%b6%e6%a8%a1%e6%88%aa%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>从本节开始使用常数零模截断</p>
+<p><span id="formula-117"></span></p>
+<div class="math display">\[
+\boxed{\chi(x)=\chi_0,\qquad\mathrm d\chi=0,\qquad
+\widehat F=\mathrm dB+\chi_0G.}
+\tag{117}
+\]</div><p>于是</p>
+<p><span id="formula-118"></span></p>
+<div class="math display">\[
+S_{\rm CS}^{(4)}\propto
+2\pi R\,\kappa\chi_0
+\int_{M_4}\widehat F\wedge\widehat F.
+\tag{118}
+\]</div><p>这是四维 theta-type topological term。在闭合 bulk 且 <span class="math inline">\(\chi_0\)</span> 固定时，它不改变局域 Maxwell equation；但可影响 boundary term、量子相位、topological sector，并混合 <span class="math inline">\(B\)</span> 与 KK gauge field <span class="math inline">\(C\)</span>。常数零模截断下不再包含 <span class="math inline">\(\mathrm d\chi\)</span> 相互作用。</p>
+
+<h3 class="relative group">C.7 五维 Einstein&ndash;Gauss&ndash;Bonnet 动力学
+    <div id="c7-五维-einsteingaussbonnet-动力学" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c7-%e4%ba%94%e7%bb%b4-einsteingaussbonnet-%e5%8a%a8%e5%8a%9b%e5%ad%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>五维 action 为</p>
+<p><span id="formula-119"></span></p>
+<div class="math display">\[
+S_{\rm EGB}^{(5)}=\frac1{16\pi G_5}
+\int\sqrt{-g}\left(R-2\Lambda+\alpha\mathcal G_5\right)\mathrm d^5x,
+\tag{119}
+\]</div><p>其中</p>
+<p><span id="formula-120"></span></p>
+<div class="math display">\[
+\mathcal G_5=R_{MNRS}R^{MNRS}-4R_{MN}R^{MN}+R^2.
+\tag{120}
+\]</div><p>在五维它不再是拓扑项。场方程为</p>
+<p><span id="formula-121"></span></p>
+<div class="math display">\[
+G_{MN}+\Lambda g_{MN}+\alpha H_{MN}=8\pi G_5T_{MN},
+\tag{121}
+\]</div><p>其中 Lanczos tensor</p>
+<p><span id="formula-122"></span></p>
+<div class="math display">\[
+\begin{align}
+H_{MN}={}&amp;2\Bigl(RR_{MN}-2R_{MP}R^P{}_N
+-2R^{PQ}R_{MPNQ}
++R_M{}^{PQR}R_{NPQR}\Bigr)\tag{122}\\
+&amp;-\frac12g_{MN}\mathcal G_5.
+\tag{123}
+\end{align}
+\]</div><p>尽管 action 含曲率平方，Lovelock 组合使场方程仍至多含 metric 的二阶导数。</p>
+<p>对常曲率 ansatz</p>
+<p><span id="formula-124"></span></p>
+<div class="math display">\[
+R_{MNRS}=K(g_{MR}g_{NS}-g_{MS}g_{NR}),
+\tag{124}
+\]</div><p>真空方程化为</p>
+<p><span id="formula-125"></span></p>
+<div class="math display">\[
+\boxed{K+2\alpha K^2=\frac{\Lambda}{6}}
+\tag{125}
+\]</div><p>（符号随 Riemann convention 而变）。二次方程产生连续连接 <span class="math inline">\(\alpha\to0\)</span> Einstein branch 和另一条 non-Einstein branch；后者常涉及不同有效 Newton constant 或稳定性问题。</p>
+
+<h3 class="relative group">C.8 EGB&ndash;Maxwell&ndash;CS 总作用量
+    <div id="c8-egbmaxwellcs-总作用量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c8-egbmaxwellcs-%e6%80%bb%e4%bd%9c%e7%94%a8%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>一个方便的组合模型是</p>
+<p><span id="formula-126"></span></p>
+<div class="math display">\[
+\boxed{
+S_5=\frac1{16\pi G_5}\int_{M_5}\left[
+(R-2\Lambda+\alpha\mathcal G_5)\star1
+-\frac12F\wedge\star F
++\frac{\kappa}{3}A\wedge F\wedge F\right].}
+\tag{126}
+\]</div><p>Gauss&ndash;Bonnet term 直接修改 gravitational equation、AdS radius、black hole geometry 和 entropy functional；规范 CS term 直接修改 gauge equation 和 Page charge，但无直接 metric stress tensor。两者通过共同解出的 <span class="math inline">\(F\)</span>、metric 和 Hodge star 间接耦合。</p>
+
+<h3 class="relative group">C.9 黑洞、熵与 AdS<span class="math inline">\(_5\)</span>/CFT<span class="math inline">\(_4\)</span>
+    <div id="c9-黑洞熵与-adscft" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c9-%e9%bb%91%e6%b4%9e%e7%86%b5%e4%b8%8e-adscft" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>五维 Gauss&ndash;Bonnet black hole 的 stationary horizon entropy 使用 Jacobson&ndash;Myers/Wald-type formula，而非纯面积律：</p>
+<p><span id="formula-127"></span></p>
+<div class="math display">\[
+S_{\rm BH}=\frac1{4G_5}\int_{\mathcal H}\sqrt h
+\left(1+2\alpha\mathcal R_{\mathcal H}\right)\mathrm d^3y.
+\tag{127}
+\]</div><p>规范 CS coupling 改变 charged rotating black hole 的 charge&ndash;angular momentum relation、Page charge 和 extremal branches<a href="/notes/topology-five-dimensional-gravity/#ref-Gauntlett" >[16]</a>, <a href="/notes/topology-five-dimensional-gravity/#ref-Kunz" >[17]</a>。</p>
+<p>在 AdS<span class="math inline">\(_5\)</span>/CFT<span class="math inline">\(_4\)</span> 中，bulk gauge CS coefficient 编码 boundary global-current anomaly coefficient；Gauss&ndash;Bonnet coupling 改变 boundary central charges 和 holographic entanglement entropy。若模型来自 supersymmetric string compactification，<span class="math inline">\(\alpha\)</span>、<span class="math inline">\(\kappa\)</span> 和其他 higher derivative couplings 往往受 supersymmetry、flux quantization 和 anomaly matching 共同约束，不能任意独立选择。</p>
+
+<h3 class="relative group">C.10 四维有效结构和适用范围
+    <div id="c10-四维有效结构和适用范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c10-%e5%9b%9b%e7%bb%b4%e6%9c%89%e6%95%88%e7%bb%93%e6%9e%84%e5%92%8c%e9%80%82%e7%94%a8%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>五维 Gauss&ndash;Bonnet term 做 KK reduction 后，若完全冻结 radion 和 KK gauge field，仅留下四维纯 metric GB integral，它是拓扑项；若保留 <span class="math inline">\(\phi\)</span> 和 <span class="math inline">\(C_\mu\)</span>，会产生</p>
+<p><span id="formula-128"></span></p>
+<div class="math display">\[
+e^{a\phi}\mathcal G_4,\qquad
+G^{\mu\nu}\partial_\mu\phi\partial_\nu\phi,\qquad
+(\partial\phi)^2\Box\phi,\qquad
+RF_C^2,\qquad F_C^4,\ldots
+\tag{128}
+\]</div><p>等 scalar&ndash;tensor 和 vector&ndash;tensor interactions，属于 Horndeski/Galileon-type second-order structures 的来源之一<a href="/notes/topology-five-dimensional-gravity/#ref-Acoleyen" >[15]</a>。</p>
+<p>与此同时，常数 <span class="math inline">\(\chi_0\)</span> 的规范 CS reduction 只保留</p>
+<p><span id="formula-129"></span></p>
+<div class="math display">\[
+\chi_0(\mathrm dB+\chi_0G)\wedge(\mathrm dB+\chi_0G),
+\tag{129}
+\]</div><p>不再含 <span class="math inline">\(\mathrm d\chi\)</span>。因此四维局域动力学主要由 Einstein&ndash;Maxwell&ndash;dilaton 和 GB reduction 的高导耦合控制；常数 CS zero mode 主要选择 topological sector 和 boundary response。</p>
+
+<h2 class="relative group">参考资料
+    <div id="参考资料" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>
+<p><span id="ref-Hatcher"></span></p>
+<p>A. Hatcher, <em>Algebraic Topology</em>, Cambridge University Press, 2002.</p>
+</li>
+<li>
+<p><span id="ref-Nakahara"></span></p>
+<p>M. Nakahara, <em>Geometry, Topology and Physics</em>, 2nd ed., CRC Press, 2003.</p>
+</li>
+<li>
+<p><span id="ref-ChernSimons"></span></p>
+<p>S.-S. Chern and J. Simons, &ldquo;Characteristic forms and geometric invariants,&rdquo; <em>Ann. Math.</em> <strong>99</strong> (1974) 48&ndash;69.</p>
+</li>
+<li>
+<p><span id="ref-Nishioka"></span></p>
+<p>T. Nishioka, &ldquo;Entanglement entropy: holography and renormalization group,&rdquo; <em>Rev. Mod. Phys.</em> <strong>90</strong> (2018) 035007, arXiv:1801.10352.</p>
+</li>
+<li>
+<p><span id="ref-RT"></span></p>
+<p>S. Ryu and T. Takayanagi, &ldquo;Holographic derivation of entanglement entropy from AdS/CFT,&rdquo; <em>Phys. Rev. Lett.</em> <strong>96</strong> (2006) 181602, arXiv:hep-th/0603001.</p>
+</li>
+<li>
+<p><span id="ref-HRT"></span></p>
+<p>V. E. Hubeny, M. Rangamani and T. Takayanagi, &ldquo;A covariant holographic entanglement entropy proposal,&rdquo; <em>JHEP</em> 07 (2007) 062, arXiv:0705.0016.</p>
+</li>
+<li>
+<p><span id="ref-LM"></span></p>
+<p>A. Lewkowycz and J. Maldacena, &ldquo;Generalized gravitational entropy,&rdquo; <em>JHEP</em> 08 (2013) 090, arXiv:1304.4926.</p>
+</li>
+<li>
+<p><span id="ref-Dong"></span></p>
+<p>X. Dong, &ldquo;Holographic entanglement entropy for general higher derivative gravity,&rdquo; <em>JHEP</em> 01 (2014) 044, arXiv:1310.5713.</p>
+</li>
+<li>
+<p><span id="ref-Camps"></span></p>
+<p>J. Camps, &ldquo;Generalized entropy and higher derivative gravity,&rdquo; <em>JHEP</em> 03 (2014) 070, arXiv:1310.6659.</p>
+</li>
+<li>
+<p><span id="ref-JM"></span></p>
+<p>T. Jacobson and R. C. Myers, &ldquo;Black hole entropy and higher curvature interactions,&rdquo; <em>Phys. Rev. Lett.</em> <strong>70</strong> (1993) 3684.</p>
+</li>
+<li>
+<p><span id="ref-Lovelock"></span></p>
+<p>D. Lovelock, &ldquo;The Einstein tensor and its generalizations,&rdquo; <em>J. Math. Phys.</em> <strong>12</strong> (1971) 498.</p>
+</li>
+<li>
+<p><span id="ref-GreenHarveyMoore"></span></p>
+<p>M. B. Green, J. A. Harvey and G. Moore, &ldquo;I-brane inflow and anomalous couplings on D-branes,&rdquo; <em>Class. Quant. Grav.</em> <strong>14</strong> (1997) 47, arXiv:hep-th/9605033.</p>
+</li>
+<li>
+<p><span id="ref-MinasianMoore"></span></p>
+<p>R. Minasian and G. Moore, &ldquo;K-theory and Ramond&ndash;Ramond charge,&rdquo; <em>JHEP</em> 11 (1997) 002, arXiv:hep-th/9710230.</p>
+</li>
+<li>
+<p><span id="ref-Clark"></span></p>
+<p>T. E. Clark, S. T. Love and T. ter Veldhuis, &ldquo;Holographic currents and Chern&ndash;Simons terms,&rdquo; arXiv:1006.2400.</p>
+</li>
+<li>
+<p><span id="ref-Acoleyen"></span></p>
+<p>K. Van Acoleyen and J. Van Doorsselaere, &ldquo;Galileons from Lovelock actions,&rdquo; <em>Phys. Rev. D</em> <strong>83</strong> (2011) 084025, arXiv:1102.0487.</p>
+</li>
+<li>
+<p><span id="ref-Gauntlett"></span></p>
+<p>J. P. Gauntlett <em>et al.</em>, &ldquo;All supersymmetric solutions of minimal supergravity in five dimensions,&rdquo; <em>Class. Quant. Grav.</em> <strong>20</strong> (2003) 4587, arXiv:hep-th/0209114.</p>
+</li>
+<li>
+<p><span id="ref-Kunz"></span></p>
+<p>J. Kunz and F. Navarro-Lérida, &ldquo;<span class="math inline">\(D=5\)</span> Einstein&ndash;Maxwell&ndash;Chern&ndash;Simons black holes,&rdquo; <em>Phys. Rev. Lett.</em> <strong>96</strong> (2006) 081101, arXiv:hep-th/0510250.</p>
+</li>
+<li>
+<p><span id="ref-Li2026"></span></p>
+<p>Q. Li, Y. Liu and W. Zhu, &ldquo;Entanglement islands of 2D charged scalar-hairy black holes on the brane,&rdquo; 2026.</p>
+</li>
+</ol>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/topology-five-dimensional-gravity/markdown.zip" download>Markdown &#43; resources</a></li><li><a href="/attachments/zh/notes/topology-five-dimensional-gravity/article.pdf" download>PDF</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/homology-cohomology/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;同调、上同调与 de Rham 上同调
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-16T14:25:00&#43;08:00">2026年11月16日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+  
+  
+  
+  <section id="comments" class="site-comments" aria-labelledby="comments-title"
+    data-site-comments data-repo="PeterBenjaminZhu/peterbenjaminzhu.github.io" data-repo-id="R_kgDOVqUVYg"
+    data-category="Website Notes" data-category-id="DIC_kwDOVqUVYs4DLMiy"
+    data-term="/notes/topology-five-dimensional-gravity/" data-lang="zh-CN"
+    data-loading-text="正在连接评论服务…"
+    data-ready-text="评论框已载入。请在下方查看讨论或登录参与。"
+    data-empty-text="这篇笔记尚无讨论，首次提交留言后会自动创建。"
+    data-error-text="评论区出现错误或连接超时。请查看下方提示、刷新重试，或通过 GitHub 讨论入口查看。"
+    data-discussion-link-text="在 GitHub 查看本篇讨论">
+    <h2 id="comments-title">评论与提问</h2>
+    <p class="site-comments-intro">使用 GitHub 账户留言、提问或勘误。内容公开保存于 GitHub Discussions；回复提醒由个人 GitHub 通知设置决定。</p>
+    <p class="site-comments-status" role="status" aria-live="polite">滚动到这里后加载评论。</p>
+    <p><a class="site-comments-link" href="https://github.com/PeterBenjaminZhu/peterbenjaminzhu.github.io/discussions/categories/website-notes" target="_blank" rel="noopener noreferrer">在 GitHub 查看网站讨论分类</a></p>
+    <div id="giscus-comments" class="giscus"></div>
+    <noscript><p>评论需要 JavaScript。你也可以通过上方链接访问 GitHub 讨论分类。</p></noscript>
+  </section>
+  
+  <script defer src="/js/comments.min.549eb599f43e88a559283c161bbcfdf528438c4a6d6708b10e7b43208c31b132447e7bd66ca29c4e6df42e7cee619d0d363f40db1eb7b5c5735c487a83c43d78.js" integrity="sha512-VJ61mfQ&#43;iKVZKDwWG7z99ShDjEptZwixDntDIIwxsTJEfnvWbKKcTm30LnzuYZ0NNj9A2x63tcVzXEh6g8Q9eA=="></script>
+
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#阅读导图">阅读导图</a>
+      <ul>
+        <li><a href="#五个核心概念">五个核心概念</a></li>
+        <li><a href="#代数与拓扑符号">代数与拓扑符号</a></li>
+        <li><a href="#微分几何与特征类符号">微分几何与特征类符号</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-群论与商结构准备">1 群论与商结构准备</a>
+      <ul>
+        <li><a href="#11-为什么先谈结构">1.1 为什么先谈&quot;结构&quot;</a></li>
+        <li><a href="#12-陪集和正规子群">1.2 陪集和正规子群</a></li>
+        <li><a href="#13-商空间集合差陪集空间和商群">1.3 商空间、集合差、陪集空间和商群</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2-同态核像与同构">2 同态、核、像与同构</a>
+      <ul>
+        <li><a href="#21-同态保持运算的映射">2.1 同态：保持运算的映射</a></li>
+        <li><a href="#22-像和核">2.2 像和核</a></li>
+        <li><a href="#23-为什么核必为正规子群">2.3 为什么核必为正规子群</a></li>
+        <li><a href="#24-同构和第一同构定理">2.4 同构和第一同构定理</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-同胚与微分同胚定义和基本联系">3 同胚与微分同胚：定义和基本联系</a></li>
+    <li><a href="#4-同伦把连续变形看成一部电影">4 同伦：把连续变形看成一部电影</a>
+      <ul>
+        <li><a href="#41-电影比喻和标准定义">4.1 电影比喻和标准定义</a></li>
+        <li><a href="#42-同痕与单参数微分同胚群">4.2 同痕与单参数微分同胚群</a></li>
+        <li><a href="#43-路径路径同伦和闭合路径">4.3 路径、路径同伦和闭合路径</a></li>
+        <li><a href="#44-映射同伦和空间同伦等价">4.4 映射同伦和空间同伦等价</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-同调闭链模去边界链">5 同调：闭链模去边界链</a>
+      <ul>
+        <li><a href="#51-链和边界算子">5.1 链和边界算子</a></li>
+        <li><a href="#52-同伦不变性">5.2 同伦不变性</a></li>
+        <li><a href="#53-rthrt-与岛中的相对同调约束">5.3 RT/HRT 与岛中的相对同调约束</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-同胚同伦与同调的区别和联系">6 同胚、同伦与同调的区别和联系</a></li>
+    <li><a href="#7-在量子引力adscft-与弦论中的位置">7 在量子引力、AdS/CFT 与弦论中的位置</a></li>
+    <li><a href="#8-正文总结空间等价条件的嵌套关系">8 正文总结：空间等价条件的嵌套关系</a></li>
+    <li><a href="#附录-abetti-数与-euler-示性数">附录 A：Betti 数与 Euler 示性数</a>
+      <ul>
+        <li><a href="#a1-从凸多面体的--开始">A.1 从凸多面体的 $V-E+F=2$ 开始</a></li>
+        <li><a href="#a2-为什么细分不改变-euler-示性数">A.2 为什么细分不改变 Euler 示性数</a></li>
+        <li><a href="#a3-链群和边界矩阵">A.3 链群和边界矩阵</a></li>
+        <li><a href="#a4-秩零化度定理和-betti-数">A.4 秩&ndash;零化度定理和 Betti 数</a></li>
+        <li><a href="#a5-圆周与圆盘的完整计算">A.5 圆周与圆盘的完整计算</a></li>
+        <li><a href="#a6-球面和环面">A.6 球面和环面</a></li>
+        <li><a href="#a7-eulerpoincaré-定理">A.7 Euler&ndash;Poincaré 定理</a></li>
+        <li><a href="#a8-自由部分挠率和四维例子">A.8 自由部分、挠率和四维例子</a></li>
+      </ul>
+    </li>
+    <li><a href="#附录-bcherngaussbonnet陈数与纠缠熵">附录 B：Chern&ndash;Gauss&ndash;Bonnet、陈数与纠缠熵</a>
+      <ul>
+        <li><a href="#b1-一般-cherngaussbonnet-定理">B.1 一般 Chern&ndash;Gauss&ndash;Bonnet 定理</a></li>
+        <li><a href="#b2-物理人的直觉局域曲率密度为何给出整数">B.2 物理人的直觉：局域曲率密度为何给出整数</a></li>
+        <li><a href="#b3-从-euler-类到陈类和陈数">B.3 从 Euler 类到陈类和陈数</a>
+          <ul>
+            <li><a href="#b31-复向量丛与总陈类">B.3.1 复向量丛与总陈类</a></li>
+            <li><a href="#b32-陈数">B.3.2 陈数</a></li>
+          </ul>
+        </li>
+        <li><a href="#b4-chern-form-与-chernsimons-form-的下降关系">B.4 Chern form 与 Chern&ndash;Simons form 的下降关系</a></li>
+        <li><a href="#b5-量子引力adscft-与弦论中的陈数cs-关系">B.5 量子引力、AdS/CFT 与弦论中的陈数&ndash;CS 关系</a>
+          <ul>
+            <li><a href="#b51-全息反常流入">B.5.1 全息反常流入</a></li>
+            <li><a href="#b52-d-brane-wesszumino-coupling-和-k-theory">B.5.2 D-brane Wess&ndash;Zumino coupling 和 K-theory</a></li>
+            <li><a href="#b53-page-charge黑洞和拓扑扇区">B.5.3 Page charge、黑洞和拓扑扇区</a></li>
+          </ul>
+        </li>
+        <li><a href="#b6-二维-gaussbonnet-和二维引力">B.6 二维 Gauss&ndash;Bonnet 和二维引力</a></li>
+        <li><a href="#b7-四维-gaussbonneteinstein-manifold-与高维引力">B.7 四维 Gauss&ndash;Bonnet、Einstein manifold 与高维引力</a></li>
+        <li><a href="#b8-纠缠熵从约化密度矩阵到-replica-trick">B.8 纠缠熵：从约化密度矩阵到 replica trick</a>
+          <ul>
+            <li><a href="#b81-rényi-entropy-和已归一化公式">B.8.1 Rényi entropy 和已归一化公式</a></li>
+            <li><a href="#b82-qft-路径积分中的-replica-trick">B.8.2 QFT 路径积分中的 replica trick</a></li>
+          </ul>
+        </li>
+        <li><a href="#b9-面积律普适项与-cft">B.9 面积律、普适项与 CFT</a></li>
+        <li><a href="#b10-holographic-entanglement-entropy">B.10 holographic entanglement entropy</a>
+          <ul>
+            <li><a href="#b101-gkpw-relation-与全息-replica-表示">B.10.1 GKP&ndash;W relation 与全息 replica 表示</a></li>
+            <li><a href="#b102-ryutakayanagi-formula-与-hrt-formula">B.10.2 Ryu&ndash;Takayanagi formula 与 HRT formula</a></li>
+            <li><a href="#b103-rényi-entropy-与-cosmic-brane">B.10.3 Rényi entropy 与 cosmic brane</a></li>
+            <li><a href="#b104-spherical-region-与-hyperbolic-black-hole">B.10.4 spherical region 与 hyperbolic black hole</a></li>
+          </ul>
+        </li>
+        <li><a href="#b11-gaussbonnet-引力中的全息纠缠熵">B.11 Gauss&ndash;Bonnet 引力中的全息纠缠熵</a></li>
+      </ul>
+    </li>
+    <li><a href="#附录-c五维-kaluzaklein规范-chernsimons-与-gaussbonnet-理论">附录 C：五维 Kaluza&ndash;Klein、规范 Chern&ndash;Simons 与 Gauss&ndash;Bonnet 理论</a>
+      <ul>
+        <li><a href="#c1-范围和约定">C.1 范围和约定</a></li>
+        <li><a href="#c2-kk-理论的几何思想和模展开">C.2 KK 理论的几何思想和模展开</a></li>
+        <li><a href="#c3-五维-abelian-gauge-chernsimons-term">C.3 五维 Abelian gauge Chern&ndash;Simons term</a></li>
+        <li><a href="#c4-maxwellcs-equation-与-page-charge">C.4 Maxwell&ndash;CS equation 与 Page charge</a></li>
+        <li><a href="#c5-五维规范场降到四维先保留动态">C.5 五维规范场降到四维：先保留动态 $\chi$</a></li>
+        <li><a href="#c6-常数零模截断">C.6 常数零模截断 $\chi=\chi_0$</a></li>
+        <li><a href="#c7-五维-einsteingaussbonnet-动力学">C.7 五维 Einstein&ndash;Gauss&ndash;Bonnet 动力学</a></li>
+        <li><a href="#c8-egbmaxwellcs-总作用量">C.8 EGB&ndash;Maxwell&ndash;CS 总作用量</a></li>
+        <li><a href="#c9-黑洞熵与-adscft">C.9 黑洞、熵与 AdS$_5$/CFT$_4$</a></li>
+        <li><a href="#c10-四维有效结构和适用范围">C.10 四维有效结构和适用范围</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>

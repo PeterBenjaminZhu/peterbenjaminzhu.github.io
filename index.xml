@@ -9,7 +9,7 @@
     <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
     <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
     <copyright>© 2026 Peter Benjamin Zhu</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 11:00:00 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2026 14:25:37 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>微分几何入门与广义相对论(1)——集合与拓扑空间</title>
@@ -38,6 +38,26 @@
       <author>19973397352@163.com (Peter Benjamin Zhu)</author>
       <guid>https://peterbenjaminzhu.github.io/topics/differential-geometry-general-relativity/chapter-02-manifolds/</guid>
       <description>梁灿彬教材学习笔记：坐标图、图册、微分结构、微分同胚与标量场</description>
+      
+    </item>
+    
+    <item>
+      <title>同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力</title>
+      <link>https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/</link>
+      <pubDate>Mon, 16 Nov 2026 14:25:37 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/topology-five-dimensional-gravity/</guid>
+      <description>从群论与商结构、同伦和同调出发，讨论 Chern–Gauss–Bonnet、纠缠熵，以及五维 Kaluza–Klein、规范 Chern–Simons 与 Gauss–Bonnet 理论。</description>
+      
+    </item>
+    
+    <item>
+      <title>同调、上同调与 de Rham 上同调</title>
+      <link>https://peterbenjaminzhu.github.io/notes/homology-cohomology/</link>
+      <pubDate>Mon, 16 Nov 2026 14:25:00 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/notes/homology-cohomology/</guid>
+      <description>从边界算子、链复形与微分形式出发，理解同调、上同调及 RT/HRT 的相对同调约束。</description>
       
     </item>
     

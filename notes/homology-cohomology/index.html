@@ -1,0 +1,1941 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>同调、上同调与 de Rham 上同调 &middot; 学物理的咸鱼</title>
+    <meta name="title" content="同调、上同调与 de Rham 上同调 &middot; 学物理的咸鱼">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="从边界算子、链复形与微分形式出发，理解同调、上同调及 RT/HRT 的相对同调约束。">
+  
+  
+    <meta name="keywords" content="同调,上同调,全息纠缠熵,">
+  
+  
+  
+  <link rel="canonical" href="https://peterbenjaminzhu.github.io/notes/homology-cohomology/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Peter Benjamin Zhu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/PeterBenjaminZhu" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://peterbenjaminzhu.github.io/notes/homology-cohomology/">
+	<meta property="og:site_name" content="学物理的咸鱼">
+	<meta property="og:title" content="同调、上同调与 de Rham 上同调">
+	<meta property="og:description" content="从边界算子、链复形与微分形式出发，理解同调、上同调及 RT/HRT 的相对同调约束。">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="notes">
+		<meta property="article:published_time" content="2026-11-16T14:25:00+08:00">
+		<meta property="article:modified_time" content="2026-11-16T14:25:00+08:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="同调、上同调与 de Rham 上同调">
+	<meta name="twitter:description" content="从边界算子、链复形与微分形式出发，理解同调、上同调及 RT/HRT 的相对同调约束。">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.afa37b631f158a8ccd4138ab338c7f1292989640ba856de4f1976986832300624bc97612f92be7328e3f938496d1c7931d459db5f2697457e72f3bd9cfbfa1f8.css"
+    integrity="sha512-r6N7Yx8ViozNQTirM4x/EpKYlkC6hW3k8ZdphoMjAGJLyXYS&#43;SvnMo4/k4SW0ceTHUWdtfJpdFfnLzvZz7&#43;h&#43;A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.3619055ec357840536b584e638f4fbaff02ffc71abc327cfa25cdd3a1aed7af26697bb83f0d1d4ba9da065a990a91ed98a16ffb570a4ceb29b7e3edea1408612.js"
+    integrity="sha512-NhkFXsNXhAU2tYTmOPT7r/Av/HGrwyfPolzdOhrtevJml7uD8NHUup2gZamQqR7Zihb/tXCkzrKbfj7eoUCGEg=="></script>
+  
+
+
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/reading-progress.min.5d84577898a2dc0e1ed36baf2acb508e94e0c0f59a7fdeef67c1aa264029d9a17ccaff47182411b19d9de2eec2d6ac67f610f61bd938aa18af177ed66030cff1.js"
+      integrity="sha512-XYRXeJii3A4e02uvKstQjpTgwPWaf97vZ8GqJkAp2aF8yv9HGCQRsZ2d4u7C1qxn9hD2G9k4qhivF37WYDDP8Q=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0c949625e1f2646ad5f15cf6363ca852b22d633b996c157cf3283b7145d643ce32f9b8568cc843edf2b8850719034069eedc2cb31cbfcaa3899e8ff794bb391a.js"
+      integrity="sha512-DJSWJeHyZGrV8Vz2NjyoUrItYzuZbBV88yg7cUXWQ84y&#43;bhWjMhD7fK4hQcZA0Bp7twssxy/yqOJno/3lLs5Gg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="icon" href="/images/portrait_hu_f5023edcae1e8526.jpg" type="image/jpeg">
+
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "独立笔记",
+    "name": "同调、上同调与 de Rham 上同调",
+    "headline": "同调、上同调与 de Rham 上同调",
+    
+    "inLanguage": "zh-CN",
+    "url" : "https://peterbenjaminzhu.github.io/notes/homology-cohomology/",
+    "author" : {
+      "@type": "Person",
+      "name": "Peter Benjamin Zhu",
+      "image": "https://peterbenjaminzhu.github.io/images/portrait.jpg",
+      "sameAs": ["https://github.com/PeterBenjaminZhu"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-16T14:25:00\u002b08:00",
+    "datePublished": "2026-11-16T14:25:00\u002b08:00",
+    
+    "dateModified": "2026-11-16T14:25:00\u002b08:00",
+    
+    "keywords": ["同调","上同调","全息纠缠熵"],
+    
+    "mainEntityOfPage": "https://peterbenjaminzhu.github.io/notes/homology-cohomology/",
+    "wordCount":  1075 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    
+
+  <meta name="giscus:backlink" content="https://peterbenjaminzhu.github.io/notes/homology-cohomology/">
+
+
+  
+  
+  
+  
+  
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        packages: {'[+]': ["tagformat"]},
+        macros: {},
+        tagformat: {id: (id) => 'eq-' + id.replace(/[^a-zA-Z0-9_.:-]/g, '-')}
+      },
+      loader: {load: ["[tex]/tagformat"]},
+      options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+      chtml: {displayAlign: 'center'},
+      startup: {
+        pageReady() {
+          return MathJax.startup.defaultPageReady().then(() => {
+            
+            document.dispatchEvent(new Event('site:math-ready'));
+            
+          });
+        }
+      }
+    };
+  </script>
+  <script defer src="/vendor/mathjax/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
+  <script defer src="/js/equation-links.min.be35510465f1f2e33831d7e329b614ed945d7b5efa8f71daed1682e695f172d26703d9299217685e6b2f9d1cf94f57571a982b8ed4428e142a6bb9ccf66a26a0.js" integrity="sha512-vjVRBGXx8uM4MdfjKbYU7ZRde176j3Ha7RaC5pXxctJnA9kpkhdoXmsvnRz5T1dXGpgrjtRCjhQqa7nM9momoA=="></script>
+
+
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+    <div id="the-top" class="absolute flex self-center">
+      <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    <header>
+      
+      
+        
+  <div class="min-h-32"></div>
+  <div class="fixed inset-x-0 top-3 z-100 px-3 sm:top-5 sm:px-6">
+    <div class="relative mx-auto max-w-7xl rounded-2xl border border-neutral-200/80 shadow-lg shadow-neutral-900/5 dark:border-neutral-700/80 [&_img.logo]:max-h-10 [&_img.logo]:max-w-10">
+      <div class="absolute inset-0 -z-10 rounded-2xl bg-neutral/60 backdrop-blur-xl dark:bg-neutral-800/60"></div>
+      <div class="px-3"><div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      学物理的咸鱼
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="主导航" class="flex items-center gap-x-5 h-12">
+  
+    
+  
+    <a href="/"  class="flex items-center bf-icon-color-hover" aria-label="首页" title="学物理的咸鱼">
+      
+      <span class="text-sm font-medium break-normal">首页</span>
+    </a>
+  
+
+  
+    <a href="/notes/"  class="flex items-center bf-icon-color-hover" aria-label="独立笔记" title="独立笔记">
+      
+      <span class="text-sm font-medium break-normal">独立笔记</span>
+    </a>
+  
+
+  
+    <a href="/topics/"  class="flex items-center bf-icon-color-hover" aria-label="系统笔记" title="系统笔记">
+      
+      <span class="text-sm font-medium break-normal">系统笔记</span>
+    </a>
+  
+
+  
+    <a href="/research/"  class="flex items-center bf-icon-color-hover" aria-label="研究" title="研究">
+      
+      <span class="text-sm font-medium break-normal">研究</span>
+    </a>
+  
+
+  
+    <a href="/projects/"  class="flex items-center bf-icon-color-hover" aria-label="项目" title="项目">
+      
+      <span class="text-sm font-medium break-normal">项目</span>
+    </a>
+  
+
+  
+    <a href="/about/"  class="flex items-center bf-icon-color-hover" aria-label="关于" title="关于我">
+      
+      <span class="text-sm font-medium break-normal">关于</span>
+    </a>
+  
+
+  
+    <a href="/contact/"  class="flex items-center bf-icon-color-hover" aria-label="联系" title="联系">
+      
+      <span class="text-sm font-medium break-normal">联系</span>
+    </a>
+  
+
+  
+  
+
+  
+  
+    <button id="appearance-switcher" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button" type="button" aria-label="搜索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd id="search-shortcut-hint" class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden="true">⌘K</kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+    
+
+  
+  
+    <button id="appearance-switcher-mobile" class="site-nav-appearance" type="button" data-site-appearance data-appearance-state="system" data-label-system="跟随系统" data-label-light="浅色" data-label-dark="深色" data-label-format="当前外观：{current}；点击切换为{next}" aria-label="外观" title="外观">
+  <span data-appearance-icon="system" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+  <span data-appearance-icon="light" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></span>
+  <span data-appearance-icon="dark" aria-hidden="true"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></span>
+</button>
+
+  
+  
+    <button id="search-button-mobile" type="button" aria-label="搜索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="主导航" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+    <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-label="主导航" style="scrollbar-gutter: stable;" class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99 bf-scrollbar">
+      <label for="mobile-menu-toggle" tabindex="0" role="button" aria-expanded="false" aria-controls="mobile-menu-dialog" class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only"></span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav aria-label="移动导航" class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/" aria-label="首页"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="学物理的咸鱼" class="text-2xl font-bold tracking-tight">首页</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/notes/" aria-label="独立笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="独立笔记" class="text-2xl font-bold tracking-tight">独立笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/topics/" aria-label="系统笔记"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="系统笔记" class="text-2xl font-bold tracking-tight">系统笔记</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/research/" aria-label="研究"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="研究" class="text-2xl font-bold tracking-tight">研究</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/projects/" aria-label="项目"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="项目" class="text-2xl font-bold tracking-tight">项目</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/about/" aria-label="关于"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="关于我" class="text-2xl font-bold tracking-tight">关于</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a href="/contact/" aria-label="联系"  class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="联系" class="text-2xl font-bold tracking-tight">联系</span>
+        </a>
+        
+      </div>
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </div>
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  
+    
+  
+  
+  
+    <div
+  id="reading-progress"
+  class="fixed left-0 top-0 z-100 h-1 w-0 bg-primary-500 dark:bg-primary-400 print:hidden"
+  aria-hidden="true"></div>
+
+  
+  <article class="site-single site-reading-page">
+    
+      
+        
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+
+
+  
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div
+    id="hero-background"
+    class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/images/backgrounds/blue-gold-cosmic_hu_6990d67476efcf98.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+       />
+    
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-transparent mix-blend-normal dark:from-neutral-800"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-neutral to-neutral-100 opacity-60 mix-blend-normal dark:from-neutral-800 dark:to-neutral-800"></div>
+    
+  </div>
+
+  
+    
+      <div
+        id="background-blur"
+        class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/background-blur.min.2b8477cfbdb6843f33fd6f7c9a9a1343c895e878a7b55c32979586e6c6ba1018372c0c66a011abdbd7bc1a912f98ea249043c82bfae8fb04a0f37f854ee1e920.js"
+        integrity="sha512-K4R3z722hD8z/W98mpoTQ8iV6HintVwyl5WG5sa6EBg3LAxmoBGr29e8GpEvmOokkEPIK/ro&#43;wSg83&#43;FTuHpIA=="
+        data-blur-id="background-blur"></script>
+    
+  
+      
+    
+    <header id="single_header" class="site-page-heading">
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >学物理的咸鱼</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/"
+      >独立笔记</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/notes/homology-cohomology/"
+      >同调、上同调与 de Rham 上同调</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      <h1>同调、上同调与 de Rham 上同调</h1>
+      
+        <div class="site-single-meta">
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-16T14:25:00&#43;08:00">2026年11月16日</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="啟用阅读模式"
+    data-title-i18n-disable="啟用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+</div>
+      
+    </header>
+    
+    
+    
+    
+    <section class="site-reading-layout  site-has-toc">
+      
+      <div class="site-reading-body">
+        <div class="article-content prose dark:prose-invert max-w-none">
+          <p><em>从闭合曲线到 HRT 同调约束的物理学入门笔记</em></p>
+<p>围绕二维膜黑洞纠缠岛研究的讨论整理；原稿日期：2026年7月11日。</p>
+
+<h2 class="relative group">摘要
+    <div id="摘要" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%91%98%e8%a6%81" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>本文面向物理系本科生，从&quot;一个闭合回路能否在所处空间中被填起来&quot;这一几何问题出发，依次介绍边界算子、链复形、同调群、上同调群、微分形式和 de Rham 上同调，并用广义 Stokes 定理解释同调与上同调之间的积分配对。文末将这些概念应用到全息纠缠熵：解释 RT/HRT 面的同调约束、Planck 膜存在时的相对同调，以及岛区域为何成为断开 HRT 面所围 bulk 区域的一部分。正文尽量减少抽象代数预设，并为关键公式配备几何解释。</p>
+
+<h2 class="relative group">1 一幅总图景
+    <div id="1-一幅总图景" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e4%b8%80%e5%b9%85%e6%80%bb%e5%9b%be%e6%99%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>整份笔记可以压缩成一句话：</p>
+<blockquote><p><strong>直观理解</strong></p>
+<p>同调研究&quot;哪些闭合几何对象无法在空间内部填起来&quot;；上同调研究&quot;有哪些测量能够探测这些不可填充对象&quot;；de Rham 上同调用微分形式及其积分实现这种测量。</p>
+</blockquote><p>三组最重要的平行关系是</p>
+<div class="math display">\[
+\boxed{
+\begin{array}{ccc}
+\text{几何链} &amp; \longleftrightarrow &amp; \text{微分形式}\\
+\partial &amp; \longleftrightarrow &amp; \mathrm d \\
+\partial^2=0 &amp; \longleftrightarrow &amp; \mathrm d ^2=0\\
+\partial C=0 &amp; \longleftrightarrow &amp; \mathrm d \omega=0\\
+C=\partial D &amp; \longleftrightarrow &amp; \omega=\mathrm d \eta
+\end{array}}
+\tag{1}
+\]</div><p>其中 <span class="math inline">\(\partial\)</span> 是几何对象的边界算子，<span class="math inline">\(\mathrm d\)</span> 是微分形式的外微分。</p>
+
+<h2 class="relative group">2 从边界算子开始
+    <div id="2-从边界算子开始" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e4%bb%8e%e8%be%b9%e7%95%8c%e7%ae%97%e5%ad%90%e5%bc%80%e5%a7%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.1 有向几何对象的边界
+    <div id="21-有向几何对象的边界" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-%e6%9c%89%e5%90%91%e5%87%a0%e4%bd%95%e5%af%b9%e8%b1%a1%e7%9a%84%e8%be%b9%e7%95%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>设 <span class="math inline">\(C\)</span> 是一个有方向的几何对象，用 <span class="math inline">\(\partial C\)</span> 表示它的边界。最熟悉的例子是</p>
+<div class="math display">\[
+\begin{align}
+\partial(\text{线段})&amp;=\text{终点}-\text{起点}, \tag{2}\\
+\partial(\text{圆盘})&amp;=\text{圆周}, \tag{3}\\
+\partial(\text{实心球})&amp;=\text{球面}. \tag{4}
+\end{align}
+\]</div><p>若有向线段从 <span class="math inline">\(v_0\)</span> 指向 <span class="math inline">\(v_1\)</span>，记为 <span class="math inline">\([v_0v_1]\)</span>，则</p>
+<div class="math display">\[
+\partial[v_0v_1]=[v_1]-[v_0].
+\tag{5}
+\]</div><p>减号编码的是取向，而不是点集相减。</p>
+<p>对于定向三角形 <span class="math inline">\([v_0v_1v_2]\)</span>，</p>
+<div class="math display">\[
+\partial[v_0v_1v_2]
+=[v_1v_2]-[v_0v_2]+[v_0v_1].
+\tag{6}
+\]</div><p>再作用一次边界算子，每个顶点以相反符号出现两次并抵消，因此</p>
+<div class="math display">\[
+\boxed{\partial^2=0.}
+\tag{7}
+\]</div><blockquote><p><strong>直观理解</strong></p>
+<p>&ldquo;边界的边界为零&quot;是同调理论的起点。圆盘的边界是圆周，而圆周没有端点；实心球的边界是球面，而球面自身没有边界。</p>
+</blockquote>
+<h3 class="relative group">2.2 闭合不等于非平凡
+    <div id="22-闭合不等于非平凡" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-%e9%97%ad%e5%90%88%e4%b8%8d%e7%ad%89%e4%ba%8e%e9%9d%9e%e5%b9%b3%e5%87%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>图 <a href="/notes/homology-cohomology/#fig-boundary-cycle" >1</a> 中，圆周 <span class="math inline">\(C\)</span> 没有端点，所以 <span class="math inline">\(\partial C=0\)</span>；但它又是圆盘 <span class="math inline">\(D\)</span> 的边界，即 <span class="math inline">\(C=\partial D\)</span>。因此这个闭合回路在同调中是平凡的。</p>
+<div id="fig-boundary-cycle" style="scroll-margin-top: 110px;"></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="图 1"
+    width="810"
+    height="490"
+    src="/notes/homology-cohomology/boundary-cycle_hu_84ed7446dfdebcc9.png"
+    srcset="/notes/homology-cohomology/boundary-cycle_hu_84ed7446dfdebcc9.png 800w, /notes/homology-cohomology/boundary-cycle.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/notes/homology-cohomology/boundary-cycle.png"></figure>
+</p>
+<p><strong>图 1</strong>：可填充的闭链：<span class="math inline">\(C\)</span> 虽然闭合，但它是圆盘 <span class="math inline">\(D\)</span> 的边界，因此代表零同调类。</p>
+
+<h2 class="relative group">3 链、闭链、边界链与同调群
+    <div id="3-链闭链边界链与同调群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e9%93%be%e9%97%ad%e9%93%be%e8%be%b9%e7%95%8c%e9%93%be%e4%b8%8e%e5%90%8c%e8%b0%83%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">3.1 最低限度的抽象代数
+    <div id="31-最低限度的抽象代数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-%e6%9c%80%e4%bd%8e%e9%99%90%e5%ba%a6%e7%9a%84%e6%8a%bd%e8%b1%a1%e4%bb%a3%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>同调计算中需要把几何对象相加，例如 <span class="math inline">\(C_1-C_2\)</span>。因此我们使用阿贝尔群：一组可以相加、存在零元和负元，并满足交换律的对象。最常见的例子是 <span class="math inline">\(\mathbb Z\)</span>、<span class="math inline">\(\mathbb Z ^n\)</span> 和 <span class="math inline">\(\mathbb R ^n\)</span>。</p>
+<p>把所有 <span class="math inline">\(k\)</span> 维基本几何块的整数形式线性组合记为 <span class="math inline">\(C_k\)</span>，称作 <span class="math inline">\(k\)</span>-链群：</p>
+<ul>
+<li>
+<p><span class="math inline">\(C_0\)</span> 由点生成；</p>
+</li>
+<li>
+<p><span class="math inline">\(C_1\)</span> 由有向边或曲线生成；</p>
+</li>
+<li>
+<p><span class="math inline">\(C_2\)</span> 由有向三角形或曲面生成；</p>
+</li>
+<li>
+<p><span class="math inline">\(C_3\)</span> 由三维胞腔生成。</p>
+</li>
+</ul>
+<p>边界算子降低维数：</p>
+<div class="math display">\[
+\partial_k:C_k\longrightarrow C_{k-1}.
+\tag{8}
+\]</div><p>这些群和映射组成链复形</p>
+<div class="math display">\[
+\cdots\xrightarrow{\partial_{k+1}}C_k
+\xrightarrow{\partial_k}C_{k-1}
+\xrightarrow{\partial_{k-1}}\cdots,
+\qquad \partial_k\partial_{k+1}=0.
+\tag{9}
+\]</div>
+<h3 class="relative group">3.2 闭链与边界链
+    <div id="32-闭链与边界链" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-%e9%97%ad%e9%93%be%e4%b8%8e%e8%be%b9%e7%95%8c%e9%93%be" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>若 <span class="math inline">\(C\in C_k\)</span> 满足</p>
+<div class="math display">\[
+\partial C=0,
+\tag{10}
+\]</div><p>则称 <span class="math inline">\(C\)</span> 为 <span class="math inline">\(k\)</span>-闭链。所有闭链构成</p>
+<div class="math display">\[
+Z_k=\ker\partial_k.
+\tag{11}
+\]</div><p>若存在 <span class="math inline">\(D\in C_{k+1}\)</span> 使得</p>
+<div class="math display">\[
+C=\partial D,
+\tag{12}
+\]</div><p>则称 <span class="math inline">\(C\)</span> 为边界链。所有边界链构成</p>
+<div class="math display">\[
+B_k=\operatorname{im}\partial_{k+1}.
+\tag{13}
+\]</div><p>由 <span class="math inline">\(\partial^2=0\)</span> 立即得到</p>
+<div class="math display">\[
+B_k\subseteq Z_k.
+\tag{14}
+\]</div><p>也就是说，边界一定闭合，但闭合对象不一定是边界。</p>
+
+<h3 class="relative group">3.3 同调群的定义
+    <div id="33-同调群的定义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-%e5%90%8c%e8%b0%83%e7%be%a4%e7%9a%84%e5%ae%9a%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>第 <span class="math inline">\(k\)</span> 阶同调群定义为</p>
+<div class="math display">\[
+\boxed{H_k=\frac{Z_k}{B_k}
+=\frac{\ker\partial_k}{\operatorname{im}\partial_{k+1}}.}
+\tag{15}
+\]</div><p>商群 <span class="math inline">\(Z_k/B_k\)</span> 的含义是：如果两个闭链只相差一个边界，就将它们视为等价：</p>
+<div class="math display">\[
+C_1\sim C_2
+\quad\Longleftrightarrow\quad
+C_1-C_2=\partial D.
+\tag{16}
+\]</div><p>闭链 <span class="math inline">\(C\)</span> 所在的等价类记为 <span class="math inline">\([C]\)</span>。若 <span class="math inline">\(C=\partial D\)</span>，则 <span class="math inline">\([C]=0\)</span>。</p>
+<blockquote><p><strong>直观理解</strong></p>
+<p>同调忽略闭链的精确形状，只记录它绕过了哪些洞。如果 <span class="math inline">\(C_1\)</span> 可以扫过一条带状区域变成 <span class="math inline">\(C_2\)</span>，并且过程中不穿过洞，那么两者属于同一个同调类。</p>
+</blockquote>
+<h3 class="relative group">3.4 穿孔平面
+    <div id="34-穿孔平面" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-%e7%a9%bf%e5%ad%94%e5%b9%b3%e9%9d%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>考虑</p>
+<div class="math display">\[
+M=\mathbb R ^2\setminus\{0\}.
+\tag{17}
+\]</div><p>绕原点一周的圆 <span class="math inline">\(C\)</span> 满足 <span class="math inline">\(\partial C=0\)</span>，但不存在完全位于 <span class="math inline">\(M\)</span> 内的圆盘 <span class="math inline">\(D\)</span> 使 <span class="math inline">\(C=\partial D\)</span>，因为任何填充都必须经过已删除的原点。因此</p>
+<div class="math display">\[
+[C]\neq0\in H_1(M).
+\tag{18}
+\]</div><div id="fig-punctured-plane" style="scroll-margin-top: 110px;"></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="图 2"
+    width="770"
+    height="556"
+    src="/notes/homology-cohomology/punctured-plane.png"
+    srcset="/notes/homology-cohomology/punctured-plane.png 800w, /notes/homology-cohomology/punctured-plane.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/notes/homology-cohomology/punctured-plane.png"></figure>
+</p>
+<p><strong>图 2</strong>：穿孔平面中的非平凡闭链，以及用闭1-形式的周期积分探测该同调类。</p>
+
+<h2 class="relative group">4 不同阶同调的直观含义
+    <div id="4-不同阶同调的直观含义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-%e4%b8%8d%e5%90%8c%e9%98%b6%e5%90%8c%e8%b0%83%e7%9a%84%e7%9b%b4%e8%a7%82%e5%90%ab%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>粗略地说，<span class="math inline">\(H_k\)</span> 探测 <span class="math inline">\(k\)</span> 维不可填充对象：</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">同调群</th>
+					<th style="text-align: left">主要探测的结构</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center"><span class="math inline">\(H_0\)</span></td>
+					<td style="text-align: left">连通分支</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><span class="math inline">\(H_1\)</span></td>
+					<td style="text-align: left">独立环路或隧道</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><span class="math inline">\(H_2\)</span></td>
+					<td style="text-align: left">闭合壳层或空腔</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"><span class="math inline">\(H_3\)</span></td>
+					<td style="text-align: left">更高维空腔</td>
+			</tr>
+	</tbody>
+</table>
+<p>若使用实数系数并有</p>
+<div class="math display">\[
+H_k(M;\mathbb R )\cong\mathbb R ^{b_k},
+\tag{19}
+\]</div><p>则 <span class="math inline">\(b_k\)</span> 称为第 <span class="math inline">\(k\)</span> 个 Betti 数，可粗略看作独立 <span class="math inline">\(k\)</span> 维洞的数目。</p>
+<p>几个常见空间的同调为</p>
+<div class="math display">\[
+\begin{align}
+H_0(S^1)&amp;\cong\mathbb Z ,&amp; H_1(S^1)&amp;\cong\mathbb Z , \tag{20}\\
+H_0(S^2)&amp;\cong\mathbb Z ,&amp; H_1(S^2)&amp;=0,&amp; H_2(S^2)&amp;\cong\mathbb Z , \tag{21}\\
+H_0(T^2)&amp;\cong\mathbb Z ,&amp; H_1(T^2)&amp;\cong\mathbb Z ^2,&amp; H_2(T^2)&amp;\cong\mathbb Z . \tag{22}
+\end{align}
+\]</div><p>环面 <span class="math inline">\(T^2\)</span> 的两个独立1-循环分别沿&quot;大圆方向&quot;和&quot;小圆方向&rdquo;。</p>
+
+<h2 class="relative group">5 如何计算同调
+    <div id="5-如何计算同调" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-%e5%a6%82%e4%bd%95%e8%ae%a1%e7%ae%97%e5%90%8c%e8%b0%83" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">5.1 空心与实心三角形
+    <div id="51-空心与实心三角形" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-%e7%a9%ba%e5%bf%83%e4%b8%8e%e5%ae%9e%e5%bf%83%e4%b8%89%e8%a7%92%e5%bd%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>设三个顶点为 <span class="math inline">\(v_0,v_1,v_2\)</span>，三条有向边为 <span class="math inline">\(e_{01},e_{12},e_{20}\)</span>。边界为</p>
+<div class="math display">\[
+\begin{align}
+\partial e_{01}&amp;=v_1-v_0, \tag{23}\\
+\partial e_{12}&amp;=v_2-v_1, \tag{24}\\
+\partial e_{20}&amp;=v_0-v_2. \tag{25}
+\end{align}
+\]</div><p>闭合回路</p>
+<div class="math display">\[
+C=e_{01}+e_{12}+e_{20}
+\tag{26}
+\]</div><p>满足 <span class="math inline">\(\partial C=0\)</span>。</p>
+<p>若三角形内部为空，没有二维面 <span class="math inline">\(f\)</span>，则 <span class="math inline">\(C\)</span> 不是边界，产生 <span class="math inline">\(H_1\cong\mathbb Z\)</span>。若加入二维面</p>
+<div class="math display">\[
+f=[v_0v_1v_2],
+\tag{27}
+\]</div><p>则</p>
+<div class="math display">\[
+\partial f=e_{01}+e_{12}+e_{20}=C,
+\tag{28}
+\]</div><p>原先的一维洞被填掉，因而 <span class="math inline">\(H_1=0\)</span>。</p>
+
+<h3 class="relative group">5.2 边界矩阵
+    <div id="52-边界矩阵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-%e8%be%b9%e7%95%8c%e7%9f%a9%e9%98%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>实际计算时，将 <span class="math inline">\(\partial_k\)</span> 写成矩阵 <span class="math inline">\(D_k\)</span>，然后求</p>
+<div class="math display">\[
+\ker D_k,
+\qquad
+\operatorname{im}D_{k+1}.
+\tag{29}
+\]</div><p>若系数取在域 <span class="math inline">\(\mathbb R\)</span> 或 <span class="math inline">\(\mathbb Q\)</span> 上，则</p>
+<div class="math display">\[
+\boxed{b_k
+=\dim C_k-\operatorname{rank}D_k-\operatorname{rank}D_{k+1}.}
+\tag{30}
+\]</div><p>若使用整数系数，还可能出现 <span class="math inline">\(\mathbb Z _n\)</span> 型挠率，需要用 Smith 标准形计算。物理中若只关心连续零模，实系数通常足够；若关心离散电荷或量子化信息，则整数系数更重要。</p>
+
+<h2 class="relative group">6 从同调到上同调
+    <div id="6-从同调到上同调" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-%e4%bb%8e%e5%90%8c%e8%b0%83%e5%88%b0%e4%b8%8a%e5%90%8c%e8%b0%83" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">6.1 上链是链的测量工具
+    <div id="61-上链是链的测量工具" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#61-%e4%b8%8a%e9%93%be%e6%98%af%e9%93%be%e7%9a%84%e6%b5%8b%e9%87%8f%e5%b7%a5%e5%85%b7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>同调使用几何链 <span class="math inline">\(C_k\)</span>。上同调使用对链赋值的函数，称为上链：</p>
+<div class="math display">\[
+C^k=\operatorname{Hom}(C_k,G).
+\tag{31}
+\]</div><p>一个 <span class="math inline">\(k\)</span>-上链 <span class="math inline">\(\varphi\)</span> 接收 <span class="math inline">\(k\)</span>-链并输出一个数：</p>
+<div class="math display">\[
+\varphi(C)\in G.
+\tag{32}
+\]</div><p>因此可以把同调链看作被测对象，把上链看作测量探针。</p>
+<p>上边界算子定义为</p>
+<div class="math display">\[
+(\delta\varphi)(C_{k+1})=\varphi(\partial C_{k+1}),
+\tag{33}
+\]</div><p>并满足 <span class="math inline">\(\delta^2=0\)</span>。第 <span class="math inline">\(k\)</span> 阶上同调群为</p>
+<div class="math display">\[
+\boxed{H^k
+=\frac{\ker\delta_k}{\operatorname{im}\delta_{k-1}}.}
+\tag{34}
+\]</div><blockquote><p><strong>直观理解</strong></p>
+<p>同调问&quot;空间中有哪些无法填充的闭合对象&quot;；上同调问&quot;有哪些全局测量能够识别这些对象&quot;。穿孔平面上的测量应当对不绕洞的回路给出零，对绕洞一次给出固定非零值，对绕洞两次给出两倍结果。</p>
+</blockquote>
+<h2 class="relative group">7 微分形式与外微分
+    <div id="7-微分形式与外微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-%e5%be%ae%e5%88%86%e5%bd%a2%e5%bc%8f%e4%b8%8e%e5%a4%96%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">7.1 <span class="math inline">\(k\)</span>-形式可以在 <span class="math inline">\(k\)</span> 维对象上积分
+    <div id="71--形式可以在--维对象上积分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#71--%e5%bd%a2%e5%bc%8f%e5%8f%af%e4%bb%a5%e5%9c%a8--%e7%bb%b4%e5%af%b9%e8%b1%a1%e4%b8%8a%e7%a7%af%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在光滑流形上，上链可以由微分形式实现。0-形式是普通函数 <span class="math inline">\(f\)</span>；二维中的一般1-形式为</p>
+<div class="math display">\[
+\omega=P(x,y)\,\mathrm d  x+Q(x,y)\,\mathrm d  y,
+\tag{35}
+\]</div><p>可以沿曲线 <span class="math inline">\(C\)</span> 积分。二维中的2-形式为</p>
+<div class="math display">\[
+\Omega=F(x,y)\,\mathrm d  x\wedge\mathrm d  y,
+\tag{36}
+\]</div><p>可以在二维区域上积分。一般地，<span class="math inline">\(k\)</span>-形式自然地在 <span class="math inline">\(k\)</span> 维定向链上积分。</p>
+
+<h3 class="relative group">7.2 外微分
+    <div id="72-外微分" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#72-%e5%a4%96%e5%be%ae%e5%88%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>外微分将 <span class="math inline">\(k\)</span>-形式变为 <span class="math inline">\(k+1\)</span>-形式：</p>
+<div class="math display">\[
+\mathrm d :\Omega^k(M)\longrightarrow\Omega^{k+1}(M).
+\tag{37}
+\]</div><p>对函数，</p>
+<div class="math display">\[
+\mathrm d  f=\frac{\partial f}{\partial x}\mathrm d  x
++\frac{\partial f}{\partial y}\mathrm d  y.
+\tag{38}
+\]</div><p>对二维1-形式，</p>
+<div class="math display">\[
+\mathrm d \omega
+=\left(\frac{\partial Q}{\partial x}
+-\frac{\partial P}{\partial y}\right)
+\mathrm d  x\wedge\mathrm d  y.
+\tag{39}
+\]</div><p>外微分统一了梯度、旋度和散度，并满足</p>
+<div class="math display">\[
+\boxed{\mathrm d ^2=0.}
+\tag{40}
+\]</div>
+<h2 class="relative group">8 闭形式、恰当形式与 de Rham 上同调
+    <div id="8-闭形式恰当形式与-de-rham-上同调" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e9%97%ad%e5%bd%a2%e5%bc%8f%e6%81%b0%e5%bd%93%e5%bd%a2%e5%bc%8f%e4%b8%8e-de-rham-%e4%b8%8a%e5%90%8c%e8%b0%83" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>若 <span class="math inline">\(\mathrm d \omega=0\)</span>，则称 <span class="math inline">\(\omega\)</span> 为闭形式。若存在 <span class="math inline">\(\eta\)</span> 使</p>
+<div class="math display">\[
+\omega=\mathrm d \eta,
+\tag{41}
+\]</div><p>则称 <span class="math inline">\(\omega\)</span> 为恰当形式或恰形式。由于 <span class="math inline">\(\mathrm d ^2=0\)</span>，</p>
+<div class="math display">\[
+\text{恰当}\quad\Longrightarrow\quad\text{闭合}.
+\tag{42}
+\]</div><p>但反过来只在局部成立，不一定全局成立。</p>
+<p>第 <span class="math inline">\(k\)</span> 阶 de Rham 上同调定义为</p>
+<div class="math display">\[
+\boxed{
+H_{\mathrm{dR}}^k(M)
+=\frac{\ker(\mathrm d :\Omega^k\to\Omega^{k+1})}
+{\operatorname{im}(\mathrm d :\Omega^{k-1}\to\Omega^k)}
+=\frac{\text{闭 }k\text{-形式}}{\text{恰当 }k\text{-形式}}.}
+\tag{43}
+\]</div><p>若两个闭形式只相差一个恰当形式，</p>
+<div class="math display">\[
+\omega_1-\omega_2=\mathrm d \eta,
+\tag{44}
+\]</div><p>则它们属于同一 de Rham 上同调类。</p>
+
+<h3 class="relative group">8.1 穿孔平面上的闭但不恰当形式
+    <div id="81-穿孔平面上的闭但不恰当形式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#81-%e7%a9%bf%e5%ad%94%e5%b9%b3%e9%9d%a2%e4%b8%8a%e7%9a%84%e9%97%ad%e4%bd%86%e4%b8%8d%e6%81%b0%e5%bd%93%e5%bd%a2%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在 <span class="math inline">\(M=\mathbb R ^2\setminus\{0\}\)</span> 上考虑</p>
+<div class="math display">\[
+\boxed{
+\omega=\frac{-y\,\mathrm d  x+x\,\mathrm d  y}{x^2+y^2}.}
+\tag{45}
+\]</div><p>在原点之外有 <span class="math inline">\(\mathrm d \omega=0\)</span>，所以它是闭形式。在极坐标中它局部等于 <span class="math inline">\(\mathrm d \theta\)</span>。但沿单位圆积分得到</p>
+<div class="math display">\[
+\oint_C\omega=\int_0^{2\pi}\mathrm d \theta=2\pi.
+\tag{46}
+\]</div><p>若存在全局单值函数 <span class="math inline">\(f\)</span> 使 <span class="math inline">\(\omega=\mathrm d  f\)</span>，则任意闭合回路上都应有 <span class="math inline">\(\oint_C\mathrm d  f=0\)</span>，与上式矛盾。因此 <span class="math inline">\(\omega\)</span> 闭但不全局恰当，并代表</p>
+<div class="math display">\[
+H_{\mathrm{dR}}^1(\mathbb R ^2\setminus\{0\})\cong\mathbb R 
+\tag{47}
+\]</div><p>中的非零元素。</p>
+
+<h3 class="relative group">8.2 Poincaré 引理
+    <div id="82-poincaré-引理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#82-poincar%c3%a9-%e5%bc%95%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在开球、星形区域等可缩的局部区域内，Poincaré 引理给出</p>
+<div class="math display">\[
+\mathrm d \omega=0\quad\Longrightarrow\quad\omega=\mathrm d \eta.
+\tag{48}
+\]</div><p>因此 de Rham 上同调反映的是全局拓扑障碍，而不是局部微分障碍：</p>
+<div class="math display">\[
+\boxed{\text{局部：闭形式通常恰当；全局：洞可能阻止恰当性。}}
+\tag{49}
+\]</div>
+<h2 class="relative group">9 Stokes 定理：同调与上同调的桥梁
+    <div id="9-stokes-定理同调与上同调的桥梁" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-stokes-%e5%ae%9a%e7%90%86%e5%90%8c%e8%b0%83%e4%b8%8e%e4%b8%8a%e5%90%8c%e8%b0%83%e7%9a%84%e6%a1%a5%e6%a2%81" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>广义 Stokes 定理为</p>
+<div class="math display">\[
+\boxed{\int_{\partial C}\omega=\int_C\mathrm d \omega.}
+\tag{50}
+\]</div><p>它统一了微积分基本定理、Green 定理、旋度形式的 Stokes 定理和 Gauss 散度定理。</p>
+<p>若 <span class="math inline">\(C=\partial D\)</span> 且 <span class="math inline">\(\mathrm d \omega=0\)</span>，则</p>
+<div class="math display">\[
+\int_C\omega=\int_{\partial D}\omega
+=\int_D\mathrm d \omega=0.
+\tag{51}
+\]</div><p>若 <span class="math inline">\(\omega=\mathrm d \eta\)</span> 且 <span class="math inline">\(\partial C=0\)</span>，则</p>
+<div class="math display">\[
+\int_C\omega=\int_C\mathrm d \eta
+=\int_{\partial C}\eta=0.
+\tag{52}
+\]</div><p>因此积分只依赖于同调类 <span class="math inline">\([C]\)</span> 和上同调类 <span class="math inline">\([\omega]\)</span>：</p>
+<div class="math display">\[
+H_{\mathrm{dR}}^k(M)\times H_k(M;\mathbb R )
+\longrightarrow\mathbb R ,
+\qquad
+([\omega],[C])\longmapsto\int_C\omega.
+\tag{53}
+\]</div><p>de Rham 定理进一步说明</p>
+<div class="math display">\[
+\boxed{H_{\mathrm{dR}}^k(M)\cong H^k(M;\mathbb R ).}
+\tag{54}
+\]</div><blockquote><p><strong>物理联系</strong></p>
+<p>在规范场论中，闭合回路上的 Wilson 环、闭曲面上的电磁通量以及背景规范场的拓扑扇区，都体现了&quot;用微分形式的积分探测同调循环&quot;这一思想。</p>
+</blockquote>
+<h2 class="relative group">10 &ldquo;闭&quot;字的四种不同含义
+    <div id="10-闭字的四种不同含义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-%e9%97%ad%e5%ad%97%e7%9a%84%e5%9b%9b%e7%a7%8d%e4%b8%8d%e5%90%8c%e5%90%ab%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<blockquote><p><strong>容易混淆之处</strong></p>
+<p>闭链、闭形式、无边界流形和拓扑闭集是不同概念，不能仅因都使用&quot;闭&quot;字就混为一谈。</p>
+</blockquote><table>
+	<thead>
+			<tr>
+					<th style="text-align: left"><strong>说法</strong></th>
+					<th style="text-align: left">数学条件</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>闭链</strong></td>
+					<td style="text-align: left"><span class="math inline">\(\partial C=0\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>无边界流形</strong></td>
+					<td style="text-align: left"><span class="math inline">\(\partial M=\varnothing\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>闭形式</strong></td>
+					<td style="text-align: left"><span class="math inline">\(\mathrm d \omega=0\)</span></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>拓扑闭集</strong></td>
+					<td style="text-align: left">集合包含自己的全部极限点</td>
+			</tr>
+	</tbody>
+</table>
+<p>&ldquo;一个闭合曲面是否是某区域的边界&quot;还取决于环境空间。例如圆周作为 <span class="math inline">\(\mathbb R ^2\)</span> 中的曲线是圆盘的边界，但作为空间 <span class="math inline">\(S^1\)</span> 自身中的1-链，它不是 <span class="math inline">\(S^1\)</span> 内任何二维链的边界，因为 <span class="math inline">\(S^1\)</span> 本身没有二维区域。类似地，<span class="math inline">\(S^2\)</span> 在 <span class="math inline">\(\mathbb R ^3\)</span> 中是实心球的边界，但在 <span class="math inline">\(S^2\)</span> 自身内部不是任何三维链的边界。</p>
+
+<h2 class="relative group">11 RT/HRT 中的同调约束
+    <div id="11-rthrt-中的同调约束" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-rthrt-%e4%b8%ad%e7%9a%84%e5%90%8c%e8%b0%83%e7%ba%a6%e6%9d%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">11.1 普通 AdS/CFT 中的约束
+    <div id="111-普通-adscft-中的约束" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#111-%e6%99%ae%e9%80%9a-adscft-%e4%b8%ad%e7%9a%84%e7%ba%a6%e6%9d%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在静态 RT 公式中，极值面 <span class="math inline">\(\gamma_A\)</span> 不仅要满足</p>
+<div class="math display">\[
+\partial\gamma_A=\partial A,
+\tag{55}
+\]</div><p>还必须与边界区域 <span class="math inline">\(A\)</span> 同调，记作</p>
+<div class="math display">\[
+\gamma_A\sim A.
+\tag{56}
+\]</div><p>其含义是：存在 bulk 中的高一维区域 <span class="math inline">\(r_A\)</span>，使得</p>
+<div class="math display">\[
+\boxed{\partial r_A=A-\gamma_A.}
+\tag{57}
+\]</div><p>若忽略取向符号，可简写为</p>
+<div class="math display">\[
+\partial r_A=A\cup\gamma_A.
+\tag{58}
+\]</div><blockquote><p><strong>直观理解</strong></p>
+<p>HRT 面不能只与 <span class="math inline">\(A\)</span> 拥有相同端点；它还必须与 <span class="math inline">\(A\)</span> 一起真正围成一个 bulk 区域。即使某条候选极值面面积更小，如果它不能满足该条件，也不能用于计算 <span class="math inline">\(S(A)\)</span>。</p>
+</blockquote><p>区域 <span class="math inline">\(r_A\)</span> 的因果发展给出纠缠楔。因此，同调约束不仅是形式上的拓扑要求，也决定边界子系统能够重构哪部分 bulk 信息。</p>
+
+<h3 class="relative group">11.2 Planck 膜、相对同调与岛
+    <div id="112-planck-膜相对同调与岛" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#112-planck-%e8%86%9c%e7%9b%b8%e5%af%b9%e5%90%8c%e8%b0%83%e4%b8%8e%e5%b2%9b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在本文所研究的双重全息模型中，断开 HRT 面 <span class="math inline">\(\gamma_R\)</span> 可以终止在 Planck 膜 <span class="math inline">\(\mathcal B\)</span> 上。此时辐射区域 <span class="math inline">\(R\)</span> 与 <span class="math inline">\(\gamma_R\)</span> 不能单独构成某个 bulk 区域的完整边界，还需要加入膜上的区域 <span class="math inline">\(\mathcal I\)</span>：</p>
+<div class="math display">\[
+\boxed{\partial r_R=R\cup\gamma_R\cup\mathcal I ,}
+\tag{59}
+\]</div><p>其中取向符号从略。膜上区域 <span class="math inline">\(\mathcal I\)</span> 就是岛，而</p>
+<div class="math display">\[
+\partial\mathcal I =\gamma_R\cap\mathcal B 
+\tag{60}
+\]</div><p>给出岛端点或量子极值面。</p>
+<div id="fig-hrt-homology" style="scroll-margin-top: 110px;"></div>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="图 3"
+    width="760"
+    height="601"
+    src="/notes/homology-cohomology/hrt-relative-homology.png"
+    srcset="/notes/homology-cohomology/hrt-relative-homology.png 800w, /notes/homology-cohomology/hrt-relative-homology.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/notes/homology-cohomology/hrt-relative-homology.png"></figure>
+</p>
+<p><strong>图 3</strong>：带 Planck 膜时的相对同调约束。辐射区域、断开 HRT 面和膜上岛区域共同构成 bulk 区域 <span class="math inline">\(r_R\)</span> 的完整边界。</p>
+<p>更严格地说，这里使用相对同调 <span class="math inline">\(H_k(M,\mathcal B )\)</span>。相对同调允许链的部分边界落在指定子空间 <span class="math inline">\(\mathcal B\)</span> 上。在当前问题中，可以把它理解为：Planck 膜是极值面被允许终止的特殊边界，而膜上的岛区域补齐了同调所需的边界片段。</p>
+
+<h3 class="relative group">11.3 同调约束、极值方程和正交条件
+    <div id="113-同调约束极值方程和正交条件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#113-%e5%90%8c%e8%b0%83%e7%ba%a6%e6%9d%9f%e6%9e%81%e5%80%bc%e6%96%b9%e7%a8%8b%e5%92%8c%e6%ad%a3%e4%ba%a4%e6%9d%a1%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>这三个条件回答不同问题：</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left"><strong>条件</strong></th>
+					<th style="text-align: left">回答的问题</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>同调约束</strong></td>
+					<td style="text-align: left">候选面能否与边界区域共同围成合法 bulk 区域？</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>极值方程</strong></td>
+					<td style="text-align: left">曲线或曲面的内部是否使面积泛函取驻值？</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>正交条件</strong></td>
+					<td style="text-align: left">当端点可沿膜滑动时，端点变分是否也使面积取驻值？</td>
+			</tr>
+	</tbody>
+</table>
+<p>对于论文第二章的断开面，正交条件为</p>
+<div class="math display">\[
+\frac{1}{f(z_p)}+x&#39;(z_p)X&#39;(z_p)=0.
+\tag{61}
+\]</div><p>它是局部变分边界条件，不是由同调约束或柯西曲面概念推出的。</p>
+
+<h2 class="relative group">12 常用计算路线
+    <div id="12-常用计算路线" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-%e5%b8%b8%e7%94%a8%e8%ae%a1%e7%ae%97%e8%b7%af%e7%ba%bf" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">12.1 计算同调
+    <div id="121-计算同调" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-%e8%ae%a1%e7%ae%97%e5%90%8c%e8%b0%83" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>将空间三角剖分，或选择 CW 胞腔分解；</p>
+</li>
+<li>
+<p>列出各维链群 <span class="math inline">\(C_k\)</span>；</p>
+</li>
+<li>
+<p>根据取向写出边界矩阵 <span class="math inline">\(D_k\)</span>；</p>
+</li>
+<li>
+<p>计算 <span class="math inline">\(\ker D_k\)</span> 与 <span class="math inline">\(\operatorname{im}D_{k+1}\)</span>；</p>
+</li>
+<li>
+<p>取商得到 <span class="math inline">\(H_k\)</span>。域系数下可用高斯消元，整数系数下可用 Smith 标准形。</p>
+</li>
+</ol>
+
+<h3 class="relative group">12.2 计算 de Rham 上同调
+    <div id="122-计算-de-rham-上同调" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#122-%e8%ae%a1%e7%ae%97-de-rham-%e4%b8%8a%e5%90%8c%e8%b0%83" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p>写出一般 <span class="math inline">\(k\)</span>-形式 <span class="math inline">\(\omega\)</span>；</p>
+</li>
+<li>
+<p>求解闭合条件 <span class="math inline">\(\mathrm d \omega=0\)</span>；</p>
+</li>
+<li>
+<p>模掉所有恰当形式 <span class="math inline">\(\omega=\mathrm d \eta\)</span>；</p>
+</li>
+<li>
+<p>通过非平凡循环上的周期积分 <span class="math inline">\(\int_C\omega\)</span> 检验剩余形式；</p>
+</li>
+<li>
+<p>或先计算实系数同调，再利用 de Rham 定理判断维数。</p>
+</li>
+</ol>
+<p>在紧致定向黎曼流形上，还可使用 Hodge 定理：每个 de Rham 上同调类都有唯一调和代表，满足</p>
+<div class="math display">\[
+\Delta\omega=0,
+\qquad
+\Delta=\mathrm d \mathrm d ^\dagger+\mathrm d ^\dagger\mathrm d .
+\tag{62}
+\]</div><p>这使拓扑零模问题可以转化为偏微分方程问题。</p>
+
+<h2 class="relative group">13 总结
+    <div id="13-总结" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-%e6%80%bb%e7%bb%93" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>最值得保留的记忆框架是</p>
+<div class="math display">\[
+\boxed{
+H_k=\frac{\text{闭链}}{\text{边界链}},
+\qquad
+H_{\mathrm{dR}}^k
+=\frac{\text{闭形式}}{\text{恰当形式}}.}
+\tag{63}
+\]</div><p>同调类 <span class="math inline">\([C]\)</span> 表示不可在当前空间中填充的闭合几何对象；de Rham 上同调类 <span class="math inline">\([\omega]\)</span> 表示能够通过周期积分探测这些对象的闭形式。两者由</p>
+<div class="math display">\[
+\int_{\partial C}\omega=\int_C\mathrm d \omega
+\tag{64}
+\]</div><p>联系起来。</p>
+<p>对 HRT/岛问题，最重要的公式是</p>
+<div class="math display">\[
+\boxed{
+\gamma_R\sim R
+\quad\Longleftrightarrow\quad
+\exists\,r_R:\ \partial r_R=R\cup\gamma_R
+}
+\tag{65}
+\]</div><p>以及有膜时的相对同调形式</p>
+<div class="math display">\[
+\boxed{
+\exists\,r_R:\ \partial r_R=R\cup\gamma_R\cup\mathcal I .
+}
+\tag{66}
+\]</div><p>后一个式子给出了岛的直接几何解释：岛是为使辐射区域与断开 HRT 面共同满足同调约束而必须补入的膜上区域。</p>
+
+<h2 class="relative group">参考资料
+    <div id="参考资料" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>
+<p>Q. Li, Y. Liu and W. Zhu, <em>Entanglement islands of 2D charged scalar-hairy black holes on the brane</em>, 2026，重点参见第2章。</p>
+</li>
+<li>
+<p>H.-S. Chen et al., <em>Quantum Extremal Islands Made Easy, Part I: Entanglement on the Brane</em>, 2020。</p>
+</li>
+<li>
+<p>H.-S. Chen et al., <em>Quantum Extremal Islands Made Easy, Part II: Black Holes on the Brane</em>, 2020。</p>
+</li>
+<li>
+<p>关于代数拓扑的一般背景，可进一步查阅链复形、奇异同调、相对同调、de Rham 定理和 Hodge 定理的标准教材章节。</p>
+</li>
+</ol>
+
+        </div>
+        
+          <section class="site-downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">下载</h2>
+            
+              <ul><li><a href="/attachments/zh/notes/homology-cohomology/markdown.zip" download>Markdown &#43; resources</a></li><li><a href="/attachments/zh/notes/homology-cohomology/article.pdf" download>PDF</a></li></ul>
+            
+            
+          </section>
+        
+        
+          <footer class="site-article-footer">
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/mcp-ai-research-environment/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;MCP 与 AI 辅助科研工作环境
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-12T11:00:00&#43;08:00">2026年11月12日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/notes/topology-five-dimensional-gravity/">
+              <span class="leading-6">
+                同态、同构、同胚、同伦与同调：从代数拓扑基础到五维引力&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-16T14:25:37&#43;08:00">2026年11月16日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+</footer>
+        
+        
+
+  
+  
+  
+  <section id="comments" class="site-comments" aria-labelledby="comments-title"
+    data-site-comments data-repo="PeterBenjaminZhu/peterbenjaminzhu.github.io" data-repo-id="R_kgDOVqUVYg"
+    data-category="Website Notes" data-category-id="DIC_kwDOVqUVYs4DLMiy"
+    data-term="/notes/homology-cohomology/" data-lang="zh-CN"
+    data-loading-text="正在连接评论服务…"
+    data-ready-text="评论框已载入。请在下方查看讨论或登录参与。"
+    data-empty-text="这篇笔记尚无讨论，首次提交留言后会自动创建。"
+    data-error-text="评论区出现错误或连接超时。请查看下方提示、刷新重试，或通过 GitHub 讨论入口查看。"
+    data-discussion-link-text="在 GitHub 查看本篇讨论">
+    <h2 id="comments-title">评论与提问</h2>
+    <p class="site-comments-intro">使用 GitHub 账户留言、提问或勘误。内容公开保存于 GitHub Discussions；回复提醒由个人 GitHub 通知设置决定。</p>
+    <p class="site-comments-status" role="status" aria-live="polite">滚动到这里后加载评论。</p>
+    <p><a class="site-comments-link" href="https://github.com/PeterBenjaminZhu/peterbenjaminzhu.github.io/discussions/categories/website-notes" target="_blank" rel="noopener noreferrer">在 GitHub 查看网站讨论分类</a></p>
+    <div id="giscus-comments" class="giscus"></div>
+    <noscript><p>评论需要 JavaScript。你也可以通过上方链接访问 GitHub 讨论分类。</p></noscript>
+  </section>
+  
+  <script defer src="/js/comments.min.549eb599f43e88a559283c161bbcfdf528438c4a6d6708b10e7b43208c31b132447e7bd66ca29c4e6df42e7cee619d0d363f40db1eb7b5c5735c487a83c43d78.js" integrity="sha512-VJ61mfQ&#43;iKVZKDwWG7z99ShDjEptZwixDntDIIwxsTJEfnvWbKKcTm30LnzuYZ0NNj9A2x63tcVzXEh6g8Q9eA=="></script>
+
+
+      </div>
+      
+        <aside class="site-page-toc">
+          <details class="site-toc-directory toc" open>
+            <summary>本页目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#摘要">摘要</a></li>
+    <li><a href="#1-一幅总图景">1 一幅总图景</a></li>
+    <li><a href="#2-从边界算子开始">2 从边界算子开始</a>
+      <ul>
+        <li><a href="#21-有向几何对象的边界">2.1 有向几何对象的边界</a></li>
+        <li><a href="#22-闭合不等于非平凡">2.2 闭合不等于非平凡</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-链闭链边界链与同调群">3 链、闭链、边界链与同调群</a>
+      <ul>
+        <li><a href="#31-最低限度的抽象代数">3.1 最低限度的抽象代数</a></li>
+        <li><a href="#32-闭链与边界链">3.2 闭链与边界链</a></li>
+        <li><a href="#33-同调群的定义">3.3 同调群的定义</a></li>
+        <li><a href="#34-穿孔平面">3.4 穿孔平面</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-不同阶同调的直观含义">4 不同阶同调的直观含义</a></li>
+    <li><a href="#5-如何计算同调">5 如何计算同调</a>
+      <ul>
+        <li><a href="#51-空心与实心三角形">5.1 空心与实心三角形</a></li>
+        <li><a href="#52-边界矩阵">5.2 边界矩阵</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-从同调到上同调">6 从同调到上同调</a>
+      <ul>
+        <li><a href="#61-上链是链的测量工具">6.1 上链是链的测量工具</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-微分形式与外微分">7 微分形式与外微分</a>
+      <ul>
+        <li><a href="#71--形式可以在--维对象上积分">7.1 $k$-形式可以在 $k$ 维对象上积分</a></li>
+        <li><a href="#72-外微分">7.2 外微分</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-闭形式恰当形式与-de-rham-上同调">8 闭形式、恰当形式与 de Rham 上同调</a>
+      <ul>
+        <li><a href="#81-穿孔平面上的闭但不恰当形式">8.1 穿孔平面上的闭但不恰当形式</a></li>
+        <li><a href="#82-poincaré-引理">8.2 Poincaré 引理</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-stokes-定理同调与上同调的桥梁">9 Stokes 定理：同调与上同调的桥梁</a></li>
+    <li><a href="#10-闭字的四种不同含义">10 &ldquo;闭&quot;字的四种不同含义</a></li>
+    <li><a href="#11-rthrt-中的同调约束">11 RT/HRT 中的同调约束</a>
+      <ul>
+        <li><a href="#111-普通-adscft-中的约束">11.1 普通 AdS/CFT 中的约束</a></li>
+        <li><a href="#112-planck-膜相对同调与岛">11.2 Planck 膜、相对同调与岛</a></li>
+        <li><a href="#113-同调约束极值方程和正交条件">11.3 同调约束、极值方程和正交条件</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-常用计算路线">12 常用计算路线</a>
+      <ul>
+        <li><a href="#121-计算同调">12.1 计算同调</a></li>
+        <li><a href="#122-计算-de-rham-上同调">12.2 计算 de Rham 上同调</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-总结">13 总结</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav>
+          </details>
+        </aside>
+      
+    </section>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Peter Benjamin Zhu
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+  
+    
+
+  
+</footer>
+<div id="search-wrapper" class="site-search-wrapper invisible" role="dialog" aria-modal="true" aria-label="站内搜索" data-url="/" data-empty="没有找到相关内容。" data-prompt="输入关键词，查找标题与正文。" data-error="搜索索引加载失败，请刷新后重试。">
+  <div id="search-modal" class="site-search-modal">
+    <header class="site-search-header">
+      <form role="search">
+        <label class="sr-only" for="search-query">站内搜索</label>
+        <input type="search" id="search-query" placeholder="搜索标题与正文…" autocomplete="off">
+      </form>
+      <button id="close-search-button" type="button" aria-label="关闭搜索"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></button>
+    </header>
+    <div id="search-tag-filter" class="site-search-tag-filter hidden" data-label="标签">
+      <span id="search-tag-label"></span>
+      <button id="clear-search-tag" type="button">清除标签筛选</button>
+    </div>
+    <p id="search-status" role="status" aria-live="polite">输入关键词，查找标题与正文。</p>
+    <ul id="search-results"></ul>
+    <footer class="site-search-footer">Esc 关闭 · ↑ ↓ 选择 · Enter 打开</footer>
+  </div>
+</div>
+
+    </div>
+    
+  </body>
+  
+  
+</html>
