@@ -9,7 +9,27 @@
     <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
     <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
     <copyright>© 2026 Peter Benjamin Zhu</copyright>
-    <lastBuildDate></lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2026 15:19:24 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PDF Selection Colors · PDF 选中底色</title>
+      <link>https://peterbenjaminzhu.github.io/projects/zotero-pdf-selection-colors/</link>
+      <pubDate>Mon, 16 Nov 2026 15:19:24 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/projects/zotero-pdf-selection-colors/</guid>
+      <description>为 Zotero PDF 阅读器自定义临时文字选择底色，提供颜色预设、自定义选色和不透明度调节。</description>
+      
+    </item>
+    
+    <item>
+      <title>practical-tech-guides · 实操手册</title>
+      <link>https://peterbenjaminzhu.github.io/projects/practical-tech-guides/</link>
+      <pubDate>Mon, 16 Nov 2026 15:19:24 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/projects/practical-tech-guides/</guid>
+      <description>编程语言、第三方库、软件工具及网站搭建的实操手册，配套可独立运行的案例。</description>
+      
+    </item>
     
   </channel>
 </rss>

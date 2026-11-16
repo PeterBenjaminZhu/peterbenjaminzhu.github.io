@@ -9,7 +9,27 @@
     <managingEditor>19973397352@163.com (Peter Benjamin Zhu)</managingEditor>
     <webMaster>19973397352@163.com (Peter Benjamin Zhu)</webMaster>
     <copyright>© 2026 Peter Benjamin Zhu</copyright>
-    <lastBuildDate>Wed, 11 Nov 2026 15:24:32 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2026 15:19:24 +0800</lastBuildDate><atom:link href="https://peterbenjaminzhu.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PDF Selection Colors</title>
+      <link>https://peterbenjaminzhu.github.io/en/projects/zotero-pdf-selection-colors/</link>
+      <pubDate>Mon, 16 Nov 2026 15:19:24 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/en/projects/zotero-pdf-selection-colors/</guid>
+      <description>Customize temporary text-selection colors in Zotero&amp;rsquo;s PDF reader with color presets, a custom color picker, and adjustable opacity.</description>
+      
+    </item>
+    
+    <item>
+      <title>practical-tech-guides · Practical Guides</title>
+      <link>https://peterbenjaminzhu.github.io/en/projects/practical-tech-guides/</link>
+      <pubDate>Mon, 16 Nov 2026 15:19:24 +0800</pubDate>
+      <author>19973397352@163.com (Peter Benjamin Zhu)</author>
+      <guid>https://peterbenjaminzhu.github.io/en/projects/practical-tech-guides/</guid>
+      <description>Practical guides to programming languages, libraries, software tools, and website building, with independently runnable examples.</description>
+      
+    </item>
     
     <item>
       <title>About</title>
